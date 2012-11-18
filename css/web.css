@@ -1,0 +1,76 @@
+body.ext-ie6 { text-align: center; }
+
+body.frontend { background: var(lightGray); }
+
+#page #outerHeader #header,
+#page #outerContent #content,
+#page #outerFooter #footer { width: 780px; margin: 0px auto; text-align: left; }
+
+#page #outerHeader {
+    background: url('/assets/web/images/headBg.jpg') repeat-x top left;
+}
+#page #outerHeader #header { position: relative; height: 169px; background: url('/assets/web/images/headLight.png') no-repeat; }
+#page #outerHeader #slogan {
+    position: absolute;
+    font-weight: bold; padding-top: 40px; right: 0px;
+    text-shadow: #c0c0c0 3px 3px 5px;
+    width: 500px;
+}
+#page #outerHeader #slogan .smart,
+#page #outerHeader #slogan .rich { color: var(mainColor); background-color: #f1f1f1; padding: 5px; border-radius: 5px; }
+#page #outerHeader #header #mainMenu { position: absolute; bottom: 0px; }
+
+#page #outerContent { background: var(light); }
+#page #outerContent #content { padding: 35px 0px 25px 0px; }
+#page #outerContent #content #subMenu { width: 180px; margin-right: 25px; }
+#page #outerContent #content #innerContent { width: 780px; }
+#page #outerContent #content .withSub { width: 575px !important; }
+
+#page #outerFooter { background: url('/assets/web/images/footerBg.jpg') repeat-x top left; }
+#page #outerFooter #footer { padding: 15px; height: 60px; position: relative; }
+#page #outerFooter #footer p { margin-bottom: 0px; color: var(darkGray); }
+#page #outerFooter #footer .menu { position: absolute; left: 0; width: 300px; top: 10px; }
+#page #outerFooter #footer .vivid { position: absolute; left: 10px; top: 60px; }
+#page #outerFooter #footer .based {
+    position: absolute; right: 0; width: 400px; font-weight: bold;
+}
+#page #outerFooter #footer .based img {
+    position: relative; top: 3px;
+}
+
+.webListNone ul { margin: 0px; }
+.webListNone,
+.webListNone li { margin-bottom: 0px; }
+
+.webForm input,
+.webForm textarea,
+.webForm label,
+.webForm button,
+.webForm select {
+    font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;
+    font-size: 12px;
+    color: var(typo);
+    line-height: 18px;
+}
+
+.webForm label { text-align: left; }
+.webForm .submitWrapper { margin: 10px 0px 10px 140px; }
+.webForm button { color: var(light); background: none !important; border: none !important; }
+.webForm button:hover { color: var(mainColor); }
+
+.webForm .beforeButton,
+.webForm .afterButton {
+    display: block;
+    float: left;
+    width: 4px;
+    height: 27px;
+    background: url('/assets/web/images/webFormButtonLeft.png') no-repeat top right;
+}
+.webForm .button {
+    float: left;
+    height: 27px;
+    background: url('/assets/web/images/webFormButtonCenter.png') repeat-x top left;
+}
+.webForm .afterButton {
+    background: url('/assets/web/images/webFormButtonRight.png') no-repeat top left;
+}

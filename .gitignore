@@ -1,0 +1,11 @@
+querylog
+*.kdev4
+.project
+.buildpath
+.settings
+include_path
+update
+eventlog
+kwf-lib
+config.local.ini
+library
