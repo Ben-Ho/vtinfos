@@ -5,6 +5,7 @@ class Basic_Post_Component extends Kwc_Form_Component
     {
         $ret = parent::getSettings();
         $ret['componentName'] = trl('Post');
+        $ret['assets']['files'][] = 'web/components/Basic/Post/Component.js';
         return $ret;
     }
 
