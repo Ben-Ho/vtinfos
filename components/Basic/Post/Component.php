@@ -9,8 +9,15 @@ class Basic_Post_Component extends Kwc_Form_Component
         return $ret;
     }
 
-    protected function _beforeInsert(Kwf_Model_Row_Interface $row)
+    protected function _afterInsert(Kwf_Model_Row_Interface $row)
     {
-        parent::_beforeInsert($row);
+
+        parent::_afterInsert($row);
+        // This is our new stuff
+        $context = new ZMQContext();
+        $socket = $context->getSocket(ZMQ::SOCKET_PUSH, 'my pusher');
+        $socket->connect("tcp://localhost:5555");
+
+        $socket->send(json_encode($row->toArray()));
     }
 }

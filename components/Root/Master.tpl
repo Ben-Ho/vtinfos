@@ -3,6 +3,7 @@
     <head>
         <?=$this->assets('Frontend');?>
         <?=$this->debugData();?>
+        <script src="http://autobahn.s3.amazonaws.com/js/autobahn.min.js"></script>
         <link rel="shortcut icon" href="/assets/web/images/favicon.ico" /> 
     </head>
     <body class="frontend">
