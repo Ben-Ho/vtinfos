@@ -10,11 +10,6 @@
         <div id="page">
             <div id="outerHeader">
                 <div id="header">
-                    <div class="left" id="logo">
-                        <a href="/">
-                            <img src="/assets/web/images/logo.jpg" alt="RegioTool" />
-                        </a>
-                    </div>
                     <div class="right" id="login">&nbsp;</div>
                     <div class="clear"></div>
                     <div id="mainMenu">&nbsp;</div>
@@ -43,7 +38,6 @@
                 <div id="footer">&nbsp;</div>
             </div>
         </div>
-        <?= $this->statisticCode() ?>
     </body>
 </html>
 

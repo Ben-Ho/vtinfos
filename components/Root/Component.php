@@ -12,12 +12,20 @@ class Root_Component extends Kwc_Root_Component
 
         $ret['generators']['title']['component'] = 'Kwc_Box_TitleEditable_Component';
 
+        $ret['generators']['login'] = array(
+            'class' => 'Kwf_Component_Generator_Page_Static',
+            'component' => 'Login_Component',
+            'name' => trlStatic('Login'),
+            'inherit' => false,
+            'unique' => true
+        );
+
         $ret['editComponents'] = array('title', 'metaTags');
 
         $ret['contentWidth'] = 780;
-        $ret['contentWidthBoxSubtract'] = array(
-            'subMenu' => 205,
-        );
+//         $ret['contentWidthBoxSubtract'] = array(
+//             'subMenu' => 205,
+//         );
         return $ret;
     }
 }

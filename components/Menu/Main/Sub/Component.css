@@ -1,0 +1,13 @@
+.cssClass {
+    height: 31px;
+}
+
+.cssClass.kwcMenuAbstract ul.menu li a {
+    border-bottom: none;
+    text-transform: none;
+    color: #fff;
+}
+
+.cssClass.kwcMenuAbstract ul.menu li.current a {
+    text-transform: uppercase;
+}

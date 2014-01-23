@@ -1,0 +1,10 @@
+.cssClass {
+    margin-left: 10%;
+    width: 80%;
+}
+
+#page #outerHeader #header #logo.loginLogo {
+    margin: auto;
+    margin-top: 15px;
+    float: none;
+}

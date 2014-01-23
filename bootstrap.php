@@ -10,7 +10,6 @@ require_once '../kwf-lib/Kwf/Setup.php';
 Kwf_Setup::setUp();
 Kwf_Setup::dispatchKwc();
 Kwf_Setup::dispatchMedia();
-Kwf_Assets_Loader::load();
 
 $front = Kwf_Controller_Front_Component::getInstance();
 

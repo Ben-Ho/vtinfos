@@ -1,0 +1,31 @@
+.cssClass {
+    padding: 20px;
+}
+
+.cssClass ul li.speaker {
+    list-style-type: none;
+}
+
+.cssClass ul li.speaker .name {
+    float: left;
+    margin-right: 3px;
+}
+
+.cssClass ul li.speaker .degree {
+    float: left;
+    color: #999999;
+}
+
+.cssClass ul li.speaker .congregation {
+    clear: left;
+}
+
+.cssClass ul li.speaker table.talks {
+    padding: 5px;
+}
+
+.cssClass ul li.speaker table.talks tr td {
+    vertical-align: top;
+    padding-right: 3px;
+    margin-bottom: 3px;
+}

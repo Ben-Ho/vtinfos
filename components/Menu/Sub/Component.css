@@ -1,29 +1,35 @@
-.cssClass ul li p {
-    font-weight: bold;
-    margin: 0px 0px 2px 0px;
-    padding: 2px 7px 3px 7px;
-    color: var(light);
-    background: url('/assets/web/images/subMenuBg.png') no-repeat top left;
+.cssClass.st480 .menu {
+    display: none;
 }
-.cssClass ul li { margin-bottom: 0px; margin-left: 0px; }
+.cssClass.st480 {
+    height: 0px;
+}
+.cssClass {
+    height: 31px;
+}
+.cssClass ul li { margin-bottom: 0px; margin-left: 0px; float: left; width: 50%;}
 .cssClass ul li a {
+    background-color: #4C97CC;
     display: block;
-    width: 174px;
-    height: 21px;
+    height: 30px;
+    line-height: 30px;
     font-weight: bold;
-    margin: 0px 0px 0px 6px;
-    padding: 1px 7px;
+    text-align: center;
+    vertical-align: middle;
+    border-left-style: dotted;
+    border-left-width: 1px;
+    border-left-color: #fff;
+    color: #fff;
 }
-.cssClass ul li a:hover,
+.cssClass ul li a:hover {
+    background-color: #2673D9;
+    color: #fff;
+}
 .cssClass ul li.current a {
-    color: var(light);
-    background: url('/assets/web/images/subSubMenuActiveBg.png') no-repeat top left;
+    text-transform: uppercase;
 }
-.cssClass ul li ul li { margin-left: 15px; }
-.cssClass ul li ul li.last { margin-bottom: 10px; }
-.cssClass ul li.current ul li a { color: var(mainColor); background: none; }
-.cssClass ul li.current ul li a:hover,
-.cssClass ul li.current ul li.current a {
-    color: var(light) !important;
-    background: url('/assets/web/images/subSubMenuActiveBg.png') no-repeat top left !important;
+.cssClass ul li.first a {
+    border-left-style: none;
+    border-left-width: 0px;
+    margin-left: 1px;
 }

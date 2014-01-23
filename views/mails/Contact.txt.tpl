@@ -1,20 +1,12 @@
-<?=trlKwf('You got a requst on {0}', $this->host);?>.
+<?=$this->data->trl('Kontakt-Formular auf {0} ausgefüllt:', $this->host);?>.
 
 
-<?=trlKwf('Enquiry');?>:
+<?=$this->data->trl('Anfrage über');?>: <?=$this->topic;?>
 <?= $this->content; ?>
 
 
-<?=trlKwf('This enquiry was sent by');?>:
+<?=$this->data->trl('Anfrage wurde gesendet von');?>:
 
-<?=trlKwf('Name');?>: <?= $this->firstname; ?> <?= $this->lastname; ?>
+<?=$this->data->trl('Name');?>: <?= $this->firstname; ?> <?= $this->lastname; ?>
 
-<?=trlKwf('Email');?>: <?= $this->email; ?>
-
-<?=trlKwf('Organisation');?>: <?= $this->organisation; ?>
-
-<?=trlKwf('Street');?>: <?= $this->street; ?>
-
-<?=trlKwf('ZIP / City');?>: <?= $this->city; ?>
-
-<?=trlKwf('Phone');?>: <?= $this->phone; ?>
+<?=$this->data->trl('Email');?>: <?= $this->email; ?>

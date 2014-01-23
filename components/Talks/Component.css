@@ -1,0 +1,12 @@
+.cssClass .talks {
+    padding: 0;
+    padding-top: 10px;
+}
+
+.cssClass .talks .talk {
+    vertical-align: top;
+}
+
+.cssClass .talks .talk td {
+    padding-right: 3px;
+}

@@ -1,0 +1,112 @@
+@import "kwf/css3/border-radius";
+
+.webStandard { font-family: Helvetica, Arial, Verdana, Geneva, sans-serif; font-size: 13px; color: var(typo); }
+.webStandard strong { font-weight: bold; }
+.webStandard em { font-style: italic; }
+
+.webStandard p { line-height: 18px; color: var(typo); margin-bottom: 10px; }
+
+.webStandard h1 { font-size: 25px; margin-bottom: 10px; color: var(mainColor); } /* Überschrift 1 */
+.webStandard h2 { font-size: 20px; margin-bottom: 10px; color: var(mainColor); } /* Überschrift 2 */
+.webStandard h3 { font-size: 14px; margin-bottom: 5px; } /* Überschrift 3 */
+
+.webStandard a { text-decoration: none; color: var(mainColor); outline: none; }
+.webStandard a:hover { text-decoration: none; color: var(secColor); }
+.webStandard a:link { text-decoration: none; }
+
+.webStandard ol,
+.webStandard ul { margin-bottom: 10px; margin-left: 20px; }
+.webStandard li { list-style-type: square; margin-bottom: 5px; line-height: 18px; color: var(typo); }
+
+
+.frontend {
+    background-image: url('/assets/web/images/background.jpg');
+}
+.frontend.st800 {
+    background-image: none;
+}
+.frontend #page {
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #fff;
+    @include border-radius-pie(3px);
+    overflow: hidden;
+}
+.frontend.st800 #page {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    @include border-radius-pie(0px);
+}
+
+#page #outerHeader #header #logo {
+    background-image: url("/assets/web/images/login-logo.png");
+    background-repeat: no-repeat;
+    width: 125px;
+    height: 125px;
+}
+
+#page #outerHeader #header #logo.gt350 {
+    float: left;
+}
+
+body.ext-ie6 { text-align: center; }
+
+#page #outerHeader #header,
+#page #outerContent #content,
+#page #outerFooter #footer { margin: 0px auto; text-align: left; }
+
+#page #outerHeader #header .menues {
+    margin-left: 125px;
+}
+
+#page #outerContent { background: var(light); }
+#page #outerContent #content { padding: 0px 0px 0px 0px; }
+#page #outerContent #content #innerContent {
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+#page #outerFooter #footer { padding: 15px; height: 20px; position: relative; }
+
+.webListNone ul { margin: 0px; }
+.webListNone,
+.webListNone li { margin-bottom: 0px; }
+
+.webForm input,
+.webForm textarea,
+.webForm label,
+.webForm button,
+.webForm select {
+    font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;
+    font-size: 12px;
+    color: var(typo);
+    line-height: 18px;
+}
+
+.webForm label { text-align: left; }
+.webForm .submitWrapper { margin: 10px 0px 10px 140px; }
+.webForm button { color: var(light); background: none !important; border: none !important; }
+.webForm button:hover { color: var(mainColor); }
+
+.webForm .beforeButton,
+.webForm .afterButton {
+    display: block;
+    float: left;
+    width: 4px;
+    height: 27px;
+    background: url('/assets/web/images/webFormButtonLeft.png') no-repeat top right;
+}
+.webForm .button {
+    float: left;
+    height: 27px;
+    background: url('/assets/web/images/webFormButtonCenter.png') repeat-x top left;
+}
+.webForm .afterButton {
+    background: url('/assets/web/images/webFormButtonRight.png') no-repeat top left;
+}
