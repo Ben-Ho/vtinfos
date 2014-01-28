@@ -42,6 +42,19 @@
     @include border-radius-pie(0px);
 }
 
+
+#page #outerHeader #header .logout {
+    background-color: #F17F08;
+    line-height: 25px;
+    text-align: center;
+    width: 125px;
+    display: block;
+    height: 25px;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
 #page #outerHeader #header #logo {
     background-image: url("/assets/web/images/login-logo.png");
     background-repeat: no-repeat;

@@ -1,5 +1,5 @@
 .cssClass {
-    height: 31px;
+    height: 62px;
 }
 .cssClass.st480 {
     height: auto;
@@ -23,8 +23,8 @@
 }
 .cssClass ul.menu li a {
     display: block;
-    height: 30px;
-    line-height: 30px;
+    height: 62px;
+    line-height: 62px;
     background-color: #085AC0;
     font-weight: bold;
     margin: 0px 0px 1px 1px;
@@ -32,6 +32,10 @@
     vertical-align: middle;
     text-transform: uppercase;
     color: #ffffff;
+}
+.cssClass.st480 ul.menu li a {
+    height: 30px;
+    line-height: 30px;
 }
 
 .cssClass ul.menu li.current a {

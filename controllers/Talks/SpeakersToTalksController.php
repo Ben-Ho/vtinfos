@@ -10,9 +10,10 @@ class Talks_SpeakersToTalksController extends Kwf_Controller_Action_Auto_Grid
         $select = new Kwf_Model_Select();
         $select->order('number');
         $comboBox->setValues(Kwf_Model_Abstract::getInstance('Talks')->getRows($select));
-        $this->_columns->add(new Kwf_Grid_Column('talk_id', trl('Ansprache'), 30))
+        $this->_columns->add(new Kwf_Grid_Column('talk_id', trl('ID'), 30))
             ->setEditor($comboBox);
 //             ->setData(new Talks_SpeakersToTalksControllerTalkNumber());
+        $this->_columns->add(new Kwf_Grid_Column('number', trl('Nummer'), 30));
         $this->_columns->add(new Kwf_Grid_Column('title', trl('Titel'), 300));
     }
 

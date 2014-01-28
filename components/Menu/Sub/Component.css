@@ -5,14 +5,14 @@
     height: 0px;
 }
 .cssClass {
-    height: 31px;
+    height: 62px;
 }
 .cssClass ul li { margin-bottom: 0px; margin-left: 0px; float: left; width: 50%;}
 .cssClass ul li a {
     background-color: #4C97CC;
     display: block;
-    height: 30px;
-    line-height: 30px;
+    height: 62px;
+    line-height: 62px;
     font-weight: bold;
     text-align: center;
     vertical-align: middle;

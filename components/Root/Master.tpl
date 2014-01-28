@@ -20,6 +20,7 @@
                         <?}?>
                     </div>
                     <div class="clear"></div>
+                    <a class="logout webStandard" href="/kwf/user/logout"><?=$this->data->trl('Abmelden');?></a>
                 </div>
             </div>
             <div class="clear"></div>

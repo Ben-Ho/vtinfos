@@ -1,6 +1,13 @@
 <?php
 class Login_Form_Component extends Kwc_User_Login_Form_Component
 {
+    public static function getSettings()
+    {
+        $ret = parent::getSettings();
+        $ret['placeholder']['submitButton'] = trlStatic('Anmelden');
+        return $ret;
+    }
+
     protected function _afterSave(Kwf_Model_Row_Interface $row)
     {
         $tryLogin = false;
