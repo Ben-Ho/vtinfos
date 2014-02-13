@@ -8,7 +8,7 @@
         <div id="page">
             <div id="outerHeader">
                 <div id="header">
-                    <div id="logo" class="logo loginLogo"> </div>
+                    <div id="logo" class="logo loginLogo"><div class="domain">vtinfos</div><div class="tld">.com</div></div>
                 </div>
             </div>
             <div id="outerContent">

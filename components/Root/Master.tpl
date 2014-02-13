@@ -8,7 +8,7 @@
         <div id="page">
             <div id="outerHeader">
                 <div id="header">
-                    <div id="logo" class="logo"></div>
+                    <div id="logo" class="logo"><div class="domain">vtinfos</div><div class="tld">.com</div></div>
                     <div class="menues">
                         <div id="mainMenu">
                             <?=$this->component($this->boxes['mainMenu']);?>
