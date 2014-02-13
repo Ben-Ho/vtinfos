@@ -57,7 +57,6 @@
     font-weight: bold;
 }
 #page #outerHeader #header #logo {
-    /*background-image: url("/assets/web/images/login-logo.png");*/
     background-repeat: no-repeat;
     background-color: #085AC0;
     width: 125px;
@@ -77,14 +76,6 @@
         line-height: 20px;
     }
 }
-/*#page #outerHeader #header #logo .domain {
-    color: white;
-    font-weight: bolder;
-}
-#page #outerHeader #header #logo .domain {
-    color: white;
-    font-weight: lighter;
-}*/
 
 
 #page #outerHeader #header #logo.gt350 {
@@ -136,15 +127,12 @@ body.ext-ie6 { text-align: center; }
 .webForm .afterButton {
     display: block;
     float: left;
-    width: 4px;
+    width: 0px;
     height: 27px;
-    background: url('/assets/web/images/webFormButtonLeft.png') no-repeat top right;
 }
 .webForm .button {
     float: left;
     height: 27px;
-    background: url('/assets/web/images/webFormButtonCenter.png') repeat-x top left;
 }
 .webForm .afterButton {
-    background: url('/assets/web/images/webFormButtonRight.png') no-repeat top left;
 }
