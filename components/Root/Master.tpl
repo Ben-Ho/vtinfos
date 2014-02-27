@@ -8,7 +8,10 @@
         <div id="page">
             <div id="outerHeader">
                 <div id="header">
-                    <div id="logo" class="logo"><div class="domain">vtinfos</div><div class="tld">.com</div></div>
+                    <div class="leftRegion">
+                        <div id="logo" class="logo"><div class="domain">vtinfos</div><div class="tld">.com</div></div>
+                        <a class="logout webStandard" href="/kwf/user/logout"><?=$this->data->trl('Abmelden');?></a>
+                    </div>
                     <div class="menues">
                         <div id="mainMenu">
                             <?=$this->component($this->boxes['mainMenu']);?>
@@ -20,7 +23,6 @@
                         <?}?>
                     </div>
                     <div class="clear"></div>
-                    <a class="logout webStandard" href="/kwf/user/logout"><?=$this->data->trl('Abmelden');?></a>
                 </div>
             </div>
             <div class="clear"></div>

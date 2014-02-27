@@ -1,58 +1,28 @@
-.cssClass {
-    height: 62px;
-}
-.cssClass.st480 {
-    height: auto;
-}
-
-.cssClass ul.menu li .menuMainSub {
-    display: none;
-}
-.cssClass.st480 ul.menu li .menuMainSub {
-    display: block;
-}
-
-.cssClass.st480 ul.menu li .menuMainSub ul li {
-    width: 50%;
-    float: left;
-}
-
-.cssClass ul.menu li {
-    float: left;
-    width: 25%;
-}
 .cssClass ul.menu li a {
+    height: 30px;
+    line-height: 30px;
     display: block;
-    height: 62px;
-    line-height: 62px;
     background-color: #085AC0;
     font-weight: bold;
     margin: 0px 0px 1px 1px;
     text-align: center;
     vertical-align: middle;
     text-transform: uppercase;
-    color: #ffffff;
-}
-.cssClass.st480 ul.menu li a {
-    height: 30px;
-    line-height: 30px;
-}
-
-.cssClass ul.menu li.current a {
-    background-color: #4C97CC;
     color: #fff;
-}
-.cssClass ul.menu li a:hover {
-    background-color: #2673D9;
 }
 
 .cssClass ul.menu li.current a {
     margin-bottom: 0px;
     border-bottom-style: dotted;
     border-bottom-width: 1px;
+    background-color: #4C97CC;
+    color: #fff;
 }
 
-.cssClass.st480 ul.menu li {
-    float: none;
-    width: auto;
+.cssClass.gt550 ul.menu li {
+    width: 25%;
+    float: left;
+}
+.cssClass.gt550 ul.menu li.current .menuMainSub {
+    display: none;
 }

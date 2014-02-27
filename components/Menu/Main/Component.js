@@ -1,1 +1,1 @@
-Kwf.Utils.ResponsiveEl('.menuMain', [{maxWidth: 480, cls: 'st480'}]);
+Kwf.Utils.ResponsiveEl('.menuMain', [550]);

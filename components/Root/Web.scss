@@ -19,14 +19,21 @@
 .webStandard li { list-style-type: square; margin-bottom: 5px; line-height: 18px; color: var(typo); }
 
 
-.frontend {
+.frontend.gt1000 {
     background-image: url('/assets/web/images/background.jpg');
     background-color: black;
 }
-.frontend.st800 {
+.frontend {
     background-image: none;
 }
+
 .frontend #page {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    @include border-radius-pie(0px);
+}
+.frontend.gt1000 #page {
     width: 80%;
     margin: auto;
     margin-top: 20px;
@@ -36,31 +43,31 @@
     @include border-radius-pie(3px);
     overflow: hidden;
 }
-.frontend.st800 #page {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    @include border-radius-pie(0px);
+
+#page #outerHeader #header .leftRegion {
+    width: 123px;
+    float: left;
 }
-
-
-#page #outerHeader #header .logout {
+#page #outerHeader #header .leftRegion .logout {
     background-color: #F17F08;
-    line-height: 25px;
+    line-height: 30px;
     text-align: center;
-    width: 125px;
+    width: 123px;
     display: block;
-    height: 25px;
+    height: 30px;
     text-transform: uppercase;
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+    float:left;
+    margin-top: 1px;
 }
-#page #outerHeader #header #logo {
+#page #outerHeader #header .leftRegion #logo {
+    float: left;
     background-repeat: no-repeat;
     background-color: #085AC0;
-    width: 125px;
-    height: 125px;
+    width: 123px;
+    height: 123px;
     font-family: Helvetica, Arial;
     text-align: center;
     font-size: 33px;
@@ -76,10 +83,20 @@
         line-height: 20px;
     }
 }
+.frontend.gt673 #page #outerHeader #header .leftRegion #logo {
+    height: 61px;
+    font-size: 20px;
 
+    .domain {
+        padding-top: 10px;
+    }
+    .tld {
+        line-height: 8px;
+    }
+}
 
-#page #outerHeader #header #logo.gt350 {
-    float: left;
+#page #outerHeader #header .menues {
+    margin-left: 123px;
 }
 
 body.ext-ie6 { text-align: center; }
@@ -88,9 +105,6 @@ body.ext-ie6 { text-align: center; }
 #page #outerContent #content,
 #page #outerFooter #footer { margin: 0px auto; text-align: left; }
 
-#page #outerHeader #header .menues {
-    margin-left: 125px;
-}
 
 #page #outerContent { background: var(light); }
 #page #outerContent #content { padding: 0px 0px 0px 0px; }

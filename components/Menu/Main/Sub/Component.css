@@ -1,13 +1,20 @@
 .cssClass {
     height: 31px;
+    display: block;
 }
 
-.cssClass.kwcMenuAbstract ul.menu li a {
+.cssClass ul li {
+    width: 50%;
+    float: left;
+}
+
+.cssClass ul.menu li a {
     border-bottom: none;
-    text-transform: none;
     color: #fff;
+    text-transform: none;
 }
 
-.cssClass.kwcMenuAbstract ul.menu li.current a {
+.cssClass ul.menu li.current a {
+    background-color: #4C97CC;
     text-transform: uppercase;
 }
