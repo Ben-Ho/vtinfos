@@ -3,6 +3,7 @@
     <head>
         <?=$this->includeCode('header')?>
         <link rel="shortcut icon" href="/assets/web/images/favicon.ico" /> 
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
     <body class="frontend">
         <div id="page">
