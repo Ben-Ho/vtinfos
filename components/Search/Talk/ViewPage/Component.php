@@ -39,13 +39,7 @@ class Search_Talk_ViewPage_Component extends Kwc_Directories_List_ViewPage_Compo
             $user = Kwf_Registry::get('userModel')->getAuthedUser();
             $latitude = $user->getParentRow('Congregation')->latitude;
             $longitude = $user->getParentRow('Congregation')->longitude;
-            $sql = '(6371 * acos(
-                    cos( radians('.$latitude.') )
-                    * cos( radians( latitude ) )
-                    * cos( radians( longitude ) - radians('.$longitude.') )
-                    + sin( radians('.$latitude.') )
-                    * sin( radians( latitude ) ) ) ) < '.$searchRow->distance;
-            $ret->where(new Kwf_Model_Select_Expr_Parent('Congregation', new Kwf_Model_Select_Expr_Sql($sql)));
+            $ret->where(new Kwf_Model_Select_Expr_Area($latitude, $longitude, $searchRow->distance));
         }
         return $ret;
     }

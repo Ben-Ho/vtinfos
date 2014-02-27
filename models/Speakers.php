@@ -19,5 +19,7 @@ class Speakers extends Kwf_Model_Db
     {
         parent::_init();
         $this->_exprs['speaks_count'] = new Kwf_Model_Select_Expr_Child_Count('SpeakerToTalks', new Kwf_Model_Select());
+        $this->_exprs['longitude'] = new Kwf_Model_Select_Expr_Parent('Congregation', 'longitude');
+        $this->_exprs['latitude'] = new Kwf_Model_Select_Expr_Parent('Congregation', 'latitude');
     }
 }

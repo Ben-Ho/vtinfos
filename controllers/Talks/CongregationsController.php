@@ -39,4 +39,27 @@ class Talks_CongregationsController extends Kwf_Controller_Action_Auto_Grid
         parent::_beforeInsert($row, $submitRow);
         $row->circle_id = $this->_getParam('circle_id');
     }
+
+    protected function _beforeSave(Kwf_Model_Row_Interface $row, $submitRow)
+    {
+        if (!$row->longitude && !$row->latitude && $row->zip) {
+            $select = new Kwf_Model_Select();
+            $select->whereEquals('zip', $row->zip);
+            $zipRow = Kwf_Model_Abstract::getInstance('ZipToLocation')->getRow($select);
+            if ($zipRow) {
+                $row->longitude = $zipRow->longitude;
+                $row->latitude = $zipRow->latitude;
+            } else if ($row->zip && $row->country) {
+                $coordinates = Kwf_Util_Geocode::getCoordinates($row->zip.' '.$row->country);
+                $row->longitude = $coordinates['lng'];
+                $row->latitude = $coordinates['lat'];
+                $zipRow = Kwf_Model_Abstract::getInstance('ZipToLocation')->createRow();
+                $zipRow->zip = $row->zip;
+                $zipRow->longitude = $coordinates['lng'];
+                $zipRow->latitude = $coordinates['lat'];
+                $zipRow->save();
+            }
+        }
+        parent::_beforeSave($row, $submitRow);
+    }
 }

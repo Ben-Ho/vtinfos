@@ -6,19 +6,31 @@ class Talks_SpeakersController extends Kwf_Controller_Action_Auto_Grid
     protected function _initColumns()
     {
         parent::_initColumns();
-        $this->_columns->add(new Kwf_Grid_Column('id', trl('ID')));
+        $select = new Kwf_Model_Select();
+        $select->order('name');
+        $congregationsRows = Kwf_Model_Abstract::getInstance('Congregations')->getRows($select);
+        $congregations = array();
+        foreach ($congregationsRows as $congregationRow) {
+            $congregations[$congregationRow->id] = $congregationRow->name;
+        }
+
+        $comboBox = new Kwf_Form_Field_ComboBox();
+        $comboBox->setValues($congregations);
+        $this->_columns->add(new Kwf_Grid_Column('congregation_id', trl('Versammlung'), 100))
+            ->setEditor($comboBox);
         $this->_columns->add(new Kwf_Grid_Column('firstname', trl('Vorname')))
             ->setEditor(new Kwf_Form_Field_TextField());
         $this->_columns->add(new Kwf_Grid_Column('lastname', trl('Nachname')))
             ->setEditor(new Kwf_Form_Field_TextField());
-        $comboBox = new Kwf_Form_Field_Select();
-        $comboBox->setValues(array(
+        $selectField = new Kwf_Form_Field_Select();
+        $selectField->setValues(array(
             'eldest' => trl('Ältester'),
             'ministry_assistent' => trl('DAG')
         ));
+
         $this->_columns->add(new Kwf_Grid_Column('degree', trl('Vorrecht')))
-            ->setEditor($comboBox);
-//             ->setData(new Talks_SpeakersControllerDegree());
+//             ->setData(new Talks_SpeakersControllerDegree())
+            ->setEditor($selectField);
         $this->_columns->add(new Kwf_Grid_Column('street', trl('Straße')))
             ->setEditor(new Kwf_Form_Field_TextField());
         $this->_columns->add(new Kwf_Grid_Column('zip', trl('PLZ')))
