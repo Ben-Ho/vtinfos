@@ -134,8 +134,14 @@ body.ext-ie6 { text-align: center; }
 
 .webForm label { text-align: left; }
 .webForm .submitWrapper { margin: 10px 0px 10px 140px; }
-.webForm button { color: var(light); background: none !important; border: none !important; }
-.webForm button:hover { color: var(mainColor); }
+.webForm button {
+    color: var(light);
+    background: none !important;
+    border: none !important;
+    width: 100%;
+    height: 100%;
+}
+.webForm button:hover { color: var(light); }
 
 .webForm .beforeButton,
 .webForm .afterButton {
@@ -146,7 +152,8 @@ body.ext-ie6 { text-align: center; }
 }
 .webForm .button {
     float: left;
-    height: 27px;
-}
-.webForm .afterButton {
+    height: 30px;
+    line-height: 30px;
+    background-color: #085AC0;
+    background-image: none;
 }
