@@ -8,6 +8,7 @@ class Forms_Speaker_Component extends Kwc_Form_Component
         $ret['generators']['child']['component']['success'] = 'Forms_Speaker_Success_Component';
         $ret['placeholder']['submitButton'] = trlStatic('Anlegen');
         $ret['viewCache'] = false;
+        $ret['useAjaxRequest'] = false;
         return $ret;
     }
 

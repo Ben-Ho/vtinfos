@@ -20,9 +20,9 @@ class Forms_Congregation_FrontendForm extends Kwf_Form
         $this->add(new Kwf_Form_Field_TextField('ministryschool_time', trl('Predigtdienstschulzeit')));
 
         $select = new Kwf_Model_Select();
-        if ($this->getId()) {
-            $select->whereEquals('congregation_id', $this->getId());
-        }
+        $user = Kwf_Registry::get('userModel')->getAuthedUser();
+        $select->whereEquals('congregation_id', $user->congregation_id);
+        $select->whereEquals('deleted', 0);
         $speakerRows = Kwf_Model_Abstract::getInstance('Speakers')->getRows($select);
         $selectBox = new Kwf_Form_Field_Select('coordinator', trl('Koordinator'));
         $selectBox->setValues($speakerRows);

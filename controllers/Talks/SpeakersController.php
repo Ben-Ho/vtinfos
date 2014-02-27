@@ -18,6 +18,8 @@ class Talks_SpeakersController extends Kwf_Controller_Action_Auto_Grid
         $comboBox->setValues($congregations);
         $this->_columns->add(new Kwf_Grid_Column('congregation_id', trl('Versammlung'), 100))
             ->setEditor($comboBox);
+        $this->_columns->add(new Kwf_Grid_Column('deleted', trl('Gelöscht')))
+            ->setEditor(new Kwf_Form_Field_Checkbox());
         $this->_columns->add(new Kwf_Grid_Column('firstname', trl('Vorname')))
             ->setEditor(new Kwf_Form_Field_TextField());
         $this->_columns->add(new Kwf_Grid_Column('lastname', trl('Nachname')))

@@ -41,6 +41,7 @@ class Search_Talk_ViewPage_Component extends Kwc_Directories_List_ViewPage_Compo
             $longitude = $user->getParentRow('Congregation')->longitude;
             $ret->where(new Kwf_Model_Select_Expr_Area($latitude, $longitude, $searchRow->distance));
         }
+        $ret->whereEquals('deleted', 0);
         return $ret;
     }
 }

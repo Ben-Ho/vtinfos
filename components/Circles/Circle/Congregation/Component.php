@@ -17,6 +17,7 @@ class Circles_Circle_Congregation_Component extends Kwc_Abstract
         $ret['row'] = $this->getData()->getRow();
         $select = new Kwf_Model_Select();
         $select->where(new Kwf_Model_Select_Expr_Higher('speaks_count', 0));
+        $select->whereEquals('deleted', 0);
         $ret['speakers'] = $this->getData()->getRow()->getChildRows('Speakers', $select);
 
         $speakerModel = Kwf_Model_Abstract::getInstance('Speakers');
