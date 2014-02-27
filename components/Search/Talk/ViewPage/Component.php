@@ -7,6 +7,7 @@ class Search_Talk_ViewPage_Component extends Kwc_Directories_List_ViewPage_Compo
         $ret['generators']['child']['component']['searchForm'] = 'Search_Talk_ViewPage_SearchForm_Component';
         $ret['searchQueryFields'] = 'firstname';
         $ret['plugins'] = array('Login_Plugin_Component');
+        $ret['assets']['dep'][] = 'KwfSwitchDisplay';
         return $ret;
     }
 

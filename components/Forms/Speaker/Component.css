@@ -6,9 +6,12 @@
     width: 35px;
 }
 
-.cssClass.kwcForm .kwcForm .submitWrapper .button {
-    background-color: #085AC0;
-    background-image: none;
-    height: 30px;
-    line-height: 30px;
+.cssClass.kwcForm .kwcForm .kwfFormFieldMultiCheckbox .kwfFormFieldWrapper .kwfFormFieldMultiCheckbox {
+    max-width: 320px;
+}
+.cssClass.kwcForm .kwcForm.gt350 .kwfFormFieldMultiCheckbox .kwfFormFieldWrapper .kwfFormFieldMultiCheckbox {
+    margin-left: 40%;
+}
+.cssClass.kwcForm .kwcForm.gt500 .kwfFormFieldMultiCheckbox .kwfFormFieldWrapper .kwfFormFieldMultiCheckbox {
+    margin-left: 0;
 }

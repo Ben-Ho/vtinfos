@@ -10,12 +10,15 @@
     <div class="congregation"><?=$this->item->getRow()->getParentRow('Congregation')->name; ?></div>
     <div class="phone"><?=$this->data->trl('Tel:')?> <a href="tel:<?=$this->item->getRow()->phone; ?>"><?=$this->item->getRow()->phone; ?></a></div>
     <div class="email"><a href="mailto:<?=$this->item->getRow()->email; ?>"><?=$this->item->getRow()->email; ?></a></div>
-    <table class="talks">
-        <? $select = new Kwf_Model_Select(); ?>
-        <? $select->order('number');?>
-        <? foreach ($this->item->getRow()->getChildRows('SpeakerToTalks', $select) as $talk) { ?>
-            <tr><td><?=$talk->number;?></td><td><?=$talk->title;?></td></tr>
-        <? } ?>
-    </table>
+    <div class="kwfSwitchDisplay">
+        <a class="switchLink"><?=$this->data->trl('Zeige Vorträge');?></a>
+        <table class="talks switchContent">
+            <? $select = new Kwf_Model_Select(); ?>
+            <? $select->order('number');?>
+            <? foreach ($this->item->getRow()->getChildRows('SpeakerToTalks', $select) as $talk) { ?>
+                <tr><td><?=$talk->number;?></td><td><?=$talk->title;?></td></tr>
+            <? } ?>
+        </table>
+    </div>
     <hr />
 </li>

@@ -22,6 +22,7 @@
 
 .cssClass ul li.speaker table.talks {
     padding: 5px;
+    display: none;
 }
 
 .cssClass ul li.speaker table.talks tr td {

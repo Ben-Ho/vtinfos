@@ -26,7 +26,10 @@ class Forms_Speaker_FrontendForm extends Kwf_Form
         $this->add(new Kwf_Form_Field_TextField('phone', trl('Telefonnummer')));
         $this->add(new Kwf_Form_Field_TextField('email', trl('Email-Adresse')));
 
+        $select = new Kwf_Model_Select();
+        $select->order('number');
         $this->add(new Kwf_Form_Field_MultiCheckbox('SpeakerToTalks', 'Talk', trl('Vorträge')))
-            ->setShowCheckAllLinks(false);
+            ->setShowCheckAllLinks(false)
+            ->setValuesSelect($select);
     }
 }
