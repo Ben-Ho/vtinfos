@@ -5,11 +5,13 @@
         <link rel="shortcut icon" href="/assets/web/images/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
-    <body class="frontend">
+    <body class="frontend login">
         <div id="page">
             <div id="outerHeader">
                 <div id="header">
-                    <div id="logo" class="logo loginLogo"><div class="domain">vtinfos</div><div class="tld">.com</div></div>
+                    <div class="leftRegion">
+                        <div id="logo" class="logo"><div class="domain">vtinfos</div><div class="tld">.com</div></div>
+                    </div>
                 </div>
             </div>
             <div id="outerContent">
