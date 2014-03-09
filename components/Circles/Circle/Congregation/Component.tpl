@@ -1,5 +1,17 @@
 <div class="<?=$this->cssClass?>">
     <h1><?=$this->row->name;?></h1>
+    <div class="congregation-info">
+        <div class="time">
+            <div class="talk-time"><span class="label"><?=$this->data->trl('Vortragszeit:');?></span> <?=$this->row->talk_time;?></div>
+            <div class="ministryschool-time"><span class="label"><?=$this->data->trl('Predigtdienstschule:');?></span> <?=$this->row->ministryschool_time;?></div>
+        </div>
+        <div class="address">
+            <div class="street"><?=$this->row->street;?></div>
+            <div class="zip"><?=$this->row->zip;?></div>
+            <div class="city"><?=$this->row->city;?></div>
+            <div class="country"><?=$this->row->country;?></div>
+        </div>
+    </div>
     <div class="coordinator">
         <h2><?=$this->data->trl('Koordinator');?></h2>
         <? if ($this->coordinator) { ?>

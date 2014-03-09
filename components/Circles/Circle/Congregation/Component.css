@@ -41,18 +41,21 @@
     clear: left;
 }
 
+.cssClass .congregation-info .address .zip,
 .cssClass .coordinator .address .zip,
 .cssClass .talk-organiser .address .zip,
 .cssClass .coordinator .address .city,
 .cssClass .talk-organiser .address .city {
     float: left;
 }
+.cssClass .congregation-info .address .zip:after,
 .cssClass .coordinator .address .zip:after,
 .cssClass .talk-organiser .address .zip:after {
     content: ",";
     margin-right: 2px;
 }
 
+.cssClass .congregation-info .address .country,
 .cssClass .coordinator .address .country,
 .cssClass .talk-organiser .address .country {
     clear: left;
