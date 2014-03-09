@@ -31,5 +31,6 @@ class Forms_Speaker_FrontendForm extends Kwf_Form
         $this->add(new Kwf_Form_Field_MultiCheckbox('SpeakerToTalks', 'Talk', trl('Vorträge')))
             ->setShowCheckAllLinks(false)
             ->setValuesSelect($select);
+        $this->add(new Kwf_Form_Field_TextArea('note', trl('Notiz')));
     }
 }
