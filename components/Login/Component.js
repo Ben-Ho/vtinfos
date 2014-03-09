@@ -1,1 +1,1 @@
-Kwf.Utils.ResponsiveEl('.frontend', [673, 1000]);
+Kwf.Utils.ResponsiveEl('.pageWrapper', [673, 1000]);

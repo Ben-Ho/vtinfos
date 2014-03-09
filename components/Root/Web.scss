@@ -19,11 +19,13 @@
 .webStandard li { list-style-type: square; margin-bottom: 5px; line-height: 18px; color: var(typo); }
 
 
-.frontend.gt1000 {
+.frontend .pageWrapper.gt1000 {
     background-image: url('/assets/web/images/background.jpg');
     background-color: black;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
-.frontend {
+.frontend .pageWrapper {
     background-image: none;
 }
 
@@ -33,11 +35,9 @@
     padding: 0;
     @include border-radius-pie(0px);
 }
-.frontend.gt1000 #page {
+.frontend .pageWrapper.gt1000 #page {
     width: 80%;
     margin: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
     padding: 10px;
     background-color: #fff;
     @include border-radius-pie(3px);
@@ -83,7 +83,7 @@
         line-height: 20px;
     }
 }
-.frontend.gt673 #page #outerHeader #header .leftRegion #logo {
+.frontend .pageWrapper.gt673 #page #outerHeader #header .leftRegion #logo {
     height: 61px;
     font-size: 20px;
 

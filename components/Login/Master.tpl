@@ -7,24 +7,26 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
     <body class="frontend login">
-        <div id="page">
-            <div id="outerHeader">
-                <div id="header">
-                    <div class="leftRegion">
-                        <div id="logo" class="logo"><div class="domain">vtinfos</div><div class="tld">.com</div></div>
+        <div class="pageWrapper">
+            <div id="page">
+                <div id="outerHeader">
+                    <div id="header">
+                        <div class="leftRegion">
+                            <div id="logo" class="logo"><div class="domain">vtinfos</div><div class="tld">.com</div></div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div id="outerContent">
-                <div id="content">
-                    <div id="innerContent">
-                        <?=$this->component($this->data);?>
+                <div id="outerContent">
+                    <div id="content">
+                        <div id="innerContent">
+                            <?=$this->component($this->data);?>
+                        </div>
+                        <div class="clear"></div>
                     </div>
-                    <div class="clear"></div>
                 </div>
-            </div>
-            <div id="outerFooter">
-                <div id="footer" class="webStandard">
+                <div id="outerFooter">
+                    <div id="footer" class="webStandard">
+                    </div>
                 </div>
             </div>
         </div>
