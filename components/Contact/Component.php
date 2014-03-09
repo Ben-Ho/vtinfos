@@ -12,12 +12,19 @@ class Contact_Component extends Kwc_Form_Component
 
     protected function _beforeSave(Kwf_Model_Row_Interface $row)
     {
-        $select = new Kwf_Model_Select();
-        $select->whereEquals('role', 'admin');
-        $select->order('received_inquires', 'ASC');
-        $admins = Kwf_Registry::get('userModel')->getRows($select);
-//         $row->addTo($admins[0]->email);
-        $row->addTo('benjamin.hohenwarter@gmail.com');
+        if ($row->topic == 'bug') {
+            $row->addTo('benjamin.hohenwarter@gmail.com');
+        } else if ($row->topic == 'whish') {
+            $row->addTo('stefan');
+        } else {
+            $select = new Kwf_Model_Select();
+            $select->whereEquals('role', 'admin');
+            $select->order('received_inquires', 'ASC');
+            $admins = Kwf_Registry::get('userModel')->getRows($select);
+            $admins[0]->received_inquires++;
+            $admins[0]->save();
+            $row->addTo($admins[0]->email);
+        }
         $row->setFrom($row->email);
         $row->subject = 'Anfrage auf vtinfos';
         parent::_beforeSave($row);
