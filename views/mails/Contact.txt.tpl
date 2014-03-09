@@ -9,11 +9,11 @@ Anfrage über:
     echo 'Sonstiges';
 }?>
 
+
 <?= $this->content; ?>
 
 
-Anfrage wurde gesendet von
-
+Anfrage wurde gesendet von:
 Name: <?= $this->firstname; ?> <?= $this->lastname; ?>
 
 Email: <?= $this->email; ?>
