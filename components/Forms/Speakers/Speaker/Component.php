@@ -7,7 +7,6 @@ class Forms_Speakers_Speaker_Component extends Forms_Speaker_Component
         $ret['hideFormOnSuccess'] = false;
         $ret['generators']['child']['component']['success'] = null;
         $ret['placeholder']['submitButton'] = trlStatic('Speichern');
-        $ret['useAjaxRequest'] = true;
         return $ret;
     }
 
