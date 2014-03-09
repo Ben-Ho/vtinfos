@@ -10,20 +10,6 @@ class Contact_FrontendForm extends Kwf_Form
         parent::_beforeInsert($row);
     }
 
-    protected function _beforeSave(Kwf_Model_Row_Interface $row)
-    {
-        if (isset($_SERVER['HTTP_HOST'])) {
-            $host = $_SERVER['HTTP_HOST'];
-        } else {
-            $host = Kwf_Registry::get('config')->server->domain;
-        }
-
-        $row->addTo('benjamin.hohenwarter@gmail.com');
-        $row->setFrom($row->email);
-        $row->subject = trl('Anfrage auf {0}',$host);
-        parent::_beforeSave($row);
-    }
-
     protected function _init()
     {
         $this->setModel(new Kwf_Model_Mail(array('tpl' => 'Contact')));
