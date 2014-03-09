@@ -2,7 +2,7 @@
     <div class="name"><?=$this->item->getRow()->firstname.' '.$this->item->getRow()->lastname; ?></div>
     <div class="degree">
         <? if ($this->item->getRow()->degree == 'eldest') { ?>
-            <?= $this->data->trl('Ältester'); ?>
+            <?= $this->data->trl('Ä'); ?>
         <? } else if ($this->item->getRow()->degree == 'ministry_assistent') { ?>
             <?= $this->data->trl('DAG'); ?>
         <? } ?>

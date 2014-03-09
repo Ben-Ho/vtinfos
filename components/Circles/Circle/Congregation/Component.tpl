@@ -18,7 +18,7 @@
             <div class="name"><?=$this->coordinator->firstname.' '.$this->coordinator->lastname;?></div>
             <div class="degree">
                 <? if ($this->coordinator->degree == 'eldest') { ?>
-                    <?= $this->data->trl('Ältester'); ?>
+                    <?= $this->data->trl('Ä'); ?>
                 <? } else if ($this->coordinator->degree == 'ministry_assistent') { ?>
                     <?= $this->data->trl('DAG'); ?>
                 <? } ?>
@@ -41,7 +41,7 @@
             <div class="name"><?=$this->talk_organiser->firstname.' '.$this->talk_organiser->lastname;?></div>
             <div class="degree">
                 <? if ($this->talk_organiser->degree == 'eldest') { ?>
-                    <?= $this->data->trl('Ältester'); ?>
+                    <?= $this->data->trl('Ä'); ?>
                 <? } else if ($this->talk_organiser->degree == 'ministry_assistent') { ?>
                     <?= $this->data->trl('DAG'); ?>
                 <? } ?>
@@ -67,7 +67,7 @@
                     <div class="name"><?=$speaker->firstname.' '.$speaker->lastname; ?></div>
                     <div class="degree">
                         <? if ($speaker->degree == 'eldest') { ?>
-                            <?= $this->data->trl('Ältester'); ?>
+                            <?= $this->data->trl('Ä'); ?>
                         <? } else if ($speaker->degree == 'ministry_assistent') { ?>
                             <?= $this->data->trl('DAG'); ?>
                         <? } ?>
