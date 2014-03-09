@@ -19,14 +19,19 @@
 .webStandard li { list-style-type: square; margin-bottom: 5px; line-height: 18px; color: var(typo); }
 
 
-.frontend .pageWrapper.gt1000 {
+html {
     background-image: url('/assets/web/images/background.jpg');
     background-color: black;
+}
+
+.frontend .pageWrapper.gt1000 {
     padding-top: 20px;
     padding-bottom: 20px;
+    background-color: transparent;
 }
 .frontend .pageWrapper {
     background-image: none;
+    background-color: white;
 }
 
 .frontend #page {
