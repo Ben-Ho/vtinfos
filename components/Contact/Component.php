@@ -12,15 +12,14 @@ class Contact_Component extends Kwc_Form_Component
 
     protected function _beforeSave(Kwf_Model_Row_Interface $row)
     {
-        if (isset($_SERVER['HTTP_HOST'])) {
-            $host = $_SERVER['HTTP_HOST'];
-        } else {
-            $host = Kwf_Registry::get('config')->server->domain;
-        }
-
+        $select = new Kwf_Model_Select();
+        $select->whereEquals('role', 'admin');
+        $select->order('received_inquires', 'ASC');
+        $admins = Kwf_Registry::get('userModel')->getRows($select);
+//         $row->addTo($admins[0]->email);
         $row->addTo('benjamin.hohenwarter@gmail.com');
         $row->setFrom($row->email);
-        $row->subject = trl('Anfrage auf {0}',$host);
+        $row->subject = 'Anfrage auf vtinfos';
         parent::_beforeSave($row);
     }
 }
