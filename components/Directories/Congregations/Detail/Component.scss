@@ -1,0 +1,76 @@
+.cssClass {
+    padding: 20px;
+}
+
+.cssClass h1 {
+    margin-bottom: 10px;
+}
+
+.cssClass .coordinator,
+.cssClass .talk-organiser {
+    width: 50%;
+    float: left;
+}
+
+.cssClass.st480 .coordinator,
+.cssClass.st480 .talk-organiser {
+    width: 100%;
+    float: none;
+}
+.cssClass.st480 .talk-organiser {
+    margin-top: 5px;
+}
+
+.cssClass .coordinator .name,
+.cssClass .talk-organiser .name,
+.cssClass .speakers-list .speakers .speaker .name {
+    float: left;
+    margin-right: 3px;
+}
+
+.cssClass .coordinator .degree,
+.cssClass .talk-organiser .degree,
+.cssClass .speakers-list .speakers .speaker .degree {
+    float: left;
+    color: #999999;
+}
+
+.cssClass .coordinator .phone,
+.cssClass .talk-organiser .phone,
+.cssClass .speakers-list .speakers .speaker .phone {
+    clear: left;
+}
+
+.cssClass .congregation-info .address .zip,
+.cssClass .coordinator .address .zip,
+.cssClass .talk-organiser .address .zip,
+.cssClass .coordinator .address .city,
+.cssClass .talk-organiser .address .city {
+    float: left;
+}
+.cssClass .congregation-info .address .zip:after,
+.cssClass .coordinator .address .zip:after,
+.cssClass .talk-organiser .address .zip:after {
+    content: ",";
+    margin-right: 2px;
+}
+
+.cssClass .congregation-info .address .country,
+.cssClass .coordinator .address .country,
+.cssClass .talk-organiser .address .country {
+    clear: left;
+}
+
+.cssClass .speakers-list {
+    margin-top: 20px;
+}
+
+.cssClass .speakers-list .speakers .speaker .talks {
+    padding: 5px;
+}
+
+.cssClass .speakers-list .speakers .speaker table.talks tr td {
+    vertical-align: top;
+    padding-right: 3px;
+    margin-bottom: 3px;
+}

@@ -19,6 +19,11 @@ class Root_Component extends Kwc_Root_Component
             'inherit' => false,
             'unique' => true
         );
+        $ret['generators']['congregations'] = array(
+            'class' => 'Kwf_Component_Generator_Page_Static',
+            'component' => 'Directories_Congregations_Component',
+            'name' => trlStatic('Versammlungen')
+        );
 
         $ret['editComponents'] = array('title', 'metaTags');
 
