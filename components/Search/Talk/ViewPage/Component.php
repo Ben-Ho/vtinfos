@@ -45,4 +45,15 @@ class Search_Talk_ViewPage_Component extends Kwc_Directories_List_ViewPage_Compo
         $ret->whereEquals('deleted', 0);
         return $ret;
     }
+
+    public function getPartialVars($partial, $nr, $info)
+    {
+        $ret = parent::getPartialVars($partial, $nr, $info);
+        $master = $ret['item'];
+        if ($master->componentClass == 'Kwc_Directories_Item_Detail_Trl_Component.Kwc_Directories_Item_Detail_Component') {
+            $master = $master->chained;
+        }
+        $ret['row'] = $master->getRow();
+        return $ret;
+    }
 }

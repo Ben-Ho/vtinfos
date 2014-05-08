@@ -1,16 +1,17 @@
 <?php
-class Root_Component extends Kwc_Root_Component
+class Root_Component extends Kwc_Root_TrlRoot_Component
 {
     public static function getSettings()
     {
         $ret = parent::getSettings();
-
-        $ret['generators']['box']['component']['mainMenu'] = 'Menu_Main_Component';
-        $ret['generators']['box']['component']['subMenu'] = 'Menu_Sub_Component';
-        $ret['generators']['box']['component']['bottomMenu'] = 'Menu_Bottom_Component';
-        $ret['generators']['box']['component']['metaTags'] = 'Kwc_Box_MetaTagsContent_Component';
+        $ret['generators']['master']['component'] = 'Root_Master_Component';
+        $ret['generators']['chained']['component'] = 'Root_Chained_Component.Root_Master_Component';
 
         $ret['generators']['title']['component'] = 'Kwc_Box_TitleEditable_Component';
+        $ret['childModel'] = new Kwc_Root_TrlRoot_Model(array(
+                'de' => 'Deutsch',
+                'en' => 'English'
+        ));
 
         $ret['generators']['login'] = array(
             'class' => 'Kwf_Component_Generator_Page_Static',

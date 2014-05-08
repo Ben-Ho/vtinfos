@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<trl>
+<text>
+<de>Anmelden</de>
+<en>Login</en>
+<id>1</id>
+</text>
+<text>
+<de>Bitte geben Sie Ihre korrekten Zugangsdaten ein!</de>
+<en>Please insert correct username and password!</en>
+<id>2</id>
+</text>
+<text>
+<de>Login</de>
+<en>Login</en>
+<id>3</id>
+</text>
+<text>
+<de>Versammlungs-Kreise</de>
+<en>Congregation-Groups</en>
+<id>4</id>
+</text>
+<text>
+<de>Versammlungen</de>
+<en>Congregations</en>
+<id>5</id>
+</text>
+<text>
+<de>Versammlung</de>
+<en>Congregation</en>
+<id>6</id>
+</text>
+<text>
+<de>Vortragszeit:</de>
+<en>Talk-Time:</en>
+<id>7</id>
+</text>
+<text>
+<de>Predigtdienstschule:</de>
+<en>Ministryschool:</en>
+<id>8</id>
+</text>
+<text>
+<de>Koordinator</de>
+<en>Coordinator</en>
+<id>9</id>
+</text>
+<text>
+<de>Ä</de>
+<en>E</en>
+<id>10</id>
+</text>
+<text>
+<de>DAG</de>
+<en>MA</en>
+<id>11</id>
+</text>
+<text>
+<de>Tel:</de>
+<en>Phone:</en>
+<id>12</id>
+</text>
+<text>
+<de>Koordinator wurde nicht gesetzt!</de>
+<en>Coordinator wasn't set</en>
+<id>13</id>
+</text>
+<text>
+<de>Vortragseinteiler</de>
+<en>Talks-Organiser</en>
+<id>14</id>
+</text>
+<text>
+<de>Vortragseinteiler wurde nicht gesetzt!</de>
+<en>Talks-Organiser wasn't set</en>
+<id>15</id>
+</text>
+<text>
+<de>Redner</de>
+<en>Speaker</en>
+<id>16</id>
+</text>
+<text>
+<de>Suche</de>
+<en>Search</en>
+<id>17</id>
+</text>
+<text>
+<de>Abmelden</de>
+<en>Logout</en>
+<id>18</id>
+</text>
+<text>
+<de>Versammlungen A-Z</de>
+<en>Congregation A-Z</en>
+<id>19</id>
+</text>
+<text>
+<de>Suche nach Vortrag</de>
+<en>Search for Talk</en>
+<id>20</id>
+</text>
+<text>
+<de>Zeige Vorträge</de>
+<en>Show Talks</en>
+<id>21</id>
+</text>
+<text>
+<de>Suchfomular (Vortrag)</de>
+<en>Searchform (Talk)</en>
+<id>22</id>
+</text>
+<text>
+<de>Vortragsnummer/-titel</de>
+<en>Talknumber/-title</en>
+<id>23</id>
+</text>
+<text>
+<de>Vorname</de>
+<en>First name</en>
+<id>24</id>
+</text>
+<text>
+<de>Nachname</de>
+<en>Last name</en>
+<id>25</id>
+</text>
+<text>
+<de>Luftlinie (km)</de>
+<en>Beeline (km)</en>
+<id>26</id>
+</text>
+<text>
+<de>Rednerformular</de>
+<en>Speakerform</en>
+<id>27</id>
+</text>
+<text>
+<de>Anlegen</de>
+<en>Create</en>
+<id>28</id>
+</text>
+<text>
+<de>Dir ist keine Versammlung zugewiesen. Deswegen kannst du keine Redner anlegen.</de>
+<en>No congregation assigned to you. So you can't create a speaker.</en>
+<id>29</id>
+</text>
+<text>
+<de>Vorrecht</de>
+<en>Privilege</en>
+<id>30</id>
+</text>
+<text>
+<de>Ältester</de>
+<en>Eldest</en>
+<id>31</id>
+</text>
+<text>
+<de>Dienstamtgehilfe</de>
+<en>Ministry-Assistent</en>
+<id>32</id>
+</text>
+<text>
+<de>Straße</de>
+<en>Street</en>
+<id>33</id>
+</text>
+<text>
+<de>PLZ</de>
+<en>Postal</en>
+<id>34</id>
+</text>
+<text>
+<de>Stadt</de>
+<en>City</en>
+<id>35</id>
+</text>
+<text>
+<de>Land</de>
+<en>Country</en>
+<id>36</id>
+</text>
+<text>
+<de>Österreich</de>
+<en>Austria</en>
+<id>37</id>
+</text>
+<text>
+<de>Deutschland</de>
+<en>Germany</en>
+<id>38</id>
+</text>
+<text>
+<de>Telefonnummer</de>
+<en>Phonenumber</en>
+<id>39</id>
+</text>
+<text>
+<de>Email-Adresse</de>
+<en>E-Mail-Address</en>
+<id>40</id>
+</text>
+<text>
+<de>Vorträge</de>
+<en>Talks</en>
+<id>41</id>
+</text>
+<text>
+<de>Notiz</de>
+<en>Note</en>
+<id>42</id>
+</text>
+<text>
+<de>Rednerformular Liste</de>
+<en>Speakerform list</en>
+<id>43</id>
+</text>
+<text>
+<de>Meine Redner</de>
+<en>My Speakers</en>
+<id>44</id>
+</text>
+<text>
+<de>Redner bearbeiten</de>
+<en>Edit speakers</en>
+<id>45</id>
+</text>
+<text>
+<de>Neuen Redner anlegen</de>
+<en>Create new speaker</en>
+<id>46</id>
+</text>
+<text>
+<de>Speichern</de>
+<en>Save</en>
+<id>47</id>
+</text>
+<text>
+<de>Redner löschen</de>
+<en>Delete speaker</en>
+<id>48</id>
+</text>
+<text>
+<de>Versammlungsformular</de>
+<en>Congregationform</en>
+<id>49</id>
+</text>
+<text>
+<de>Versammlung bearbeiten</de>
+<en>Edit congregation</en>
+<id>50</id>
+</text>
+<text>
+<de>Name</de>
+<en>Name</en>
+<id>51</id>
+</text>
+<text>
+<de>Vortragszeit</de>
+<en>Talk-time</en>
+<id>52</id>
+</text>
+<text>
+<de>Predigtdienstschulzeit</de>
+<en>Ministry-School-time</en>
+<id>53</id>
+</text>
+<text>
+<de>Kontakt-Formular</de>
+<en>Contactform</en>
+<id>54</id>
+</text>
+<text>
+<de>Abschicken</de>
+<en>Send</en>
+<id>55</id>
+</text>
+<text>
+<de>Kontakt</de>
+<en>Contact</en>
+<id>56</id>
+</text>
+<text>
+<de>Grund</de>
+<en>Reason</en>
+<id>57</id>
+</text>
+<text>
+<de>Neue Versammlung</de>
+<en>New Congregation</en>
+<id>58</id>
+</text>
+<text>
+<de>Fehler auf Seite gefunden</de>
+<en>Error found on page</en>
+<id>59</id>
+</text>
+<text>
+<de>Wunsch</de>
+<en>Wish</en>
+<id>60</id>
+</text>
+<text>
+<de>Sonstiges</de>
+<en>Other</en>
+<id>61</id>
+</text>
+<text>
+<de>Vortragsthemen</de>
+<en>Talk-Topics</en>
+<id>62</id>
+</text>
+<text>
+<de>ID-Auswahl</de>
+<en>ID-Selection</en>
+<id>65</id>
+</text>
+<text>
+<de>Nummer</de>
+<en>Number</en>
+<id>66</id>
+</text>
+<text>
+<de>Titel</de>
+<en>Title</en>
+<id>67</id>
+</text>
+<text>
+<de>Gelöscht</de>
+<en>Deleted</en>
+<id>68</id>
+</text>
+<text>
+<de>Ort</de>
+<en>City</en>
+<id>69</id>
+</text>
+<text>
+<de>Telefon</de>
+<en>Phone</en>
+<id>70</id>
+</text>
+<text>
+<de>Email</de>
+<en>E-Mail</en>
+<id>71</id>
+</text>
+<text>
+<de>Vortrag Zeit/Tag</de>
+<en>Talk Time/Day</en>
+<id>72</id>
+</text>
+<text>
+<de>Predigtdienstschule Zeit/Tag</de>
+<en>Ministry-School Time/Date</en>
+<id>73</id>
+</text>
+<text>
+<de>Kreise</de>
+<en>Groups</en>
+<id>74</id>
+</text>
+</trl>
+
