@@ -7,13 +7,17 @@ class Forms_Speakers_Speaker_Component extends Forms_Speaker_Component
         $ret['hideFormOnSuccess'] = false;
         $ret['generators']['child']['component']['success'] = null;
         $ret['placeholder']['submitButton'] = trlStatic('Speichern');
+        $ret['viewCache'] = false;
         return $ret;
     }
 
-    public function getTemplateVars(Kwf_Component_Renderer_Abstract $renderer = null)
+    protected function _initForm()
     {
-        $this->getForm()->setId($this->getData()->getRow()->id);
-        $ret = parent::getTemplateVars($renderer);
-        return $ret;
+        parent::_initForm();
+        $data = $this->getData();
+        if ($this->getData()->getParent()->componentClass != 'Forms_Speakers_Component') {
+            $data = $this->getData()->getParent();
+        }
+        $this->getForm()->setId($data->getRow()->id);
     }
 }

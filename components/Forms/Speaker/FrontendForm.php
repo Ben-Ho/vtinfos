@@ -6,31 +6,31 @@ class Forms_Speaker_FrontendForm extends Kwf_Form
     protected function _initFields()
     {
         parent::_initFields();
-        $this->add(new Kwf_Form_Field_TextField('firstname', trl('Vorname')));
-        $this->add(new Kwf_Form_Field_TextField('lastname', trl('Nachname')));
-        $selectBox = new Kwf_Form_Field_Select('degree', trl('Vorrecht'));
+        $this->add(new Kwf_Form_Field_TextField('firstname', trlStatic('Vorname')));
+        $this->add(new Kwf_Form_Field_TextField('lastname', trlStatic('Nachname')));
+        $selectBox = new Kwf_Form_Field_Select('degree', trlStatic('Vorrecht'));
         $selectBox->setValues(array(
-            'eldest' => trl('Ältester'),
-            'ministry_assistent' => trl('Dienstamtgehilfe')
+            'eldest' => trlStatic('Ältester'),
+            'ministry_assistent' => trlStatic('Dienstamtgehilfe')
         ));
         $this->add($selectBox);
-        $this->add(new Kwf_Form_Field_TextField('street', trl('Straße')));
-        $this->add(new Kwf_Form_Field_TextField('zip', trl('PLZ')));
-        $this->add(new Kwf_Form_Field_TextField('city', trl('Stadt')));
-        $selectBox = new Kwf_Form_Field_Select('country', trl('Land'));
+        $this->add(new Kwf_Form_Field_TextField('street', trlStatic('Straße')));
+        $this->add(new Kwf_Form_Field_TextField('zip', trlStatic('PLZ')));
+        $this->add(new Kwf_Form_Field_TextField('city', trlStatic('Stadt')));
+        $selectBox = new Kwf_Form_Field_Select('country', trlStatic('Land'));
         $selectBox->setValues(array(
-            'Österreich' => trl('Österreich'),
-            'Deutschland' => trl('Deutschland')
+            'Österreich' => trlStatic('Österreich'),
+            'Deutschland' => trlStatic('Deutschland')
         ));
         $this->add($selectBox);
-        $this->add(new Kwf_Form_Field_TextField('phone', trl('Telefonnummer')));
-        $this->add(new Kwf_Form_Field_TextField('email', trl('Email-Adresse')));
+        $this->add(new Kwf_Form_Field_TextField('phone', trlStatic('Telefonnummer')));
+        $this->add(new Kwf_Form_Field_TextField('email', trlStatic('Email-Adresse')));
 
         $select = new Kwf_Model_Select();
         $select->order('number');
-        $this->add(new Kwf_Form_Field_MultiCheckbox('SpeakerToTalks', 'Talk', trl('Vorträge')))
+        $this->add(new Kwf_Form_Field_MultiCheckbox('SpeakerToTalks', 'Talk', trlStatic('Vorträge')))
             ->setShowCheckAllLinks(false)
             ->setValuesSelect($select);
-        $this->add(new Kwf_Form_Field_TextArea('note', trl('Notiz')));
+        $this->add(new Kwf_Form_Field_TextArea('note', trlStatic('Notiz')));
     }
 }
