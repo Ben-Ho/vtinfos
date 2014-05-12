@@ -13,19 +13,6 @@ class Root_Component extends Kwc_Root_TrlRoot_Component
                 'en' => 'English'
         ));
 
-        $ret['generators']['login'] = array(
-            'class' => 'Kwf_Component_Generator_Page_Static',
-            'component' => 'Login_Component',
-            'name' => trlStatic('Login'),
-            'inherit' => false,
-            'unique' => true
-        );
-        $ret['generators']['congregations'] = array(
-            'class' => 'Kwf_Component_Generator_Page_Static',
-            'component' => 'Directories_Congregations_Component',
-            'name' => trlStatic('Versammlungen')
-        );
-
         $ret['editComponents'] = array('title', 'metaTags');
 
         $ret['contentWidth'] = 780;

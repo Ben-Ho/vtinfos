@@ -15,11 +15,13 @@ class Root_Master_Component extends Kwc_Root_TrlRoot_Master_Component
 //             'inherit' => true
 //        );
 
-//         $ret['generators']['searchPage'] = array(
-//             'class' => 'Kwf_Component_Generator_Page_Static',
-//             'component' => 'FulltextSearch_Search_Component',
-//             'name' => trlStatic('Suche')
-//         );
+        $ret['generators']['login'] = array(
+            'class' => 'Kwf_Component_Generator_Page_Static',
+            'component' => 'Login_Component',
+            'name' => trlStatic('Login'),
+            'inherit' => false,
+            'unique' => true
+        );
 
         $ret['editComponents'] = array('metaTags', 'flag');
         return $ret;

@@ -5,11 +5,10 @@ class Directories_Congregations_Component extends Kwc_Directories_ItemPage_Direc
     {
         $ret = parent::getSettings();
         $ret['generators']['detail']['model'] = 'Congregations';
-//         $ret['generators']['child']['component']['view'] = 'Directories_Congregations_ViewPage_Component';
+        $ret['generators']['detail']['class'] = 'Directories_Congregations_Generator';
         $ret['generators']['detail']['component'] = 'Directories_Congregations_Detail_Component';
-        $ret['generators']['detail']['dbIdShortcut'] = 'congregation_';
         $ret['extConfig'] = 'Kwf_Component_Abstract_ExtConfig_None';
-        $ret['componentName'] = trlStatic('Versammlungen A-Z2');
+        $ret['componentName'] = trlStatic('Versammlungen A-Z');
         $ret['useDirectorySelect'] = false;
         return $ret;
     }
