@@ -3,6 +3,7 @@
     <head>
         <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
         <?=$this->includeCode('header')?>
+        <meta name="mobile-web-app-capable" content="yes">
         <link rel="shortcut icon" href="/assets/web/images/favicon.ico" />
         <link rel="shortcut icon" href="/assets/web/images/favicon.ico" type="image/x-icon" />
         <link rel="apple-touch-icon" href="/assets/web/images/apple-touch-icon.png" />

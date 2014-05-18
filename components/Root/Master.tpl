@@ -3,6 +3,7 @@
     <head>
         <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
         <?=$this->includeCode('header')?>
+        <meta name="mobile-web-app-capable" content="yes">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="shortcut icon" href="/assets/web/images/favicon.ico" />
         <link rel="shortcut icon" href="/assets/web/images/favicon.ico" type="image/x-icon" />
