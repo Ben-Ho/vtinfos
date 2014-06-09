@@ -50,6 +50,7 @@
                 <div id="outerFooter">
                     <div id="footer" class="webStandard">
                         <?=$this->component($this->boxes['bottomMenu']);?>
+                        <?=$this->component($this->boxes['languageSwitcher']);?>
                     </div>
                 </div>
             </div>
