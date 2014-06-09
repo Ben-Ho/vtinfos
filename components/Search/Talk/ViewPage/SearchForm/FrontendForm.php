@@ -15,6 +15,6 @@ class Search_Talk_ViewPage_SearchForm_FrontendForm extends Kwf_Form
         $congregationRows = Kwf_Model_Abstract::getInstance('Congregations')->getRows($select);
         $comboBox->setValues($congregationRows);
         $this->add($comboBox);
-        $this->add(new Kwf_Form_Field_TextField('distance', trlStatic('Luftlinie (km)')));
+//         $this->add(new Kwf_Form_Field_TextField('distance', trlStatic('Luftlinie (km)')));
     }
 }
