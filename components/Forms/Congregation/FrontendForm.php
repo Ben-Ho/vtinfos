@@ -10,12 +10,8 @@ class Forms_Congregation_FrontendForm extends Kwf_Form
         $this->add(new Kwf_Form_Field_TextField('street', trlStatic('Straße')));
         $this->add(new Kwf_Form_Field_TextField('zip', trlStatic('PLZ')));
         $this->add(new Kwf_Form_Field_TextField('city', trlStatic('Stadt')));
-        $selectBox = new Kwf_Form_Field_Select('country', trlStatic('Land'));
-        $selectBox->setValues(array(
-            'Österreich' => trlStatic('Österreich'),
-            'Deutschland' => trlStatic('Deutschland')
-        ));
-        $this->add($selectBox);
+        $this->add(new Kwf_Form_Field_SelectCountry('country', trlStatic('Land')))
+            ->setDefaultValue('AT');
         $this->add(new Kwf_Form_Field_TextField('talk_time', trlStatic('Vortragszeit')));
         $this->add(new Kwf_Form_Field_TextField('ministryschool_time', trlStatic('Predigtdienstschulzeit')));
 
