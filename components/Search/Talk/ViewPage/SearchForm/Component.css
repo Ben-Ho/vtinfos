@@ -1,3 +1,8 @@
+.cssClass.kwcForm {
+    display: table;
+    margin: auto;
+}
+
 .cssClass.kwcForm .kwcForm .submitWrapper .button {
     background-color: #085AC0;
     background-image: none;
