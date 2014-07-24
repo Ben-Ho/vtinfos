@@ -1,4 +1,4 @@
 <div class="<?=$this->cssClass?>">
-    <h1 class="mainHeadline"><?=$this->data->trl('Vortragseinteiler - Zugangsdaten')?></h1>
+    <h2><?=$this->data->trl('Kontaktdaten')?></h2>
     <?=$this->component($this->form)?>
 </div>
