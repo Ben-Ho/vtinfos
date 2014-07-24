@@ -54,6 +54,7 @@ class Search_Talk_ViewPage_Component extends Kwc_Directories_List_ViewPage_Compo
             $master = $master->chained;
         }
         $ret['row'] = $master->getRow();
+        $ret['cssClass'] = 'speaker';
         return $ret;
     }
 }

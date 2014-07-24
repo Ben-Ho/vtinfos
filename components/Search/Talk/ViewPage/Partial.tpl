@@ -1,4 +1,4 @@
-<li class="speaker">
+<li class="<?=$this->cssClass;?>">
     <div class="name"><?=$this->row->firstname.' '.$this->row->lastname; ?></div>
     <div class="degree">
         <? if ($this->row->degree == 'eldest') { ?>
@@ -12,13 +12,14 @@
     <div class="email"><a href="mailto:<?=$this->row->email; ?>"><?=$this->row->email; ?></a></div>
     <div class="kwfSwitchDisplay">
         <a class="switchLink"><?=$this->data->trl('Zeige Vorträge');?></a>
-        <table class="talks switchContent">
-            <? $select = new Kwf_Model_Select(); ?>
-            <? $select->order('number');?>
-            <? foreach ($this->row->getChildRows('SpeakerToTalks', $select) as $talk) { ?>
-                <tr><td><?=$talk->number;?></td><td><?=$talk->title;?></td></tr>
-            <? } ?>
-        </table>
+        <div class="switchContent">
+            <table class="talks">
+                <? $select = new Kwf_Model_Select(); ?>
+                <? $select->order('number');?>
+                <? foreach ($this->row->getChildRows('SpeakerToTalks', $select) as $talk) { ?>
+                    <tr><td><?=$talk->number;?></td><td><?=$talk->title;?></td></tr>
+                <? } ?>
+            </table>
+        </div>
     </div>
-    <hr />
 </li>
