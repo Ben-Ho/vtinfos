@@ -1,6 +1,6 @@
 <?php
 chdir(dirname(__FILE__));
-require_once '../kwf-lib/Kwf/Setup.php';
+require_once 'kwf-lib/Kwf/Setup.php';
 Kwf_Setup::setUp();
 Kwf_Setup::dispatchKwc();
 Kwf_Setup::dispatchMedia();
