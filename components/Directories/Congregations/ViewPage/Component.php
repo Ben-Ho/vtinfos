@@ -5,6 +5,7 @@ class Directories_Congregations_ViewPage_Component extends Kwc_Directories_List_
     {
         $ret = parent::getSettings();
         $ret['plugins'] = array('Login_Plugin_Component');
+        unset($ret['generators']['child']['component']['paging']);
         return $ret;
     }
 }
