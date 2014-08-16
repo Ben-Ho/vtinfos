@@ -6,6 +6,7 @@ class Talks extends Kwf_Model_Db
     protected $_rowClass = 'Rows_Talk';
 
     protected $_dependentModels = array(
-        'TalkToSpeakers' => 'SpeakersToTalks'
+        'TalkToSpeakers' => 'SpeakersToTalks',
+        'TalkTitles' => 'TalkTitles'
     );
 }

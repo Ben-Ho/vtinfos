@@ -15,6 +15,7 @@ class Talks_Component extends Kwc_Abstract
         $select = new Kwf_Model_Select();
         $select->order('number');
         $ret['talks'] = Kwf_Model_Abstract::getInstance('Talks')->getRows($select);
+        $ret['language'] = $this->getData()->getLanguage();
         return $ret;
     }
 }
