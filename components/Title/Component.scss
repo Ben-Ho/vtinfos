@@ -1,0 +1,28 @@
+.cssClass {
+    background-color: #085ac0;
+    .logo {
+        padding: 5px;
+        display: block;
+        background-color: #fff;
+        color: #085ac0;
+        font-weight: bold;
+    }
+    .mobileTitle {
+        padding: 5px;
+        font-size: 20px;
+        .logo, .title, .handle {
+            display: table-cell;
+        }
+        .handle {
+            padding: 5px;
+            background-color: #fff;
+            color: #085ac0;
+        }
+        .title {
+            width: 100%;
+            color: #fff;
+            font-weight: bold;
+            padding-left: 10px;
+        }
+    }
+}
