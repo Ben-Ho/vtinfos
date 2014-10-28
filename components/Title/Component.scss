@@ -25,4 +25,9 @@
             padding-left: 10px;
         }
     }
+    &.gt400 {
+        .handle {
+            display: none;
+        }
+    }
 }

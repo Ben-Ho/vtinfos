@@ -1,4 +1,4 @@
-// Kwf.Utils.ResponsiveEl('.cssClass', []);
+Kwf.Utils.ResponsiveEl('.cssClass', [400, 800]);
 Kwf.onJElementReady('.cssClass', function (el) {
     $(window).scroll(function (event, a, b, c, d) {
         if ($(window).scrollTop() == 0) {
@@ -18,9 +18,26 @@ Kwf.onJElementReady('.cssClass', function (el) {
                 height: height
             });
         } else {
-            menu.animate({
-                height: 0
-            });
+            menu.height(0);
         }
     });
+
+    $(el).find('ul.menu > li').hover(
+        function (event) {
+            if (!$(event.currentTarget).closest('.title').hasClass('gt400'))
+                return;
+            $(event.currentTarget).addClass('hover');
+            if ($(event.currentTarget).find('ul').length > 0) {
+                $(event.currentTarget).closest('.menuMain').height(80);
+                $(event.currentTarget).find('ul.subMenu').css('display', 'table');
+            }
+        },
+        function (event) {
+            if (!$(event.currentTarget).closest('.title').hasClass('gt400'))
+                return;
+            $(event.currentTarget).removeClass('hover');
+            $(event.currentTarget).closest('.menuMain').height(40);
+            $(event.currentTarget).find('ul.subMenu').css('display', 'none');
+        }
+    )
 });
