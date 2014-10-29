@@ -8,6 +8,10 @@ class Congregations extends Kwf_Model_Db
         'Circle' => array(
             'refModelClass' => 'Circles',
             'column' => 'circle_id'
+        ),
+        'Adress' => array(
+            'refModelClass' => 'CongregationAddresses',
+            'column' => 'address_id'
         )
     );
 
