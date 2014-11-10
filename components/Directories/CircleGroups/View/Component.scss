@@ -1,0 +1,41 @@
+.cssClass {
+    .directoriesCircleGroupsDetail {
+        -webkit-transition: all 0.5s; /* For Safari 3.1 to 6.0 */
+        transition: all 0.5s;
+        height: 100px;
+        overflow: hidden;
+        margin-bottom: 15px;
+        &:hover, .selected {
+            height: auto;
+            box-shadow: 0px 3px 3px #888;
+        }
+    }
+    &.gt400 {
+        .directoriesCircleGroupsDetail {
+            height: auto;
+            float: left;
+            width: 49.5%;
+            &.second {
+                clear: both;
+                margin-right: 1%;
+            }
+        }
+    }
+    &.gt400.gt800 {
+        .directoriesCircleGroupsDetail {
+            float: left;
+            width: 33%;
+            margin-right: 0%;
+            margin-left: 0.5%;
+
+            &.second {
+                clear: none;
+                margin-right: 0;
+            }
+            &.third {
+                clear: both;
+                margin-left: 0;
+            }
+        }
+    }
+}

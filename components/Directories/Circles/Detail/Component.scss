@@ -1,0 +1,14 @@
+.cssClass {
+    h3 {
+        padding-left: 10px;
+    }
+    ul {
+        > span {
+            margin-left: 15px;
+        }
+        li > a {
+            padding: 0px 5px 0px 15px;
+            display: block;
+        }
+    }
+}
