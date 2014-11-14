@@ -24,6 +24,7 @@ class Forms_Speaker_FrontendForm extends Kwf_Form
         ));
         $this->add($selectBox);
         $this->add(new Kwf_Form_Field_TextField('phone', trlStatic('Telefonnummer')));
+        $this->add(new Kwf_Form_Field_TextField('phone2', trlStatic('Telefonnummer2')));
         $this->add(new Kwf_Form_Field_TextField('email', trlStatic('Email-Adresse')));
 
         $select = new Kwf_Model_Select();
