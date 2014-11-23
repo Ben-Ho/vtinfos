@@ -12,6 +12,10 @@ class Rows_Talk extends Kwf_Model_Db_Row
         $select->whereEquals('language', $language);
         $select->limit(1);
         $rows = $this->getChildRows('TalkTitles', $select);
-        return $rows[0]->title;
+        if (count($rows) == 0) {
+            return $this->title;
+        } else {
+            return $rows[0]->title;
+        }
     }
 }
