@@ -8,6 +8,7 @@ class Search_Talk_ViewPage_SearchForm_Component extends Kwc_Form_Component
         $ret['generators']['child']['component']['success'] = false;
         $ret['useAjaxRequest'] = false;
         $ret['method'] = 'get';
+        $ret['placeholder']['submitButton'] = trlKwfStatic('Search');
         return $ret;
     }
 }
