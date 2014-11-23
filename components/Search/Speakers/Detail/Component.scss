@@ -1,0 +1,25 @@
+.cssClass {
+    .name {
+        float: left;
+        margin-right: 3px;
+    }
+    .degree {
+        float: left;
+        color: #999999;
+    }
+    .congregation {
+        clear: left;
+    }
+    table.talks tr td {
+        vertical-align: top;
+        padding-right: 3px;
+        margin-bottom: 3px;
+    }
+    .switchContent {
+        position: absolute;
+        top: 90px;
+        background-color: wheat;
+        box-shadow: 1px 1px 1px black;
+        padding: 5px;
+    }
+}

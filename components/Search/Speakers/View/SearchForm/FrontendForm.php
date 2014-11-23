@@ -1,5 +1,5 @@
 <?php
-class Search_Talk_ViewPage_SearchForm_FrontendForm extends Kwf_Form
+class Search_Speakers_View_SearchForm_FrontendForm extends Kwf_Form
 {
     protected function _initFields()
     {

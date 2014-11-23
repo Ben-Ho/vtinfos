@@ -1,4 +1,4 @@
-<li class="<?=$this->cssClass;?>">
+<div class="<?=$this->cssClass;?>">
     <div class="name"><?=$this->row->firstname.' '.$this->row->lastname; ?></div>
     <div class="degree">
         <? if ($this->row->degree == 'eldest') { ?>
@@ -22,4 +22,4 @@
             </table>
         </div>
     </div>
-</li>
+</div>

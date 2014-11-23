@@ -1,5 +1,5 @@
 <?php
-class Search_Talk_ViewPage_SearchForm_Component extends Kwc_Form_Component
+class Search_Speakers_View_SearchForm_Component extends Kwc_Form_Component
 {
     public static function getSettings()
     {

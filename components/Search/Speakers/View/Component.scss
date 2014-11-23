@@ -1,0 +1,15 @@
+.cssClass {
+    .viewContainer {
+        margin-top: 20px;
+    }
+    .kwfViewAjaxItem {
+        min-height: 100px;
+        padding-left: 5px;
+        margin-bottom: 20px;
+        position: relative;
+    }
+    &.gt350 .kwfViewAjaxItem {
+        width: 49%;
+        float: left;
+    }
+}

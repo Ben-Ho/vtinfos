@@ -1,11 +1,10 @@
 <?php
-class Search_Talk_ViewPage_Component extends Kwc_Directories_List_ViewPage_Component
+class Search_Speakers_View_Component extends Kwc_Directories_List_ViewAjax_Component
 {
     public static function getSettings()
     {
         $ret = parent::getSettings();
-        $ret['generators']['child']['component']['searchForm'] = 'Search_Talk_ViewPage_SearchForm_Component';
-        $ret['searchQueryFields'] = 'firstname';
+        $ret['generators']['child']['component']['searchForm'] = 'Search_Speakers_View_SearchForm_Component';
         $ret['plugins'] = array('Login_Plugin_Component');
         $ret['assets']['dep'][] = 'KwfSwitchDisplay';
         return $ret;
@@ -43,18 +42,6 @@ class Search_Talk_ViewPage_Component extends Kwc_Directories_List_ViewPage_Compo
             $ret->where(new Kwf_Model_Select_Expr_Area($latitude, $longitude, $searchRow->distance));
         }
         $ret->whereEquals('deleted', 0);
-        return $ret;
-    }
-
-    public function getPartialVars($partial, $nr, $info)
-    {
-        $ret = parent::getPartialVars($partial, $nr, $info);
-        $master = $ret['item'];
-        if ($master->componentClass == 'Kwc_Directories_Item_Detail_Trl_Component.Kwc_Directories_Item_Detail_Component') {
-            $master = $master->chained;
-        }
-        $ret['row'] = $master->getRow();
-        $ret['cssClass'] = 'speaker';
         return $ret;
     }
 }
