@@ -1,0 +1,17 @@
+.cssClass {
+    .filter {
+        display: table;
+        margin: auto;
+        margin-bottom: 15px;
+    }
+    ul {
+        li {
+            list-style: none;
+            float: left;
+            width: 25%;
+            &.filtered {
+                display: none;
+            }
+        }
+    }
+}
