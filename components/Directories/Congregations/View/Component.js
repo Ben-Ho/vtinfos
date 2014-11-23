@@ -1,3 +1,4 @@
+Kwf.Utils.ResponsiveEl('.cssClass', [400, 800]);
 Kwf.onJElementReady('.cssClass', function (el) {
     $(el).find('.filter').keyup(function (input) {
         var searchQuery = $(input.currentTarget).val().toUpperCase();

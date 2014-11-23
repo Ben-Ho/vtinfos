@@ -5,12 +5,31 @@
         margin-bottom: 15px;
     }
     ul {
+        margin: 0px;
         li {
             list-style: none;
             float: left;
-            width: 25%;
+            width: 100%;
+            a {
+                display: block;
+                width: 100%;
+            }
             &.filtered {
                 display: none;
+            }
+        }
+    }
+    &.gt400 {
+        ul {
+            li {
+                width: 33%;
+            }
+        }
+    }
+    &.gt800 {
+        ul {
+            li {
+                width: 25%;
             }
         }
     }
