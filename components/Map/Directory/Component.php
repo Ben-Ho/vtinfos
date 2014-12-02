@@ -6,7 +6,7 @@ class Map_Directory_Component extends Kwc_Directories_Item_DirectoryNoAdmin_Comp
         $ret = parent::getSettings();
         $ret['generators']['detail']['component'] = 'Map_Detail_Component';
         $ret['generators']['child']['component']['view'] = 'Map_ViewMap_Component';
-        $ret['childModel'] = 'CongregationAddresses';
+        $ret['childModel'] = 'Map_Directory_AddressesModel';
         $ret['componentName'] = trlStatic('Versammlungen Karte');
         $ret['cssClass'] = 'webStandard';
         $ret['plugins'] = array('Login_Plugin_Component');
