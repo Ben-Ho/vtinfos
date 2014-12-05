@@ -1,4 +1,11 @@
 .cssClass {
+    -webkit-transition: all 0.5s; /* For Safari 3.1 to 6.0 */
+    transition: all 0.5s;
+    background-color: #eee;
+    padding: 5px;
+    &:hover {
+        box-shadow: 0px 3px 3px #888;
+    }
     .name {
         float: left;
         margin-right: 3px;
@@ -14,12 +21,5 @@
         vertical-align: top;
         padding-right: 3px;
         margin-bottom: 3px;
-    }
-    .switchContent {
-        position: absolute;
-        top: 90px;
-        background-color: wheat;
-        box-shadow: 1px 1px 1px black;
-        padding: 5px;
     }
 }
