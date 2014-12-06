@@ -6,14 +6,22 @@ class Forms_Congregation_FrontendForm extends Kwf_Form
     protected function _initFields()
     {
         parent::_initFields();
-        $this->add(new Kwf_Form_Field_TextField('name', trlStatic('Name')));
-        $this->add(new Kwf_Form_Field_TextField('street', trlStatic('Straße')));
-        $this->add(new Kwf_Form_Field_TextField('zip', trlStatic('PLZ')));
-        $this->add(new Kwf_Form_Field_TextField('city', trlStatic('Stadt')));
+        $width = 250;
+        $this->add(new Kwf_Form_Field_TextField('name', trlStatic('Name')))
+            ->setWidth($width);
+        $this->add(new Kwf_Form_Field_TextField('street', trlStatic('Straße')))
+            ->setWidth($width);
+        $this->add(new Kwf_Form_Field_TextField('zip', trlStatic('PLZ')))
+            ->setWidth($width);
+        $this->add(new Kwf_Form_Field_TextField('city', trlStatic('Stadt')))
+            ->setWidth($width);
         $this->add(new Kwf_Form_Field_SelectCountry('country', trlStatic('Land')))
-            ->setDefaultValue('AT');
-        $this->add(new Kwf_Form_Field_TextField('talk_time', trlStatic('Vortragszeit')));
-        $this->add(new Kwf_Form_Field_TextField('ministryschool_time', trlStatic('Predigtdienstschulzeit')));
+            ->setDefaultValue('AT')
+            ->setWidth($width);
+        $this->add(new Kwf_Form_Field_TextField('talk_time', trlStatic('Vortragszeit')))
+            ->setWidth($width);
+        $this->add(new Kwf_Form_Field_TextField('ministryschool_time', trlStatic('Predigtdienstschulzeit')))
+            ->setWidth($width);
 
         $select = new Kwf_Model_Select();
         $user = Kwf_Registry::get('userModel')->getAuthedUser();
@@ -21,10 +29,8 @@ class Forms_Congregation_FrontendForm extends Kwf_Form
         $select->whereEquals('deleted', 0);
         $speakerRows = Kwf_Model_Abstract::getInstance('Speakers')->getRows($select);
         $selectBox = new Kwf_Form_Field_Select('coordinator', trlStatic('Koordinator'));
-        $selectBox->setValues($speakerRows);
-        $this->add($selectBox);
-        $selectBox = new Kwf_Form_Field_Select('talk_organiser', trlStatic('Vortragseinteiler'));
-        $selectBox->setValues($speakerRows);
+        $selectBox->setValues($speakerRows)
+            ->setWidth($width);
         $this->add($selectBox);
     }
 
