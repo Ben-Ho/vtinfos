@@ -361,12 +361,33 @@
 <id>74</id>
 </text>
 <text>
+<id>75</id>
 <de>Kontaktdaten</de>
 <en>Contact-Data</en>
 </text>
 <text>
+<id>76</id>
 <de>Passwort ändern</de>
 <en>Change password</en>
 </text>
+<text>
+<id>77</id>
+<de>Suchfeld</de>
+<en>Searchfield</en>
+</text>
+<text>
+<id>78</id>
+<de>Stunden</de>
+<en>hours</en>
+</text>
+<text>
+<id>79</id>
+<de>Minuten</de>
+<en>minutes</en>
+</text>
+<text>
+<id>80</id>
+<de>Hält keine Vorträge</de>
+<en>Does not give lectures</en>
+</text>
 </trl>
-

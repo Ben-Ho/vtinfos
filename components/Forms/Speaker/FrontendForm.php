@@ -33,7 +33,7 @@ class Forms_Speaker_FrontendForm extends Kwf_Form
 //         $this->add($selectBox);
         $this->add(new Kwf_Form_Field_TextField('phone', trlStatic('Telefonnummer')))
             ->setWidth($width);
-        $this->add(new Kwf_Form_Field_TextField('phone2', trlStatic('Telefonnummer2')))
+        $this->add(new Kwf_Form_Field_TextField('phone2', trlStatic('Telefonnummer').' 2'))
             ->setWidth($width);
         $this->add(new Kwf_Form_Field_TextField('email', trlStatic('Email-Adresse')))
             ->setWidth($width);
