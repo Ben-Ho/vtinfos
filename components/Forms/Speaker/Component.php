@@ -9,6 +9,7 @@ class Forms_Speaker_Component extends Kwc_Form_Component
         $ret['placeholder']['submitButton'] = trlStatic('Anlegen');
         $ret['viewCache'] = false;
         $ret['useAjaxRequest'] = false;
+        $ret['plugins'] = array('Login_Plugin_Component');
         return $ret;
     }
 

@@ -5,6 +5,7 @@ class Map_Detail_Component extends Kwc_Directories_Item_Detail_Component
     {
         $ret = parent::getSettings();
         $ret['generators']['child']['component']['drivetime'] = 'Map_Detail_Drivetime_Component';
+        $ret['plugins'] = array('Login_Plugin_Component');
         return $ret;
     }
 

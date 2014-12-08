@@ -9,6 +9,7 @@ class Search_Speakers_Directory_Component extends Kwc_Directories_ItemPage_Direc
         $ret['generators']['child']['component']['view'] = 'Search_Speakers_View_Component';
         $ret['extConfig'] = 'Kwf_Component_Abstract_ExtConfig_None';
         $ret['componentName'] = trlStatic('Suche nach Vortrag');
+        $ret['plugins'] = array('Login_Plugin_Component');
         return $ret;
     }
 }

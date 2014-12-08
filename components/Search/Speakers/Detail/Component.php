@@ -4,6 +4,7 @@ class Search_Speakers_Detail_Component extends Kwc_Directories_Item_Detail_Compo
     public static function getSettings()
     {
         $ret = parent::getSettings();
+        $ret['plugins'] = array('Login_Plugin_Component');
         return $ret;
     }
 

@@ -10,6 +10,7 @@ class Directories_Congregations_Directory_Component extends Kwc_Directories_Item
         $ret['generators']['detail']['model'] = 'Congregations';
         $ret['generators']['child']['component']['view'] = 'Directories_Congregations_View_Component';
         $ret['generators']['detail']['dbIdShortcut'] = 'congregations_';
+        $ret['plugins'] = array('Login_Plugin_Component');
         return $ret;
     }
 

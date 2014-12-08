@@ -8,6 +8,7 @@ class Forms_Speakers_Speaker_Component extends Forms_Speaker_Component
         $ret['generators']['child']['component']['success'] = null;
         $ret['placeholder']['submitButton'] = trlStatic('Speichern');
         $ret['viewCache'] = false;
+        $ret['plugins'] = array('Login_Plugin_Component');
         return $ret;
     }
 

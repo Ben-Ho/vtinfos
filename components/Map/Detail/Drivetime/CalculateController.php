@@ -5,6 +5,7 @@ class Map_Detail_Drivetime_CalculateController extends Kwf_Controller_Action
     {
         $congregationId = $this->_getParam('congregationId');
         $user = Kwf_Registry::get('userModel')->getAuthedUser();
+        if (!$user) throw new Kwf_Exception_AccessDenied();
         $select = new Kwf_Model_Select();
         $select->where(new Kwf_Model_Select_Expr_Or(array(
             new Kwf_Model_Select_Expr_And(array(

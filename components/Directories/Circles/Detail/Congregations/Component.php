@@ -6,6 +6,7 @@ class Directories_Circles_Detail_Congregations_Component extends Kwc_Directories
         $ret = parent::getSettings();
         $ret['generators']['child']['component']['view'] = 'Directories_Congregations_View_Component';
         $ret['useDirectorySelect'] = false;
+        $ret['plugins'] = array('Login_Plugin_Component');
         return $ret;
     }
 

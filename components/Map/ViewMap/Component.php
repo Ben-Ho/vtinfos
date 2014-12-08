@@ -4,6 +4,7 @@ class Map_ViewMap_Component extends Kwc_Directories_List_ViewMap_Component
     public static function getSettings()
     {
         $ret = parent::getSettings();
+        $ret['plugins'] = array('Login_Plugin_Component');
         $ret['mapOptions'] = array(
             'zoom' => 7,
             'zoom_properties' => 1,

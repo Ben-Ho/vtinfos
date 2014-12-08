@@ -8,6 +8,7 @@ class Directories_Circles_Directory_Component extends Kwc_Directories_Item_Direc
         $ret['generators']['detail']['model'] = 'Circles';
         $ret['generators']['child']['component']['view'] = 'Directories_Circles_View_Component';
         $ret['extConfig'] = 'Kwf_Component_Abstract_ExtConfig_None';
+        $ret['plugins'] = array('Login_Plugin_Component');
         return $ret;
     }
 

@@ -6,6 +6,7 @@ class Talks_Component extends Kwc_Abstract
         $ret = parent::getSettings();
         $ret['componentName'] = trlStatic('Vortragsthemen');
         $ret['cssClass'] = 'webStandard';
+        $ret['plugins'] = array('Login_Plugin_Component');
         return $ret;
     }
 

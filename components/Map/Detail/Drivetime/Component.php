@@ -5,6 +5,7 @@ class Map_Detail_Drivetime_Component extends Kwc_Abstract
     {
         $ret = parent::getSettings();
         $ret['viewCache'] = false;
+        $ret['plugins'] = array('Login_Plugin_Component');
         return $ret;
     }
 
