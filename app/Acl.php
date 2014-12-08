@@ -22,6 +22,10 @@ class Acl extends Kwf_Acl_Component
                 '/kwf/trl/kwf'), 'settings');
         $this->add(new Zend_Acl_Resource('kwf_trl_kwf-edit'), 'kwf_trl_kwf');
 
+        $this->addRole(new Kwf_Acl_Role('talk-organiser', trl('Vortragseinteiler')));
+        $this->add(new Kwf_Acl_Resource_EditRole('edit_role_talk-organiser', 'talk-organiser'), 'edit_role');
+        $this->allow('talk-organiser', 'edit_role_talk-organiser');
+
         // Admin
         $this->allow('admin', 'kwf_user_changeuser');
         $this->allow('admin', 'kwf_user_users');
