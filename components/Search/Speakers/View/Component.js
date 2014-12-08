@@ -1,1 +1,1 @@
-Kwf.Utils.ResponsiveEl('.cssClass', [{minWidth: 500, cls: 'gt500'}, {minWidth: 350, cls: 'gt350'}]);
+Kwf.Utils.ResponsiveEl('.cssClass', [400, 800]);

@@ -3,13 +3,15 @@
         margin-top: 20px;
     }
     .kwfViewAjaxItem {
+        width: 100%;
         min-height: 100px;
         padding-left: 5px;
         margin-bottom: 10px;
         position: relative;
     }
-    &.gt350 .kwfViewAjaxItem {
+    &.gt400 .kwfViewAjaxItem {
         width: 49%;
         float: left;
+        padding-left: 1%;
     }
 }
