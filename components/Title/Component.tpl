@@ -4,9 +4,6 @@
         <div class="title">
             <?=$this->pageName;?>
         </div>
-        <div class="handle">
-            E
-        </div>
     </div>
     <?=$this->component($this->menu);?>
 </div>

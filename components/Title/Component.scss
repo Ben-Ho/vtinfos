@@ -10,24 +10,14 @@
     .mobileTitle {
         padding: 5px;
         font-size: 20px;
-        .logo, .title, .handle {
+        .logo, .title {
             display: table-cell;
-        }
-        .handle {
-            padding: 5px;
-            background-color: #fff;
-            color: #085ac0;
         }
         .title {
             width: 100%;
             color: #fff;
             font-weight: bold;
             padding-left: 10px;
-        }
-    }
-    &.gt400 {
-        .handle {
-            display: none;
         }
     }
 }

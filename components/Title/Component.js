@@ -8,7 +8,9 @@ Kwf.onJElementReady('.cssClass', function (el) {
         }
     });
 
-    $(el).find('.handle').click(function() {
+    $(el).find('.mobileTitle').click(function(event) {
+        if ($(event.currentTarget).find('.title').hasClass('gt400'))
+            return;
         var menu = $(el).find('.menuMain');
         if (menu.height() == 0) {
             menu.height('auto');
