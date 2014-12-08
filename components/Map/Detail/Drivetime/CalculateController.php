@@ -4,8 +4,10 @@ class Map_Detail_Drivetime_CalculateController extends Kwf_Controller_Action
     public function jsonIndexAction()
     {
         $congregationId = $this->_getParam('congregationId');
+        $componentId = $this->_getParam('componentId');
         $user = Kwf_Registry::get('userModel')->getAuthedUser();
         if (!$user) throw new Kwf_Exception_AccessDenied();
+        $data = Kwf_Component_Data_Root::getInstance()->getComponentById($componentId);
         $select = new Kwf_Model_Select();
         $select->where(new Kwf_Model_Select_Expr_Or(array(
             new Kwf_Model_Select_Expr_And(array(
@@ -33,6 +35,6 @@ class Map_Detail_Drivetime_CalculateController extends Kwf_Controller_Action
             $row->save();
 //             $this->view->newlyRequested = true;
         }
-        $this->view->duration = str_replace('hour', trl('Stunden'), str_replace('mins', trl('Minuten'), $row->duration));
+        $this->view->duration = str_replace('hour', $data->trl('Stunden'), str_replace('mins', $data->trl('Minuten'), $row->duration));
     }
 }

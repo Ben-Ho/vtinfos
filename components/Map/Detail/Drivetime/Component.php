@@ -30,10 +30,11 @@ class Map_Detail_Drivetime_Component extends Kwc_Abstract
                 )));
                 $rows = Kwf_Model_Abstract::getInstance('Drivetimes')->getRows($select);
                 if (count($rows)) {
-                    $ret['travelTime'] = str_replace('hour', trl('Stunden'), str_replace('mins', trl('Minuten'), $rows[0]->duration));
+                    $ret['travelTime'] = str_replace('hour', $this->getData()->trl('Stunden'), str_replace('mins', $this->getData()->trl('Minuten'), $rows[0]->duration));
                 }
             }
         }
+        $ret['componentId'] = $this->getData()->componentId;
         return $ret;
     }
 }

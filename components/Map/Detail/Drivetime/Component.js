@@ -4,6 +4,7 @@ Kwf.onJElementReady('.cssClass', function (el) {
             url: '/admin/component/edit/Map_Detail_Drivetime_Component/Calculate/json-index',
             params: {
                 congregationId: $(event.currentTarget).data('congregation-id'),
+                componentId: $(event.currentTarget).data('component-id'),
                 kwfSessionToken: Kwf.sessionToken
             },
             success: function(response, options) {
