@@ -17,7 +17,23 @@ class Directories_Congregations_Detail_Component extends Kwc_Directories_Item_De
         $select = new Kwf_Model_Select();
         $select->where(new Kwf_Model_Select_Expr_Higher('speaks_count', 0));
         $select->whereEquals('deleted', 0);
-        $ret['speakers'] = $this->getData()->getRow()->getChildRows('Speakers', $select);
+        $ret['speakers'] = array();
+        foreach ($this->getData()->getRow()->getChildRows('Speakers', $select) as $speaker) {
+            $talks = array();
+            $select = new Kwf_Model_Select();
+            $select->order('number');
+            foreach ($speaker->getChildRows('SpeakerToTalks', $select) as $talk) {
+                $talks[] = array(
+                    'row' => $talk,
+                    'number' => $talk->number,
+                    'title' => $talk->title
+                );
+            }
+            $ret['speakers'][] = array(
+                'row' => $speaker,
+                'talks' => $talks
+            );
+        }
 
         $speakerModel = Kwf_Model_Abstract::getInstance('Speakers');
         if ($ret['row']->coordinator) {

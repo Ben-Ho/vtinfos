@@ -64,21 +64,19 @@
         <div class="speakers">
             <? foreach ($this->speakers as $speaker) { ?>
                 <div class="speaker">
-                    <div class="name"><?=$speaker->firstname.' '.$speaker->lastname; ?></div>
+                    <div class="name"><?=$speaker['row']->firstname.' '.$speaker['row']->lastname; ?></div>
                     <div class="degree">
-                        <? if ($speaker->degree == 'eldest') { ?>
+                        <? if ($speaker['row']->degree == 'eldest') { ?>
                             <?= $this->data->trl('Ä'); ?>
-                        <? } else if ($speaker->degree == 'ministry_assistent') { ?>
+                        <? } else if ($speaker['row']->degree == 'ministry_assistent') { ?>
                             <?= $this->data->trl('DAG'); ?>
                         <? } ?>
                     </div>
-                    <div class="phone"><?=$this->data->trl('Tel:');?> <a href="tel:<?=$speaker->phone;?>"><?=$speaker->phone;?></a></div>
-                    <div class="email"><a href="mailto:<?=$speaker->email;?>"><?=$speaker->email;?></a></div>
+                    <div class="phone"><?=$this->data->trl('Tel:');?> <a href="tel:<?=$speaker['row']->phone;?>"><?=$speaker['row']->phone;?></a></div>
+                    <div class="email"><a href="mailto:<?=$speaker['row']->email;?>"><?=$speaker['row']->email;?></a></div>
                     <table class="talks">
-                        <? $select = new Kwf_Model_Select(); ?>
-                        <? $select->order('number');?>
-                        <? foreach ($speaker->getChildRows('SpeakerToTalks', $select) as $talk) { ?>
-                            <tr><td><?=$talk->number?></td><td><?=$talk->title;?></td>
+                        <? foreach ($speaker['talks'] as $talk) { ?>
+                            <tr><td><?=$talk['number']?></td><td><?=$talk['title'];?></td>
                         <? } ?>
                     </table>
                 </div>

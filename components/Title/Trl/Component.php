@@ -11,7 +11,9 @@ class Title_Trl_Component extends Kwc_Abstract_Composite_Trl_Component
     public function getTemplateVars(Kwf_Component_Renderer_Abstract $renderer = null)
     {
         $ret = parent::getTemplateVars($renderer);
-        $ret['pageName'] = $this->getData()->getPage()->getRow()->name;
+        if (isset($this->getData()->getPage()->row)) {
+            $ret['pageName'] = $this->getData()->getPage()->row->name;
+        }
         return $ret;
     }
 }
