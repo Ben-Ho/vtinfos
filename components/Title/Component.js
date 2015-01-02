@@ -39,5 +39,10 @@ Kwf.onJElementReady('.cssClass', function (el) {
                 $(event.currentTarget).find('ul.subMenu').css('display', 'table');
             }
         }, function (event) {}
-    )
+    );
+
+    $(el).find('.mobileTitle .languages').click(function(event) {
+        $(event.currentTarget).closest('.title').find('.language').toggleClass('shown');
+        event.stopPropagation();
+    });
 });

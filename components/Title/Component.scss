@@ -34,5 +34,19 @@
                 margin-top: 7px;
             }
         }
+        .languages {
+            background-color: #fff;
+            position: absolute;
+            top: 0;
+            right: 40px;
+            display: block;
+            height: 100%;
+            width: 45px;
+            .icon {
+                display: table;
+                margin: auto;
+                margin-top: 5px;
+            }
+        }
     }
 }
