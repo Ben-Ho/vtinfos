@@ -11,6 +11,8 @@ Kwf.onJElementReady('.cssClass', function (el) {
     $(el).find('.mobileTitle').click(function(event) {
         if ($(event.currentTarget).find('.title').hasClass('gt400'))
             return;
+        if ($(event.currentTarget).hasClass('logout'))
+            return;
         var menu = $(el).find('.menuMain');
         if (menu.height() == 0) {
             menu.height('auto');
