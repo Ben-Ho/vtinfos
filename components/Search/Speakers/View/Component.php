@@ -7,11 +7,14 @@ class Search_Speakers_View_Component extends Kwc_Directories_List_ViewAjax_Compo
         $ret['generators']['child']['component']['searchForm'] = 'Search_Speakers_View_SearchForm_Component';
         $ret['plugins'] = array('Login_Plugin_Component');
         $ret['assets']['dep'][] = 'KwfSwitchDisplay';
+        $ret['placeholder']['noEntriesFound'] = '';
         return $ret;
     }
 
     protected function _getSearchSelect($ret, $searchRow)
     {
+        $ret = new Kwf_Component_Select();
+        $ret->whereGenerator('detail');
         if ($searchRow->talk_number) {
             $select = new Kwf_Model_Select();
             $select->where(new Kwf_Model_Select_Expr_Or(array(

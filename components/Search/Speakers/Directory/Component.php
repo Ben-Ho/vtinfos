@@ -12,4 +12,11 @@ class Search_Speakers_Directory_Component extends Kwc_Directories_ItemPage_Direc
         $ret['plugins'] = array('Login_Plugin_Component');
         return $ret;
     }
+
+    public function getSelect()
+    {
+        $ret = parent::getSelect();
+        $ret->where(new Kwf_Model_Select_Expr_Sql('1 = 2'));
+        return $ret;
+    }
 }
