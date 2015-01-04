@@ -38,6 +38,9 @@ class Search_Speakers_View_Component extends Kwc_Directories_List_ViewAjax_Compo
         if ($searchRow->congregation) {
             $ret->whereEquals('congregation_id', $searchRow->congregation);
         }
+        if ($searchRow->circle) {
+            $ret->whereEquals('circle_id', $searchRow->circle);
+        }
         if ($searchRow->distance) {
             $user = Kwf_Registry::get('userModel')->getAuthedUser();
             $latitude = $user->getParentRow('Congregation')->latitude;

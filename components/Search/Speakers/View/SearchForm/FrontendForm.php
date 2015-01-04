@@ -15,6 +15,13 @@ class Search_Speakers_View_SearchForm_FrontendForm extends Kwf_Form
         $congregationRows = Kwf_Model_Abstract::getInstance('Congregations')->getRows($select);
         $comboBox->setValues($congregationRows);
         $this->add($comboBox);
+        $comboBox = new Kwf_Form_Field_Select('circle', trlStatic('Kreis'));
+        $comboBox->setShowNoSelection(true);
+        $select = new Kwf_Model_Select();
+        $select->order('name');
+        $circleRows = Kwf_Model_Abstract::getInstance('Circles')->getRows($select);
+        $comboBox->setValues($circleRows);
+        $this->add($comboBox);
         $this->add(new Kwf_Form_Field_TextField('distance', trlStatic('Luftlinie (km)')));
     }
 }
