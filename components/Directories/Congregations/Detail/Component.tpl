@@ -17,9 +17,9 @@
         <? if ($this->coordinator) { ?>
             <div class="name"><?=$this->coordinator->firstname.' '.$this->coordinator->lastname;?></div>
             <div class="degree">
-                <? if ($this->coordinator->degree == 'eldest') { ?>
+                <? if ($this->coordinator->degree == 'e') { ?>
                     <?= $this->data->trl('Ä'); ?>
-                <? } else if ($this->coordinator->degree == 'ministry_assistent') { ?>
+                <? } else if ($this->coordinator->degree == 'm') { ?>
                     <?= $this->data->trl('DAG'); ?>
                 <? } ?>
             </div>
@@ -40,9 +40,9 @@
         <? if ($this->talk_organiser) { ?>
             <div class="name"><?=$this->talk_organiser->firstname.' '.$this->talk_organiser->lastname;?></div>
             <div class="degree">
-                <? if ($this->talk_organiser->degree == 'eldest') { ?>
+                <? if ($this->talk_organiser->degree == 'e') { ?>
                     <?= $this->data->trl('Ä'); ?>
-                <? } else if ($this->talk_organiser->degree == 'ministry_assistent') { ?>
+                <? } else if ($this->talk_organiser->degree == 'm') { ?>
                     <?= $this->data->trl('DAG'); ?>
                 <? } ?>
             </div>
@@ -66,9 +66,9 @@
                 <div class="speaker">
                     <div class="name"><?=$speaker['row']->firstname.' '.$speaker['row']->lastname; ?></div>
                     <div class="degree">
-                        <? if ($speaker['row']->degree == 'eldest') { ?>
+                        <? if ($speaker['row']->degree == 'e') { ?>
                             <?= $this->data->trl('Ä'); ?>
-                        <? } else if ($speaker['row']->degree == 'ministry_assistent') { ?>
+                        <? } else if ($speaker['row']->degree == 'm') { ?>
                             <?= $this->data->trl('DAG'); ?>
                         <? } ?>
                     </div>

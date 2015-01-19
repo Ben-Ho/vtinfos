@@ -1,9 +1,9 @@
 <div class="<?=$this->cssClass;?>">
     <div class="name"><?=$this->row->firstname.' '.$this->row->lastname; ?></div>
     <div class="degree">
-        <? if ($this->row->degree == 'eldest') { ?>
+        <? if ($this->row->degree == 'e') { ?>
             <?= $this->data->trl('Ä'); ?>
-        <? } else if ($this->row->degree == 'ministry_assistent') { ?>
+        <? } else if ($this->row->degree == 'm') { ?>
             <?= $this->data->trl('DAG'); ?>
         <? } ?>
     </div>

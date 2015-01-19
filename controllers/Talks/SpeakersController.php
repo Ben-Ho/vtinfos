@@ -26,8 +26,8 @@ class Talks_SpeakersController extends Kwf_Controller_Action_Auto_Grid
             ->setEditor(new Kwf_Form_Field_TextField());
         $selectField = new Kwf_Form_Field_Select();
         $selectField->setValues(array(
-            'eldest' => trl('Ältester'),
-            'ministry_assistent' => trl('DAG')
+            'e' => trl('Ä'),
+            'm' => trl('DAG')
         ));
 
         $this->_columns->add(new Kwf_Grid_Column('degree', trl('Vorrecht')))
@@ -64,9 +64,9 @@ class Talks_SpeakersControllerDegree extends Kwf_Data_Abstract
 {
     public function load($row)
     {
-        if ($row->degree == 'eldest') {
-            return trl('Ältester');
-        } else if ($row->degree == 'ministry_assistent') {
+        if ($row->degree == 'e') {
+            return trl('Ä');
+        } else if ($row->degree == 'm') {
             return trl('DAG');
         }
         return '';

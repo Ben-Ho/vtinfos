@@ -13,8 +13,8 @@ class Forms_Speaker_FrontendForm extends Kwf_Form
             ->setWidth($width);
         $selectBox = new Kwf_Form_Field_Select('degree', trlStatic('Vorrecht'));
         $selectBox->setValues(array(
-            'eldest' => trlStatic('Ältester'),
-            'ministry_assistent' => trlStatic('Dienstamtgehilfe')
+            'e' => trlStatic('Ä'),
+            'm' => trlStatic('DAG')
         ));
         $selectBox->setWidth($width);
         $this->add($selectBox);
