@@ -12,4 +12,10 @@ class Rows_User extends Kwf_User_Row
             return parent::validatePassword($password);
         }
     }
+
+    public function setPassword($password)
+    {
+        parent::setPassword($password);
+        $this->use_wp_login = 0;
+    }
 }
