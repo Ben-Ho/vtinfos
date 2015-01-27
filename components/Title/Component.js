@@ -1,12 +1,12 @@
 Kwf.Utils.ResponsiveEl('.cssClass', [400, 800]);
 Kwf.onJElementReady('.cssClass', function (el) {
-    $(window).scroll(function (event, a, b, c, d) {
-        if ($(window).scrollTop() == 0) {
-            $('body').removeClass('scrolled');
-        } else {
-            $('body').addClass('scrolled');
-        }
-    });
+//     $(window).scroll(function (event, a, b, c, d) {
+//         if ($(window).scrollTop() == 0) {
+//             $('body').removeClass('scrolled');
+//         } else {
+//             $('body').addClass('scrolled');
+//         }
+//     });
 
     $(el).find('.mobileTitle').click(function(event) {
         if ($(event.currentTarget).find('.title').hasClass('gt400'))

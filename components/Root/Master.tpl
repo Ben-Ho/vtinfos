@@ -16,7 +16,7 @@
         <link rel="apple-touch-icon" sizes="144x144" href="/assets/web/images/apple-touch-icon-144x144.png" />
         <link rel="apple-touch-icon" sizes="152x152" href="/assets/web/images/apple-touch-icon-152x152.png" />
     </head>
-    <body class="frontend">
+    <body class="frontend scrolled">
         <div class="pageWrapper">
             <div id="page">
                 <div id="outerHeader">
