@@ -47,6 +47,9 @@ class Search_Speakers_View_Component extends Kwc_Directories_List_ViewAjax_Compo
             $longitude = $user->getParentRow('Congregation')->longitude;
             $ret->where(new Kwf_Model_Select_Expr_Area($latitude, $longitude, $searchRow->distance));
         }
+        if ($searchRow->no_beard) {
+            $ret->whereEquals('has_beard', 0);
+        }
         $ret->whereEquals('deleted', 0);
         $ret->whereEquals('inactive', 0);
         return $ret;

@@ -400,4 +400,14 @@
 <de>Kreis</de>
 <en>Circle</en>
 </text>
+<text>
+<id>83</id>
+<de>Hat Bart</de>
+<en>Has beard</en>
+</text>
+<text>
+<id>84</id>
+<de>Kein Bart</de>
+<en>No beard</en>
+</text>
 </trl>

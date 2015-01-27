@@ -38,12 +38,15 @@ class Forms_Speaker_FrontendForm extends Kwf_Form
         $this->add(new Kwf_Form_Field_TextField('email', trlStatic('Email-Adresse')))
             ->setWidth($width);
 
+        $this->add(new Kwf_Form_Field_Checkbox('has_beard', trlStatic('Hat Bart')))
+            ->setWidth($width);
+
         $select = new Kwf_Model_Select();
         $select->order('number');
         $this->add(new Kwf_Form_Field_MultiCheckbox('SpeakerToTalks', 'Talk', trlStatic('Vorträge')))
             ->setShowCheckAllLinks(false)
             ->setValuesSelect($select);
-        $this->add(new Kwf_Form_Field_TextArea('note', trlStatic('Notiz (z.B. Bartträger, nur im Umkreis von...)')))
+        $this->add(new Kwf_Form_Field_TextArea('note', trlStatic('Notiz (z.B. nur im Umkreis von...)')))
             ->setWidth($width);
     }
 }
