@@ -7,6 +7,14 @@ class Talks_CongregationsController extends Kwf_Controller_Action_Auto_Grid
     protected function _initColumns()
     {
         parent::_initColumns();
+        $select = new Kwf_Model_Select();
+        $select->order('name');
+        $circleRows = Kwf_Model_Abstract::getInstance('Circles')->getRows($select);
+        $comboBox = new Kwf_Form_Field_ComboBox();
+        $comboBox->setValues($circleRows);
+        $this->_columns->add(new Kwf_Grid_Column('circle_id', trl('Kreis'), 100))
+            ->setRenderer('name')
+            ->setEditor($comboBox);
         $this->_columns->add(new Kwf_Grid_Column('name', trl('Name')))
             ->setEditor(new Kwf_Form_Field_TextField());
         $this->_columns->add(new Kwf_Grid_Column('street', trl('Straße')))
@@ -16,14 +24,15 @@ class Talks_CongregationsController extends Kwf_Controller_Action_Auto_Grid
         $this->_columns->add(new Kwf_Grid_Column('city', trl('Ort')))
             ->setEditor(new Kwf_Form_Field_TextField());
         $this->_columns->add(new Kwf_Grid_Column('country', trl('Land')))
+            ->setRenderer('name')
             ->setEditor(new Kwf_Form_Field_SelectCountry());
         $this->_columns->add(new Kwf_Grid_Column('talk_time', trl('Vortrag Zeit/Tag')))
             ->setEditor(new Kwf_Form_Field_TextField());
         $this->_columns->add(new Kwf_Grid_Column('ministryschool_time', trl('Predigtdienstschule Zeit/Tag')))
             ->setEditor(new Kwf_Form_Field_TextField());
+        $this->_columns->add(new Kwf_Grid_Column('note', trl('Anmerkung')))
+            ->setEditor(new Kwf_Form_Field_TextField());
 //         Kwf_Form_Field_GoogleMapsField
-        $this->_columns->add(new Kwf_Grid_Column('talk_organiser', trl('Vortragseinteiler')))
-            ->setEditor(new Kwf_Form_Field_NumberField());
     }
 
     protected function _getSelect()

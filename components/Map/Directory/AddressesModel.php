@@ -6,7 +6,7 @@ class Map_Directory_AddressesModel extends Kwf_Model_FnF
         $config['uniqueIdentifier'] = 'id';
         $config['columns'] = array('id', 'name', 'talk_time', 'ministryschool_time',
             'coordinator', 'talk_organiser', 'circle_id', 'street', 'zip', 'country',
-            'longitude', 'latitude', 'comment', 'congregationIds'
+            'longitude', 'latitude', 'note', 'congregationIds'
         );
         $select = new Kwf_Model_Select();
         $select->where(new Kwf_Model_Select_Expr_NotEquals('street', ''));

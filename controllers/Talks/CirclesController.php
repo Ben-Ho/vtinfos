@@ -15,9 +15,9 @@ class Talks_CirclesController extends Kwf_Controller_Action_Auto_Grid
         $comboBox = new Kwf_Form_Field_Select();
         $data = Kwf_Model_Abstract::getInstance('CircleGroups')->getRows();
         $comboBox->setValues($data);
-        $this->_columns->add(new Kwf_Grid_Column('group_id', trl('Group')))
-            ->setEditor($comboBox)
-            ->setData(new Talks_CirclesControllerGroup());
+        $this->_columns->add(new Kwf_Grid_Column('group_id', trl('Gruppe')))
+            ->setRenderer('name')
+            ->setEditor($comboBox);
         $this->_columns->add(new Kwf_Grid_Column('name', trl('Name')))
             ->setEditor(new Kwf_Form_Field_TextField());
     }
@@ -33,12 +33,5 @@ class Talks_CirclesController extends Kwf_Controller_Action_Auto_Grid
     {
         parent::_beforeInsert($row, $submitRow);
         $row->group_id = $this->_getParam('group_id');
-    }
-}
-class Talks_CirclesControllerGroup extends Kwf_Data_Abstract
-{
-    public function load($row)
-    {
-        return $row->group;
     }
 }

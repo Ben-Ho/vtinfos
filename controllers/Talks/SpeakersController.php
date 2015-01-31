@@ -9,16 +9,22 @@ class Talks_SpeakersController extends Kwf_Controller_Action_Auto_Grid
         $select = new Kwf_Model_Select();
         $select->order('name');
         $congregationsRows = Kwf_Model_Abstract::getInstance('Congregations')->getRows($select);
-        $congregations = array();
-        foreach ($congregationsRows as $congregationRow) {
-            $congregations[$congregationRow->id] = $congregationRow->name;
-        }
-
         $comboBox = new Kwf_Form_Field_ComboBox();
-        $comboBox->setValues($congregations);
+        $comboBox->setValues($congregationsRows);
         $this->_columns->add(new Kwf_Grid_Column('congregation_id', trl('Versammlung'), 100))
+            ->setRenderer('name')
             ->setEditor($comboBox);
         $this->_columns->add(new Kwf_Grid_Column('deleted', trl('Gelöscht')))
+            ->setWidth(60)
+            ->setRenderer('booleanText')
+            ->setEditor(new Kwf_Form_Field_Checkbox());
+        $this->_columns->add(new Kwf_Grid_Column('inactive', trl('Inaktiv')))
+            ->setWidth(60)
+            ->setRenderer('booleanText')
+            ->setEditor(new Kwf_Form_Field_Checkbox());
+        $this->_columns->add(new Kwf_Grid_Column('has_beard', trl('Hat Bart')))
+            ->setWidth(60)
+            ->setRenderer('booleanText')
             ->setEditor(new Kwf_Form_Field_Checkbox());
         $this->_columns->add(new Kwf_Grid_Column('firstname', trl('Vorname')))
             ->setEditor(new Kwf_Form_Field_TextField());
@@ -31,7 +37,7 @@ class Talks_SpeakersController extends Kwf_Controller_Action_Auto_Grid
         ));
 
         $this->_columns->add(new Kwf_Grid_Column('degree', trl('Vorrecht')))
-//             ->setData(new Talks_SpeakersControllerDegree())
+            ->setRenderer('name')
             ->setEditor($selectField);
         $this->_columns->add(new Kwf_Grid_Column('street', trl('Straße')))
             ->setEditor(new Kwf_Form_Field_TextField());
@@ -43,8 +49,12 @@ class Talks_SpeakersController extends Kwf_Controller_Action_Auto_Grid
             ->setEditor(new Kwf_Form_Field_TextField());
         $this->_columns->add(new Kwf_Grid_Column('phone', trl('Telefon')))
             ->setEditor(new Kwf_Form_Field_TextField());
+        $this->_columns->add(new Kwf_Grid_Column('phone2', trl('Telefon2')))
+            ->setEditor(new Kwf_Form_Field_TextField());
         $this->_columns->add(new Kwf_Grid_Column('email', trl('Email')))
             ->setEditor(new Kwf_Form_Field_TextField());
+        $this->_columns->add(new Kwf_Grid_Column('note', trl('Anmerkung')))
+            ->setEditor(new Kwf_Form_Field_TextArea());
     }
 
     protected function _getSelect()

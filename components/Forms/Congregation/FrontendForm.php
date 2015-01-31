@@ -22,7 +22,7 @@ class Forms_Congregation_FrontendForm extends Kwf_Form
             ->setWidth($width);
         $this->add(new Kwf_Form_Field_TextField('ministryschool_time', trlStatic('Predigtdienstschulzeit')))
             ->setWidth($width);
-        $this->add(new Kwf_Form_Field_TextArea('notes', trlStatic('Notiz')))
+        $this->add(new Kwf_Form_Field_TextArea('note', trlStatic('Anmerkung')))
             ->setWidth($width);
 
         $select = new Kwf_Model_Select();

@@ -16,10 +16,9 @@ class Talks_SpeakersToTalksController extends Kwf_Controller_Action_Auto_Grid
 
         $comboBox = new Kwf_Form_Field_ComboBox();
         $comboBox->setValues($talks);
-        $this->_columns->add(new Kwf_Grid_Column('talk_id', trl('ID-Auswahl'), 100))
+        $this->_columns->add(new Kwf_Grid_Column('talk_id', trl('Vortragstitel'), 300))
+            ->setRenderer('name')
             ->setEditor($comboBox);
-        $this->_columns->add(new Kwf_Grid_Column('number', trl('Nummer'), 30));
-        $this->_columns->add(new Kwf_Grid_Column('title', trl('Titel'), 300));
     }
 
     protected function _getSelect()
