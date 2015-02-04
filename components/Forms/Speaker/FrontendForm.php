@@ -7,9 +7,9 @@ class Forms_Speaker_FrontendForm extends Kwf_Form
     {
         parent::_initFields();
         $width = 300;
-        $this->add(new Kwf_Form_Field_TextField('firstname', trlStatic('Vorname')))
-            ->setWidth($width);
         $this->add(new Kwf_Form_Field_TextField('lastname', trlStatic('Nachname')))
+            ->setWidth($width);
+        $this->add(new Kwf_Form_Field_TextField('firstname', trlStatic('Vorname')))
             ->setWidth($width);
         $selectBox = new Kwf_Form_Field_Select('degree', trlStatic('Vorrecht'));
         $selectBox->setValues(array(

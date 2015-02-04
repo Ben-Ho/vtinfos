@@ -11,6 +11,7 @@ class Forms_Speakers_Generator extends Kwf_Component_Generator_Table
             $select->whereEquals('congregation_id', $user->congregation_id);
         }
         $select->whereEquals('deleted', 0);
+        $select->order('lastname');
         return $select;
     }
 }
