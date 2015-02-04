@@ -15,7 +15,7 @@ class Contact_Component extends Kwc_Form_Component
         if ($row->topic == 'bug') {
             $row->addTo('benjamin.hohenwarter@gmail.com');
         } else if ($row->topic == 'whish') {
-            $row->addTo('stefan');
+            $row->addTo('stefan@sonnleitner.me');
         } else {
             $select = new Kwf_Model_Select();
             $select->whereEquals('role', 'admin');
