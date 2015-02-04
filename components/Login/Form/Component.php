@@ -13,30 +13,15 @@ class Login_Form_Component extends Kwc_User_Login_Form_Component
     {
         if (strpos($row->text, '@') !== false) {
             $row->email = $row->text;
-            return parent::_afterSave($row);
-        }
-
-        $userSelect = new Kwf_Model_Select();
-        $select = new Kwf_Model_Select();
-        $select->whereEquals('name', $row->text);
-        $congregationRow = Kwf_Model_Abstract::getInstance('Congregations')->getRow($select);
-        if ($congregationRow) {
-            $userSelect->whereEquals('congregation_id', $congregationRow->id);
         } else {
-            $userSelect->whereEquals('name', $row->text);
-        }
-
-        $rows = Kwf_Registry::get('userModel')->getRows($userSelect);
-        if (count($rows) > 1) {
-            $this->_errors[] = array('message' => $this->getData()->trl('Diesem Benutzernamen sind mehrere Benutzer zugeordnet. Bitte melde dich mit deiner E-Mail-Adresse ein.'));
-            return;
-        }
-        foreach ($rows as $user) {
-            $result = $this->_getAuthenticateResult($user->email, $row->password);
-            if ($result->isValid()) {
-                $row->email = $user->email;
-                break;
+            $userSelect = new Kwf_Model_Select();
+            $userSelect->whereEquals('wp_user', $row->text);
+            $userRows = Kwf_Registry::get('userModel')->getRows($userSelect);
+            if (count($userRows) > 1) {
+                $this->_errors[] = array('message' => $this->getData()->trl('Diesem Benutzernamen sind mehrere Benutzer zugeordnet. Bitte melde dich mit deiner E-Mail-Adresse ein.'));
+                return;
             }
+            $row->email = $userRows[0]->email;
         }
         parent::_afterSave($row);
     }
