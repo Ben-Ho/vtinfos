@@ -22,7 +22,6 @@
                 <div id="outerHeader">
                     <div id="header">
                         <div class="menues">
-                            <? /*<a class="logout webStandard" href="/kwf/user/logout"><?=$this->data->trl('Abmelden');?></a>*/ ?>
                             <?=$this->component($this->boxes['title']);?>
                         </div>
                     </div>
