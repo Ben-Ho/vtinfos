@@ -1,6 +1,6 @@
 <div class="<?=$this->cssClass?>">
     <div class="mobileTitle">
-        <div class="logo">VT</div>
+        <a href="/" class="logo">VT</a>
         <div class="title">
             <?=$this->pageName;?>
         </div>
