@@ -15,12 +15,20 @@ class Search_Speakers_View_SearchForm_FrontendForm extends Kwf_Form
         $congregationRows = Kwf_Model_Abstract::getInstance('Congregations')->getRows($select);
         $comboBox->setValues($congregationRows);
         $this->add($comboBox);
-        $comboBox = new Kwf_Form_Field_Select('circle', trlStatic('Kreis'));
-        $comboBox->setShowNoSelection(true);
+
         $select = new Kwf_Model_Select();
         $select->order('name');
-        $circleRows = Kwf_Model_Abstract::getInstance('Circles')->getRows($select);
-        $comboBox->setValues($circleRows);
+        $circleGroupRows = Kwf_Model_Abstract::getInstance('CircleGroups')->getRows($select);
+        $data = array();
+        foreach ($circleGroupRows as $circleGroupRow) {
+            $data['g_'.$circleGroupRow->id] = $circleGroupRow->name;
+            foreach ($circleGroupRow->getChildRows('Circles', $select) as $circleRow) {
+                $data['c_'.$circleRow->id] = ' - '.$circleRow->name;
+            }
+        }
+        $comboBox = new Kwf_Form_Field_Select('circle', trlStatic('Kreis'));
+        $comboBox->setShowNoSelection(true);
+        $comboBox->setValues($data);
         $this->add($comboBox);
         $this->add(new Kwf_Form_Field_TextField('distance', trlStatic('Luftlinie (km)')));
         $this->add(new Kwf_Form_Field_Checkbox('no_beard', trlStatic('Kein Bart')));
