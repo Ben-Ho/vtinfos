@@ -73,8 +73,14 @@
 .cssClass .talk-organiser .address .zip,
 .cssClass .congregation-info .address .city,
 .cssClass .coordinator .address .city,
-.cssClass .talk-organiser .address .city{
+.cssClass .talk-organiser .address .city {
     margin-right: 2px;
+}
+
+.cssClass .congregation-info .address .city:after,
+.cssClass .coordinator .address .city:after,
+.cssClass .talk-organiser .address .city:after {
+    content: ",";
 }
 
 .cssClass .congregation-info .address .street:after,

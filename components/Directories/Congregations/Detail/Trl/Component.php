@@ -11,6 +11,8 @@ class Directories_Congregations_Detail_Trl_Component extends Kwc_Directories_Ite
     public function getTemplateVars(Kwf_Component_Renderer_Abstract $renderer = null)
     {
         $ret = parent::getTemplateVars($renderer);
+        $ret['country'] = Kwf_Model_Abstract::getInstance('Kwf_Util_Model_Countries')
+            ->getNameByLanguageAndId($this->getData()->getLanguage(), $ret['row']->country);
         foreach ($ret['speakers'] as $key=>$speaker) {
             $talks = array();
             foreach ($speaker['talks'] as $talk) {

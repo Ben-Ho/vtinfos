@@ -10,7 +10,7 @@
             <div class="street"><?=$this->row->street;?></div>
             <div class="zip"><?=$this->row->zip;?></div>
             <div class="city"><?=$this->row->city;?></div>
-            <div class="country"><?=$this->row->country;?></div>
+            <div class="country"><?=$this->country;?></div>
         </div>
     </div>
     <div class="coordinator">

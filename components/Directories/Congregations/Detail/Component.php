@@ -14,6 +14,8 @@ class Directories_Congregations_Detail_Component extends Kwc_Directories_Item_De
     {
         $ret = parent::getTemplateVars($renderer);
         $ret['row'] = $this->getData()->getRow();
+        $ret['country'] = Kwf_Model_Abstract::getInstance('Kwf_Util_Model_Countries')
+            ->getNameByLanguageAndId($this->getData()->getLanguage(), $ret['row']->country);
         $select = new Kwf_Model_Select();
         $select->where(new Kwf_Model_Select_Expr_Higher('speaks_count', 0));
         $select->whereEquals('deleted', 0);
