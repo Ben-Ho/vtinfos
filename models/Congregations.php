@@ -19,5 +19,6 @@ class Congregations extends Kwf_Model_Db
     {
         parent::_init();
         $this->_exprs['circle_name'] = new Kwf_Model_Select_Expr_Parent('Circle', 'name');
+        $this->_exprs['group_id'] = new Kwf_Model_Select_Expr_Parent('Circle', 'group_id');
     }
 }

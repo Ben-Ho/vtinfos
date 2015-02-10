@@ -28,5 +28,6 @@ class Speakers extends Kwf_Model_Db
             new Kwf_Model_Select_Expr_String(' '),
             new Kwf_Model_Select_Expr_Field('firstname')
         ));
+        $this->_exprs['group_id'] = new Kwf_Model_Select_Expr_Parent('Congregation', 'group_id');
     }
 }

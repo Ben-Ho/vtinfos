@@ -40,9 +40,7 @@ class Search_Speakers_View_Component extends Kwc_Directories_List_ViewAjax_Compo
         }
         if ($searchRow->circle) {
             if (strpos($searchRow->circle, 'g') === 0) {
-                $ret->where(new Kwf_Model_Select_Expr_Parent('Congregation',
-                    new Kwf_Model_Select_Expr_Parent('Circle',
-                        'group_id', str_replace('g_', '', $searchRow->circle))));
+                $ret->whereEquals('group_id', str_replace('g_', '', $searchRow->circle));
             } else if (strpos($searchRow->circle, 'c') === 0) {
                 $ret->whereEquals('circle_id', str_replace('c_', '', $searchRow->circle));
             }
