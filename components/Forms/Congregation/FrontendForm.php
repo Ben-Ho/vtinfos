@@ -34,6 +34,11 @@ class Forms_Congregation_FrontendForm extends Kwf_Form
         $selectBox->setValues($speakerRows)
             ->setWidth($width);
         $this->add($selectBox);
+
+        $selectBox = new Kwf_Form_Field_Select('talk_organiser', trlStatic('Vortragseinteiler'));
+        $selectBox->setValues($speakerRows)
+            ->setWidth($width);
+        $this->add($selectBox);
     }
 
 }
