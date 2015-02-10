@@ -74,6 +74,7 @@
                     </div>
                     <div class="phone"><?=$this->data->trl('Tel:');?> <a href="tel:<?=$speaker['row']->phone;?>"><?=$speaker['row']->phone;?></a></div>
                     <div class="email"><a href="mailto:<?=$speaker['row']->email;?>"><?=$speaker['row']->email;?></a></div>
+                    <div class="note"><?=$speaker['row']->note;?></div>
                     <table class="talks">
                         <? foreach ($speaker['talks'] as $talk) { ?>
                             <tr><td><?=$talk['number']?></td><td><?=$talk['title'];?></td>
