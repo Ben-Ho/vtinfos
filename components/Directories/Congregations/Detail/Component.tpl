@@ -1,5 +1,6 @@
 <div class="<?=$this->cssClass?>">
     <h1><?=$this->row->name;?></h1>
+    <div class="circle"><span class="label"><?=$this->data->trl('Kreis');?></span><span class"value"><?=$this->row->circle_name;?></span></div>
     <div class="congregation-info">
         <div class="time">
             <div class="talk-time"><span class="label"><?=$this->data->trl('Vortragszeit:');?></span> <?=$this->row->talk_time;?></div>

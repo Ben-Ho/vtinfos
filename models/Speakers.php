@@ -22,5 +22,6 @@ class Speakers extends Kwf_Model_Db
         $this->_exprs['longitude'] = new Kwf_Model_Select_Expr_Parent('Congregation', 'longitude');
         $this->_exprs['latitude'] = new Kwf_Model_Select_Expr_Parent('Congregation', 'latitude');
         $this->_exprs['circle_id'] = new Kwf_Model_Select_Expr_Parent('Congregation', 'circle_id');
+        $this->_exprs['circle_name'] = new Kwf_Model_Select_Expr_Parent('Congregation', 'circle_name');
     }
 }
