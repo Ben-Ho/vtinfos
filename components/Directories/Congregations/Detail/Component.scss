@@ -5,6 +5,14 @@
     margin-bottom: 10px;
 }
 
+.cssClass .congregation-info {
+    margin-bottom: 20px;
+    .time .talk-time, .address {
+        font-weight: bold;
+        font-size: 15px;
+    }
+}
+
 .cssClass .coordinator,
 .cssClass .talk-organiser {
     width: 50%;
@@ -44,16 +52,27 @@
     clear: left;
 }
 
+.cssClass .congregation-info .address .street,
+.cssClass .coordinator .address .street,
+.cssClass .talk-organiser .address .street,
 .cssClass .congregation-info .address .zip,
 .cssClass .coordinator .address .zip,
 .cssClass .talk-organiser .address .zip,
+.cssClass .congregation-info .address .city,
 .cssClass .coordinator .address .city,
 .cssClass .talk-organiser .address .city {
     float: left;
 }
-.cssClass .congregation-info .address .zip:after,
-.cssClass .coordinator .address .zip:after,
-.cssClass .talk-organiser .address .zip:after {
+
+.cssClass .congregation-info .address .zip,
+.cssClass .coordinator .address .zip,
+.cssClass .talk-organiser .address .zip {
+    margin-right: 2px;
+}
+
+.cssClass .congregation-info .address .street:after,
+.cssClass .coordinator .address .street:after,
+.cssClass .talk-organiser .address .street:after {
     content: ",";
     margin-right: 2px;
 }
@@ -61,7 +80,7 @@
 .cssClass .congregation-info .address .country,
 .cssClass .coordinator .address .country,
 .cssClass .talk-organiser .address .country {
-    clear: left;
+    float: left;
 }
 
 .cssClass .speakers-list {
