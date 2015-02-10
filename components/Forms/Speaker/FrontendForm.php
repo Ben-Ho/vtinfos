@@ -14,7 +14,8 @@ class Forms_Speaker_FrontendForm extends Kwf_Form
         $selectBox = new Kwf_Form_Field_Select('degree', trlStatic('Vorrecht'));
         $selectBox->setValues(array(
             'e' => trlStatic('Ä'),
-            'm' => trlStatic('DAG')
+            'm' => trlStatic('DAG'),
+            '?' => '?'
         ));
         $selectBox->setWidth($width);
         $this->add($selectBox);

@@ -33,7 +33,8 @@ class Talks_SpeakersController extends Kwf_Controller_Action_Auto_Grid
         $selectField = new Kwf_Form_Field_Select();
         $selectField->setValues(array(
             'e' => trl('Ä'),
-            'm' => trl('DAG')
+            'm' => trl('DAG'),
+            '?' => '?'
         ));
 
         $this->_columns->add(new Kwf_Grid_Column('degree', trl('Vorrecht')))
