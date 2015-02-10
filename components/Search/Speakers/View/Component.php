@@ -58,6 +58,7 @@ class Search_Speakers_View_Component extends Kwc_Directories_List_ViewAjax_Compo
         }
         $ret->whereEquals('deleted', 0);
         $ret->whereEquals('inactive', 0);
+        $ret->order('lastname');
         return $ret;
     }
 }
