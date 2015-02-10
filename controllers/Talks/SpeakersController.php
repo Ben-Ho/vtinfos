@@ -39,14 +39,14 @@ class Talks_SpeakersController extends Kwf_Controller_Action_Auto_Grid
         $this->_columns->add(new Kwf_Grid_Column('degree', trl('Vorrecht')))
             ->setRenderer('name')
             ->setEditor($selectField);
-        $this->_columns->add(new Kwf_Grid_Column('street', trl('Straße')))
-            ->setEditor(new Kwf_Form_Field_TextField());
-        $this->_columns->add(new Kwf_Grid_Column('zip', trl('PLZ')))
-            ->setEditor(new Kwf_Form_Field_TextField());
-        $this->_columns->add(new Kwf_Grid_Column('city', trl('Ort')))
-            ->setEditor(new Kwf_Form_Field_TextField());
-        $this->_columns->add(new Kwf_Grid_Column('country', trl('Land')))
-            ->setEditor(new Kwf_Form_Field_TextField());
+//        $this->_columns->add(new Kwf_Grid_Column('street', trl('Straße')))
+//            ->setEditor(new Kwf_Form_Field_TextField());
+//        $this->_columns->add(new Kwf_Grid_Column('zip', trl('PLZ')))
+//            ->setEditor(new Kwf_Form_Field_TextField());
+//        $this->_columns->add(new Kwf_Grid_Column('city', trl('Ort')))
+//            ->setEditor(new Kwf_Form_Field_TextField());
+//        $this->_columns->add(new Kwf_Grid_Column('country', trl('Land')))
+//            ->setEditor(new Kwf_Form_Field_TextField());
         $this->_columns->add(new Kwf_Grid_Column('phone', trl('Telefon')))
             ->setEditor(new Kwf_Form_Field_TextField());
         $this->_columns->add(new Kwf_Grid_Column('phone2', trl('Telefon2')))
