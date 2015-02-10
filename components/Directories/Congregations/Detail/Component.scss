@@ -66,7 +66,10 @@
 
 .cssClass .congregation-info .address .zip,
 .cssClass .coordinator .address .zip,
-.cssClass .talk-organiser .address .zip {
+.cssClass .talk-organiser .address .zip,
+.cssClass .congregation-info .address .city,
+.cssClass .coordinator .address .city,
+.cssClass .talk-organiser .address .city{
     margin-right: 2px;
 }
 
