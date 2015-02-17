@@ -31,11 +31,13 @@ class Forms_Congregation_FrontendForm extends Kwf_Form
         $select->whereEquals('deleted', 0);
         $speakerRows = Kwf_Model_Abstract::getInstance('Speakers')->getRows($select);
         $selectBox = new Kwf_Form_Field_Select('coordinator', trlStatic('Koordinator'));
+        $selectBox->setShowNoSelection(true);
         $selectBox->setValues($speakerRows)
             ->setWidth($width);
         $this->add($selectBox);
 
         $selectBox = new Kwf_Form_Field_Select('talk_organiser', trlStatic('Vortragseinteiler'));
+        $selectBox->setShowNoSelection(true);
         $selectBox->setValues($speakerRows)
             ->setWidth($width);
         $this->add($selectBox);
