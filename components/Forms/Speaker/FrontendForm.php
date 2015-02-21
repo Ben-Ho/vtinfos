@@ -31,7 +31,7 @@ class Forms_Speaker_FrontendForm extends Kwf_Form
 //             'Österreich' => trlStatic('Österreich'),
 //             'Deutschland' => trlStatic('Deutschland')
 //         ));
-        $this->add($selectBox);
+//         $this->add($selectBox);
         $this->add(new Kwf_Form_Field_TextField('phone', trlStatic('Telefonnummer')))
             ->setWidth($width);
         $this->add(new Kwf_Form_Field_TextField('phone2', trlStatic('Telefonnummer').' 2'))
