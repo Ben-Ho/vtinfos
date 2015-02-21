@@ -10,6 +10,8 @@ class Forms_Speaker_Component extends Kwc_Form_Component
         $ret['viewCache'] = false;
         $ret['useAjaxRequest'] = false;
         $ret['plugins'] = array('Login_Plugin_Component');
+        $ret['assets']['files'][] = 'components/Forms/Speaker/Field/SuperBoxSelect.js';
+        $ret['assets']['files'][] = 'components/Forms/Speaker/Field/SuperBoxSelect.scss';
         return $ret;
     }
 

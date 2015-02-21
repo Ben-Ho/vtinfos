@@ -1,17 +1,6 @@
 .cssClass {
     margin-bottom: 30px;
 }
-
-.cssClass.kwcForm .kwcForm .kwfFormFieldMultiCheckbox .kwfFormFieldWrapper.hasLabel .kwfFormFieldMultiCheckbox .checkboxItem {
-    width: 35px;
-}
-
-.cssClass.kwcForm .kwcForm .kwfFormFieldMultiCheckbox .kwfFormFieldWrapper .kwfFormFieldMultiCheckbox {
-    max-width: 320px;
-}
-.cssClass.kwcForm .kwcForm.gt350 .kwfFormFieldMultiCheckbox .kwfFormFieldWrapper .kwfFormFieldMultiCheckbox {
-    margin-left: 40%;
-}
-.cssClass.kwcForm .kwcForm.gt500 .kwfFormFieldMultiCheckbox .kwfFormFieldWrapper .kwfFormFieldMultiCheckbox {
-    margin-left: 0;
+.cssClass .formsSpeakerFieldSuperBoxSelect .hasLabel {
+    max-width: 300px;
 }

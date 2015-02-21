@@ -31,7 +31,7 @@ class Forms_Speaker_FrontendForm extends Kwf_Form
 //             'Österreich' => trlStatic('Österreich'),
 //             'Deutschland' => trlStatic('Deutschland')
 //         ));
-//         $this->add($selectBox);
+        $this->add($selectBox);
         $this->add(new Kwf_Form_Field_TextField('phone', trlStatic('Telefonnummer')))
             ->setWidth($width);
         $this->add(new Kwf_Form_Field_TextField('phone2', trlStatic('Telefonnummer').' 2'))
@@ -41,13 +41,15 @@ class Forms_Speaker_FrontendForm extends Kwf_Form
 
         $this->add(new Kwf_Form_Field_Checkbox('has_beard', trlStatic('Mode-/Vollbart')))
             ->setWidth($width);
+        $this->add(new Kwf_Form_Field_TextArea('note', trlStatic('Notiz (z.B. nur im Umkreis von...)')))
+            ->setWidth($width);
 
         $select = new Kwf_Model_Select();
         $select->order('number');
-        $this->add(new Kwf_Form_Field_MultiCheckbox('SpeakerToTalks', 'Talk', trlStatic('Vorträge')))
-            ->setShowCheckAllLinks(false)
+//         $this->rightColumn->add(new Kwf_Form_Field_MultiCheckbox('SpeakerToTalks', 'Talk', trlStatic('Vorträge')))
+//             ->setShowCheckAllLinks(false)
+//             ->setValuesSelect($select);
+        $this->add(new Forms_Speaker_Field_SuperBoxSelect('SpeakerToTalks', 'Talk', trlStatic('Vorträge')))
             ->setValuesSelect($select);
-        $this->add(new Kwf_Form_Field_TextArea('note', trlStatic('Notiz (z.B. nur im Umkreis von...)')))
-            ->setWidth($width);
     }
 }

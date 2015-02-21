@@ -15,10 +15,6 @@ class Forms_Speakers_Speaker_Component extends Forms_Speaker_Component
     protected function _initForm()
     {
         parent::_initForm();
-        $data = $this->getData();
-        if ($this->getData()->getParent()->componentClass != 'Forms_Speakers_Component') {
-            $data = $this->getData()->getParent();
-        }
-        $this->getForm()->setId($data->getRow()->id);
+        $this->getForm()->setId($this->getData()->row->id);
     }
 }
