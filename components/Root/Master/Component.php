@@ -17,7 +17,7 @@ class Root_Master_Component extends Kwc_Root_TrlRoot_Master_Component
         $ret['generators']['login'] = array(
             'class' => 'Kwf_Component_Generator_Page_Static',
             'component' => 'Login_Component',
-            'name' => trlStatic('Login'),
+            'name' => trlKwfStatic('Login'),
             'inherit' => false,
             'unique' => true
         );
@@ -25,7 +25,7 @@ class Root_Master_Component extends Kwc_Root_TrlRoot_Master_Component
         $ret['generators']['lostPassword'] = array(
             'class' => 'Kwf_Component_Generator_Page_Static',
             'component' => 'User_LostPassword_Component',
-            'name' => trlStatic('Passwort vergessen'),
+            'name' => trlKwfStatic('Passwort vergessen'),
             'inherit' => false,
             'unique' => true
         );
