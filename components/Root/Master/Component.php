@@ -17,7 +17,7 @@ class Root_Master_Component extends Kwc_Root_TrlRoot_Master_Component
         $ret['generators']['login'] = array(
             'class' => 'Kwf_Component_Generator_Page_Static',
             'component' => 'Login_Component',
-            'name' => trlKwfStatic('Login'),
+            'name' => 'Login',
             'inherit' => false,
             'unique' => true
         );
