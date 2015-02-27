@@ -22,6 +22,14 @@ class Root_Master_Component extends Kwc_Root_TrlRoot_Master_Component
             'unique' => true
         );
 
+        $ret['generators']['lostPassword'] = array(
+            'class' => 'Kwf_Component_Generator_Page_Static',
+            'component' => 'User_LostPassword_Component',
+            'name' => trlStatic('Passwort vergessen'),
+            'inherit' => false,
+            'unique' => true
+        );
+
         $ret['editComponents'] = array('metaTags', 'flag');
         return $ret;
     }
