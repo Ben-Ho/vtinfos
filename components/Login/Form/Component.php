@@ -21,6 +21,10 @@ class Login_Form_Component extends Kwc_User_Login_Form_Component
                 $this->_errors[] = array('message' => $this->getData()->trl('Diesem Benutzernamen sind mehrere Benutzer zugeordnet. Bitte melde dich mit deiner E-Mail-Adresse ein.'));
                 return;
             }
+            if (count($userRows) == 0) {
+                $this->_errors[] = array('message' => $this->getData()->trl('Es ist existiert kein Benutzer mit diesem Namen.'));
+                return;
+            }
             $row->email = $userRows[0]->email;
         }
         parent::_afterSave($row);
