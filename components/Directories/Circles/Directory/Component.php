@@ -12,4 +12,11 @@ class Directories_Circles_Directory_Component extends Kwc_Directories_Item_Direc
         $ret['plugins'] = array('Login_Plugin_Component');
         return $ret;
     }
+
+    public function getSelect()
+    {
+        $ret = parent::getSelect();
+        $ret->order('name');
+        return $ret;
+    }
 }
