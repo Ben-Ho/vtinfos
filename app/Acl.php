@@ -43,6 +43,7 @@ class Acl extends Kwf_Acl_Component
             $this->addResource(new Zend_Acl_Resource('talks_speakers'), 'talks_circles');
             $this->addResource(new Zend_Acl_Resource('talks_speakers-to-talks'), 'talks_circles');
             $this->addResource(new Zend_Acl_Resource('talks_circle-groups'), 'talks_circles');
+            $this->addResource(new Zend_Acl_Resource('talks_talk-translations'), 'talks_circles');
         $this->allow('admin', 'talks_circles');
     }
 }

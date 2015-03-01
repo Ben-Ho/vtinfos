@@ -3,6 +3,12 @@ class Talks_TalksController extends Kwf_Controller_Action_Auto_Grid
 {
     protected $_model = 'Talks';
 
+    public function indexAction()
+    {
+        parent::indexAction();
+        $this->view->xtype = 'vtinfos.talks';
+    }
+
     protected function _initColumns()
     {
         parent::_initColumns();
