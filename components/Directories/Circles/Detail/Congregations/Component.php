@@ -25,6 +25,7 @@ class Directories_Circles_Detail_Congregations_Component extends Kwc_Directories
     {
         $ret = parent::getSelect();
         $ret->whereEquals('circle_id', $this->getData()->parent->getRow()->id);
+        $ret->order('name');
         return $ret;
     }
 }
