@@ -14,6 +14,7 @@ class Forms_Speakers_Component extends Kwc_Abstract_Composite_Component
         $ret['childModel'] = 'Speakers';
         $ret['plugins'] = array('Login_Plugin_Component');
         $ret['viewCache'] = false;
+        $ret['contentSender'] = 'Forms_Speakers_ContentSender';
         return $ret;
     }
 
