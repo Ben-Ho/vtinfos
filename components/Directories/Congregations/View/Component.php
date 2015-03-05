@@ -6,6 +6,8 @@ class Directories_Congregations_View_Component extends Kwc_Directories_List_View
         $ret = parent::getSettings();
         unset($ret['generators']['child']['component']['paging']);
         $ret['plugins'] = array('Login_Plugin_Component');
+        //TODO viewcach wieder ein, cache löschen richtig machen
+        $ret['viewCache'] = false;
         return $ret;
     }
 }

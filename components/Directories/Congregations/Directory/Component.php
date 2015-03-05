@@ -4,7 +4,6 @@ class Directories_Congregations_Directory_Component extends Kwc_Directories_Item
     public static function getSettings()
     {
         $ret = parent::getSettings();
-        $ret['partialId'] = '';
         $ret['componentName'] = trlStatic('Versammlungen').'.'.trlStatic('Alphabetisch');
         $ret['generators']['detail']['component'] = 'Directories_Congregations_Detail_Component';
         $ret['generators']['detail']['model'] = 'Congregations';
