@@ -1,7 +1,7 @@
 <div class="<?=$this->cssClass?>">
     <h1><?=$this->row->name;?></h1>
     <a class="downloadPdf" href="<?=$this->pdfDownloadUrl;?>" target="_blank"><img src="/assets/web/images/downloadPdf.png" width="35" height="35"></a>
-    <div class="circle"><span class="label"><?=$this->data->trl('Kreis');?></span><span class"value"><?=$this->row->circle_name;?></span></div>
+    <div class="circle"><span class="label"><?=$this->data->trl('Kreis');?>:</span><span class"value"><?=$this->row->circle_name;?></span></div>
     <div class="congregation-info">
         <div class="time">
             <div class="talk-time"><span class="label"><?=$this->data->trl('Vortragszeit:');?></span> <?=$this->row->talk_time;?></div>
@@ -27,12 +27,6 @@
             </div>
             <div class="phone"><?=$this->data->trl('Tel:');?> <a href="tel:<?=$this->coordinator->phone;?>"><?=$this->coordinator->phone;?></a></div>
             <div class="email"><a href="mailto:<?=$this->coordinator->email;?>"><?=$this->coordinator->email;?></a></div>
-            <div class="address">
-                <div class="street"><?=$this->coordinator->street;?></div>
-                <div class="zip"><?=$this->coordinator->zip;?></div>
-                <div class="city"><?=$this->coordinator->city;?></div>
-                <div class="country"><?=$this->coordinator->country;?></div>
-            </div>
         <? } else { ?>
             <?= $this->data->trl('Koordinator wurde nicht gesetzt!'); ?>
         <? } ?>
@@ -50,12 +44,6 @@
             </div>
             <div class="phone"><?=$this->data->trl('Tel:');?> <a href="tel:<?=$this->talk_organiser->phone;?>"><?=$this->talk_organiser->phone;?></a></div>
             <div class="email"><a href="mailto:<?=$this->talk_organiser->email;?>"><?=$this->talk_organiser->email;?></a></div>
-            <div class="address">
-                <div class="street"><?=$this->talk_organiser->street;?></div>
-                <div class="zip"><?=$this->talk_organiser->zip;?></div>
-                <div class="city"><?=$this->talk_organiser->city;?></div>
-                <div class="country"><?=$this->talk_organiser->country;?></div>
-            </div>
         <? } else { ?>
             <?= $this->data->trl('Vortragseinteiler wurde nicht gesetzt!'); ?>
         <? } ?>

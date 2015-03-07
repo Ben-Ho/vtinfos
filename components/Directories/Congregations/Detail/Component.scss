@@ -8,19 +8,50 @@
 
     .circle {
         margin-bottom: 5px;
+        .label {
+            margin-right: 3px;
+        }
     }
 
     .congregation-info {
-        margin-bottom: 20px;
+        padding-bottom: 30px;
         .time .talk-time, .address {
             font-weight: bold;
             font-size: 15px;
         }
+        .time {
+            margin-bottom: 10px;
+        }
+    }
+
+    .coordinator {
+        clear: both;
     }
 
     .coordinator, .talk-organiser {
         width: 50%;
         float: left;
+    }
+}
+
+.cssClass .congregation-info {
+    .address {
+        .street, .zip, .city {
+            float: left;
+        }
+        .zip, .city {
+            margin-right: 2px;
+        }
+        .city:after {
+            content: ",";
+        }
+        .street:after {
+            content: ",";
+            margin-right: 2px;
+        }
+        .country {
+            float: left;
+        }
     }
 }
 
@@ -55,46 +86,6 @@
 .cssClass .talk-organiser .phone,
 .cssClass .speakers-list .speakers .speaker .phone {
     clear: left;
-}
-
-.cssClass .congregation-info .address .street,
-.cssClass .coordinator .address .street,
-.cssClass .talk-organiser .address .street,
-.cssClass .congregation-info .address .zip,
-.cssClass .coordinator .address .zip,
-.cssClass .talk-organiser .address .zip,
-.cssClass .congregation-info .address .city,
-.cssClass .coordinator .address .city,
-.cssClass .talk-organiser .address .city {
-    float: left;
-}
-
-.cssClass .congregation-info .address .zip,
-.cssClass .coordinator .address .zip,
-.cssClass .talk-organiser .address .zip,
-.cssClass .congregation-info .address .city,
-.cssClass .coordinator .address .city,
-.cssClass .talk-organiser .address .city {
-    margin-right: 2px;
-}
-
-.cssClass .congregation-info .address .city:after,
-.cssClass .coordinator .address .city:after,
-.cssClass .talk-organiser .address .city:after {
-    content: ",";
-}
-
-.cssClass .congregation-info .address .street:after,
-.cssClass .coordinator .address .street:after,
-.cssClass .talk-organiser .address .street:after {
-    content: ",";
-    margin-right: 2px;
-}
-
-.cssClass .congregation-info .address .country,
-.cssClass .coordinator .address .country,
-.cssClass .talk-organiser .address .country {
-    float: left;
 }
 
 .cssClass .speakers-list {
