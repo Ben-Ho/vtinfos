@@ -1,26 +1,27 @@
 .cssClass {
-}
-
-.cssClass h1 {
-    margin-bottom: 10px;
-}
-
-.cssClass .congregation-info {
-    margin-bottom: 20px;
-    .time .talk-time, .address {
-        font-weight: bold;
-        font-size: 15px;
+    h1 {
+        margin-bottom: 10px;
     }
-}
+    .downloadPdf {
+        float: right;
+    }
 
-.cssClass .circle {
-    margin-bottom: 5px;
-}
+    .circle {
+        margin-bottom: 5px;
+    }
 
-.cssClass .coordinator,
-.cssClass .talk-organiser {
-    width: 50%;
-    float: left;
+    .congregation-info {
+        margin-bottom: 20px;
+        .time .talk-time, .address {
+            font-weight: bold;
+            font-size: 15px;
+        }
+    }
+
+    .coordinator, .talk-organiser {
+        width: 50%;
+        float: left;
+    }
 }
 
 .cssClass.st480 .coordinator,

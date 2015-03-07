@@ -1,4 +1,6 @@
 .cssClass {
+    position: relative;
+
     h3 {
         padding-left: 10px;
     }
@@ -13,5 +15,10 @@
     }
     .directoriesCongregationsView .filter {
         display: none;
+    }
+    > .downloadPdf {
+        position: absolute;
+        top: 0px;
+        right: 15px;
     }
 }

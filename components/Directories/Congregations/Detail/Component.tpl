@@ -1,5 +1,6 @@
 <div class="<?=$this->cssClass?>">
     <h1><?=$this->row->name;?></h1>
+    <a class="downloadPdf" href="<?=$this->pdfDownloadUrl;?>" target="_blank"><img src="/assets/web/images/downloadPdf.png" width="35" height="35"></a>
     <div class="circle"><span class="label"><?=$this->data->trl('Kreis');?></span><span class"value"><?=$this->row->circle_name;?></span></div>
     <div class="congregation-info">
         <div class="time">

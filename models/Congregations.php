@@ -8,6 +8,14 @@ class Congregations extends Kwf_Model_Db
         'Circle' => array(
             'refModelClass' => 'Circles',
             'column' => 'circle_id'
+        ),
+        'TalkOrganiser' => array(
+            'refModelClass' => 'Speakers',
+            'column' => 'talk_organiser'
+        ),
+        'Coordinator' => array(
+            'refModelClass' => 'Speakers',
+            'column' => 'coordinator'
         )
     );
 

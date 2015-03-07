@@ -49,6 +49,7 @@ class Directories_Congregations_Detail_Component extends Kwc_Directories_Item_De
         if ($ret['row']->talk_organiser) {
             $ret['talk_organiser'] = $speakerModel->getRow($ret['row']->talk_organiser);
         }
+        $ret['pdfDownloadUrl'] = Kwf_Media::getUrl('CongregationsPdf', $ret['row']->id, 'congregation;'.$this->getData()->getLanguage(), $this->getData()->trl('Versammlungs.pdf'));
         return $ret;
     }
 }
