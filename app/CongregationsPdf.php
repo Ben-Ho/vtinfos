@@ -19,7 +19,7 @@ class CongregationsPdf extends Kwf_Pdf_TcPdf implements Kwf_Media_Output_Interfa
         }
         $congregationPdf = new CongregationsPdf($splited[0], $id, $subroot);
         return array (
-            'contents' => $congregationPdf->Output('', 'I'),//S
+            'contents' => $congregationPdf->Output('', 'S'),
             'mimeType' => 'application/pdf',
             'lifetime' => false,
             'downloadFilename' => $subroot->trl('Versammlungen.pdf')
@@ -120,7 +120,13 @@ class CongregationsPdf extends Kwf_Pdf_TcPdf implements Kwf_Media_Output_Interfa
             $this->_writeCircleGroupTitle($circleGroup['row']);
             foreach ($circleGroup['circles'] as $circle) {
                 $this->_writeCircleTitle($circle['row']);
+                $firstCongregation = true;
                 foreach ($circle['congregations'] as $congregationRow) {
+                    if (!$firstCongregation) {
+                        $this->AddPage('P', array(595.276, 841.890));
+                    } else {
+                        $firstCongregation = false;
+                    }
                     $this->_writeCongregation($congregationRow);
                 }
             }
