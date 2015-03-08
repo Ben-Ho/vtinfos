@@ -20,3 +20,7 @@
 .frontend.login #page #outerHeader #header .leftRegion #logo .tld {
     line-height: 20px;
 }
+.kwcForm.default > div.kwcForm > form .form_auto_login .kwfFormFieldWrapper > input {
+    width: 15px !important;
+    margin-top: 4px;
+}
