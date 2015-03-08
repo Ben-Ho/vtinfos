@@ -13,6 +13,7 @@
             <div class="city"><?=$this->row->city;?></div>
             <div class="country"><?=$this->country;?></div>
         </div>
+        <div class="note"><?=$this->row->note;?></div>
     </div>
     <div class="coordinator">
         <h2><?=$this->data->trl('Koordinator');?></h2>
