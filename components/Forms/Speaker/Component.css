@@ -4,3 +4,11 @@
 .cssClass .formsSpeakerFieldSuperBoxSelect .hasLabel {
     max-width: 300px;
 }
+.kwcForm.default > div.kwcForm > form .form_has_beard label {
+    float: left;
+}
+.kwcForm.default > div.kwcForm > form .form_has_beard .kwfFormFieldWrapper > input {
+    width: 15px !important;
+    margin-top: 4px;
+    margin-left: 5px;
+}
