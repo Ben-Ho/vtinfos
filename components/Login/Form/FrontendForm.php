@@ -14,6 +14,6 @@ class Login_Form_FrontendForm extends Kwf_Form
             ->setCls('loginInput')
             ->setAllowBlank(false);
 
-        $this->add(new Kwf_Form_Field_Checkbox('auto_login', trlKwfStatic('Auto Login')));
+//         $this->add(new Kwf_Form_Field_Checkbox('auto_login', trlKwfStatic('Auto Login')));
     }
 }
