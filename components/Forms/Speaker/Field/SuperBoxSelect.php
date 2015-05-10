@@ -72,7 +72,7 @@ class Forms_Speaker_Field_SuperBoxSelect extends Kwf_Form_Field_Abstract
         $selectedIds = array();
         if ($this->getSave() !== false && $row) {
             foreach ($row->getChildRows($this->getRelModel()) as $i) {
-                $selectedIds[] = $i->number;
+                $selectedIds[$i->language][] = $i->number;
             }
         }
         return array($this->getFieldName() => $selectedIds);
@@ -89,27 +89,32 @@ class Forms_Speaker_Field_SuperBoxSelect extends Kwf_Form_Field_Abstract
         $dataModel = $row->getModel();
         if ($dataModel) $this->setDataModel($dataModel);
 
+        $select = new Kwf_Model_Select();
+        $select->whereEquals('speaker_id', $row->id);
+        Kwf_Model_Abstract::getInstance('SpeakersToTalks')->deleteRows($select);
 
         $selection = json_decode($postData[$this->getFieldName()]);
-        $selectionIds = array();
-        foreach ($selection as $value) {
-            $select = new Kwf_Model_Select();
-            $select->whereEquals('number', $value);
-            $talkRow = Kwf_Model_Abstract::getInstance('Talks')->getRow($select);
-            if ($talkRow)
-                $selectionIds[] = $talkRow->id;
-        }
-
-        foreach ($row->getChildRows($this->getRelModel()) as $savedRow) {
-            if (!in_array($savedRow->talk_id, $selectionIds)) {
-                $savedRow->delete();
-            } else {
-                unset($selectionIds[array_search($savedRow->talk_id, $selectionIds)]);
+        foreach ($selection as $language => $values) {
+            foreach ($values as $value) {
+                $relationRow = $row->createChildRow('SpeakerToTalks');
+                $select = new Kwf_Model_Select();
+                $select->whereEquals('number', $value);
+                $talkRow = Kwf_Model_Abstract::getInstance('Talks')->getRow($select);
+                $relationRow->talk_id = $talkRow->id;
+                $relationRow->language = $language;
+                $relationRow->save();
             }
         }
-        foreach ($selectionIds as $id) {
-            $newRow = $row->createChildRow('SpeakerToTalks');
-            $newRow->talk_id = $id;
+    }
+
+    protected $_languages;
+    public function trlStaticExecute($language = null)
+    {
+        parent::trlStaticExecute($language);
+        $trl = Kwf_Trl::getInstance();
+        $this->_languages = array();
+        foreach (Talks::getLanguages() as $code) {
+            $this->_languages[$code] = $trl->trlStaticExecute(Talks::getLanguage($code), $language);
         }
     }
 
@@ -123,6 +128,11 @@ class Forms_Speaker_Field_SuperBoxSelect extends Kwf_Form_Field_Abstract
         $ret['html'] .= '    <div class="selectedValues"></div>'."\n";
         $ret['html'] .= '    <div class="addValue">'."\n";
         $ret['html'] .= '        <input type="text" class="newValue"/>'."\n";
+        $ret['html'] .= '        <select type="text" class="newValueSelect"/>'."\n";
+        foreach ($this->_languages as $code => $language) {
+            $ret['html'] .= '        <option value="'.$code.'">'.$language.'</option>'."\n";
+        }
+        $ret['html'] .= '        </select>'."\n";
         $ret['html'] .= '        <span class="button">+</span>'."\n";
         $ret['html'] .= '    </div>'."\n";
         $ret['html'] .= '</div>';

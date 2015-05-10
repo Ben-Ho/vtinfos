@@ -1,4 +1,4 @@
-.formsSpeakerFieldSuperBoxSelect {
+.kwcForm > div.kwcForm > form .formsSpeakerFieldSuperBoxSelect {
     .selectedValues {
         .selectedValue {
             margin-left: 2px;
@@ -18,10 +18,20 @@
                 cursor: pointer;
             }
         }
+        .languageBlock {
+            clear: both;
+            margin-left: 10px;
+        }
     }
     .addValue {
         clear: both;
         padding-top: 3px;
+        .newValue {
+        }
+        select.newValueSelect {
+            width: 100px !important;
+            height: 26px;
+        }
         .button {
             background-color: #085ac0;
             color: #fff;

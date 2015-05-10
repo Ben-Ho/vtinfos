@@ -6,6 +6,12 @@ class Search_Speakers_View_SearchForm_FrontendForm extends Kwf_Form
         parent::_initFields();
         $this->_model = new Kwf_Model_FnF();
         $this->add(new Kwf_Form_Field_TextField('talk_number', trlStatic('Vortragsnummer/-titel')));
+        $combobox = $this->add(new Kwf_Form_Field_Select('talk_language', trlStatic('Vortragssprache')));
+        $languages = array();
+        foreach (Talks::getLanguages() as $code) {
+            $languages[$code] = Talks::getLanguage($code);
+        }
+        $combobox->setValues($languages);
         $this->add(new Kwf_Form_Field_TextField('firstname', trlStatic('Vorname')));
         $this->add(new Kwf_Form_Field_TextField('lastname', trlStatic('Nachname')));
         $comboBox = new Kwf_Form_Field_Select('congregation', trlStatic('Versammlung'));

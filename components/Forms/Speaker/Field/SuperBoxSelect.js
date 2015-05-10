@@ -3,30 +3,53 @@ Kwf.onJElementReady('.formsSpeakerFieldSuperBoxSelect', function (el) {
         return JSON.parse($(el).find('.selection').val());
     }
     var setSelection = function (el, selection) {
+        if (selection.length == 0) return;
         // Set selection to posted input-field
-        selection.sort(function (a, b) {
-            return a - b;
-        });
         $(el).find('.selection').val(JSON.stringify(selection));
         // clear displayed values
         $(el).find('.selectedValues').empty();
-        // insert values from selection
-        for (var i = 0; i < selection.length; i++) {
+
+        for (var key in selection) {
+            selection[key].sort(function (a, b) {
+                return a - b;
+            });
+            var jsCode = '<div class="languageBlock">';
+            var language = '';
+            if (key == 'de') {
+                language = trl('Deutsch');
+            } else if (key == 'en') {
+                language = trl('Englisch');
+            } else if (key == 'fr') {
+                language = trl('Französisch');
+            } else if (key == 'zh') {
+                language = trl('Chinesisch');
+            } else if (key == 'fa') {
+                language = trl('Persisch');
+            } else if (key == 'gebaerde') {
+                language = trl('Gebärdensprache');
+            }
+            jsCode += '<div class="languageName" data-code="'+key+'">'+language+'</div>';
+            for (var i = 0; i < selection[key].length; i++) {
+                jsCode += '<div class="selectedValue"><span class="value">'+selection[key][i]+'</span><span class="remove">X</span></div>';
+            }
+            jsCode += '</div>';
             $(el).find('.selectedValues')
-                .append('<div class="selectedValue"><span class="value">'+selection[i]+'</span><span class="remove">X</span></div>')
+                .append(jsCode);
         }
         // add listener to displayed values
         $(el).find('.selectedValue .remove').click(function (ev) {
             if (!confirm(trl('Möchtest du diesen Vortrag wirklich löschen? Änderung wird mit Speichern endgültig übernommen.')))
                 return;
             var talkNumber = $(ev.currentTarget).parent('.selectedValue').find('.value').html();
+            var language = $(ev.currentTarget).parent().parent().find('.languageName').data('code');
             var selection = getSelection($(ev.currentTarget).closest('.formsSpeakerFieldSuperBoxSelect'));
             var newSelection = [];
-            for (var i = 0; i < selection.length; i++) {
-                if (selection[i] != talkNumber)
-                    newSelection.push(selection[i]);
+            for (var i = 0; i < selection[language].length; i++) {
+                if (selection[language][i] != talkNumber)
+                    newSelection.push(selection[language][i]);
             }
-            setSelection($(ev.currentTarget).closest('.formsSpeakerFieldSuperBoxSelect'), newSelection);
+            selection[language] = newSelection;
+            setSelection($(ev.currentTarget).closest('.formsSpeakerFieldSuperBoxSelect'), selection);
         });
     }
     // init displayed values
@@ -34,11 +57,12 @@ Kwf.onJElementReady('.formsSpeakerFieldSuperBoxSelect', function (el) {
     // init add new value
     el.find('.addValue .button').click(function(ev) {
         var newValue = $(ev.currentTarget).closest('.addValue').find('.newValue').val();
+        var language = $(ev.currentTarget).closest('.addValue').find('.newValueSelect').val();
         if (!newValue)
             return;
         $(ev.currentTarget).closest('.addValue').find('.newValue').val('');
         var selection = getSelection($(ev.currentTarget).closest('.formsSpeakerFieldSuperBoxSelect'));
-        selection.push(parseInt(newValue));
+        selection[language].push(parseInt(newValue));
         setSelection($(ev.currentTarget).closest('.formsSpeakerFieldSuperBoxSelect'), selection);
     });
 });

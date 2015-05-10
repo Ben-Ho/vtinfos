@@ -68,7 +68,11 @@
                     <div class="note"><?=$speaker['row']->note;?></div>
                     <table class="talks">
                         <? foreach ($speaker['talks'] as $talk) { ?>
-                            <tr><td><?=$talk['number']?></td><td><?=$talk['title'];?></td>
+                            <tr>
+                                <td><?=$talk['number']?></td>
+                                <td><?=$talk['title'];?></td>
+                                <td><?=$talk['language'];?></td>
+                            </tr>
                         <? } ?>
                     </table>
                 </div>
