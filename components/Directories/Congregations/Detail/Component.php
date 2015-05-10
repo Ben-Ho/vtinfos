@@ -28,7 +28,6 @@ class Directories_Congregations_Detail_Component extends Kwc_Directories_Item_De
         foreach ($this->getData()->getRow()->getChildRows('Speakers', $select) as $speaker) {
             $talks = array();
             $select = new Kwf_Model_Select();
-            $select->order("IF(language == 'de',1, 0)", 'DESC');
             $select->order('language');
             $select->order('number');
             foreach ($speaker->getChildRows('SpeakerToTalks', $select) as $talk) {
