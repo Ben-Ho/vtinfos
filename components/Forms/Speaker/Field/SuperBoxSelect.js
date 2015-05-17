@@ -27,6 +27,10 @@ Kwf.onJElementReady('.formsSpeakerFieldSuperBoxSelect', function (el) {
                 language = trl('Persisch');
             } else if (key == 'gebaerde') {
                 language = trl('Gebärdensprache');
+            } else if (key == 'twi') {
+                language = trl('Twi');
+            } else if (key == 'ga') {
+                language = trl('Ga');
             }
             jsCode += '<div class="languageName" data-code="'+key+'">'+language+'</div>';
             for (var i = 0; i < selection[key].length; i++) {

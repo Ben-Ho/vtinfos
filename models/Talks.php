@@ -53,6 +53,18 @@ class Talks extends Kwf_Model_Db
             } else {
                 return trlStatic('Gebärdensprache');
             }
+        } else if ($code = 'twi') {
+            if ($data) {
+                return $data->trl('Twi');
+            } else {
+                return trlStatic('Twi');
+            }
+        } else if ($code = 'ga') {
+            if ($data) {
+                return $data->trl('Ga');
+            } else {
+                return trlStatic('Ga');
+            }
         } else {
             if ($data) {
                 return $data->trl('Unbekannt');
