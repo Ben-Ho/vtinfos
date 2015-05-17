@@ -122,8 +122,13 @@ class Forms_Speaker_Field_SuperBoxSelect extends Kwf_Form_Field_Abstract
     {
         $ret = parent::getTemplateVars($values, $fieldNamePostfix, $idPrefix);
         $values = $values[$this->getFieldName()];
+        if (count($values)) {
+            $jsonValue = htmlspecialchars(json_encode($values));
+        } else {
+            $jsonValue = '{}';
+        }
         $ret['html']  = '<div class="inputRegion">'."\n";
-        $ret['html'] .= '    <input class="selection" type="hidden" value="'.htmlspecialchars(json_encode($values)).'"';
+        $ret['html'] .= '    <input class="selection" type="hidden" value="'.$jsonValue.'"';
         $ret['html'] .=        ' name="'.$this->getFieldName().$fieldNamePostfix.'" />'."\n";
         $ret['html'] .= '    <div class="selectedValues"></div>'."\n";
         $ret['html'] .= '    <div class="addValue">'."\n";
