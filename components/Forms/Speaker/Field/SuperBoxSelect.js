@@ -62,6 +62,9 @@ Kwf.onJElementReady('.formsSpeakerFieldSuperBoxSelect', function (el) {
             return;
         $(ev.currentTarget).closest('.addValue').find('.newValue').val('');
         var selection = getSelection($(ev.currentTarget).closest('.formsSpeakerFieldSuperBoxSelect'));
+        if (selection[language] == undefined) {
+            selection[language] = [];
+        }
         selection[language].push(parseInt(newValue));
         setSelection($(ev.currentTarget).closest('.formsSpeakerFieldSuperBoxSelect'), selection);
     });
