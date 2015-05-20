@@ -23,10 +23,12 @@ class Search_Speakers_View_Component extends Kwc_Directories_List_ViewAjax_Compo
                     'title' => $searchRow->talk_number
                 ))
             );
+            $andExprs = array();
+            $andExprs[] = new Kwf_Model_Select_Expr_Or($orExprs);
             if ($searchRow->talk_language) {
-                $orExprs[] = new Kwf_Model_Select_Expr_Equals('language', $searchRow->talk_language);
+                $andExprs[] = new Kwf_Model_Select_Expr_Equals('language', $searchRow->talk_language);
             }
-            $select->where(new Kwf_Model_Select_Expr_Or($orExprs));
+            $select->where(new Kwf_Model_Select_Expr_And($andExprs));
             $ret->where(new Kwf_Model_Select_Expr_Child_Contains('SpeakerToTalks', $select));
         }
         if ($searchRow->firstname) {
