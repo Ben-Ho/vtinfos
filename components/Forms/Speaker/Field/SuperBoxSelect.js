@@ -69,7 +69,15 @@ Kwf.onJElementReady('.formsSpeakerFieldSuperBoxSelect', function (el) {
         if (selection[language] == undefined) {
             selection[language] = [];
         }
-        selection[language].push(parseInt(newValue));
+        var alreadyExisting = false;
+        var newValue = parseInt(newValue);
+        for (var i = 0; i < selection[language].length; i++) {
+            if (selection[language][i] == newValue) {
+                alreadyExisting = true;
+                break;
+            }
+        }
+        if (!alreadyExisting) selection[language].push(newValue);
         setSelection($(ev.currentTarget).closest('.formsSpeakerFieldSuperBoxSelect'), selection);
     });
 });
