@@ -15,22 +15,25 @@ class Search_Speakers_View_Component extends Kwc_Directories_List_ViewAjax_Compo
     {
         $ret = new Kwf_Component_Select();
         $ret->whereGenerator('detail');
+        $select = new Kwf_Model_Select();
+        $andExprs = array();
         if ($searchRow->talk_number) {
-            $select = new Kwf_Model_Select();
             $orExprs = array(
                 new Kwf_Model_Select_Expr_Equals('number', $searchRow->talk_number),
                 new Kwf_Model_Select_Expr_SearchLike(array(
                     'title' => $searchRow->talk_number
                 ))
             );
-            $andExprs = array();
             $andExprs[] = new Kwf_Model_Select_Expr_Or($orExprs);
-            if ($searchRow->talk_language) {
-                $andExprs[] = new Kwf_Model_Select_Expr_Equals('language', $searchRow->talk_language);
-            }
+        }
+        if ($searchRow->talk_language) {
+            $andExprs[] = new Kwf_Model_Select_Expr_Equals('language', $searchRow->talk_language);
+        }
+        if ($andExprs) {
             $select->where(new Kwf_Model_Select_Expr_And($andExprs));
             $ret->where(new Kwf_Model_Select_Expr_Child_Contains('SpeakerToTalks', $select));
         }
+
         if ($searchRow->firstname) {
             $ret->where(new Kwf_Model_Select_Expr_SearchLike(array(
                 'firstname' => $searchRow->firstname
