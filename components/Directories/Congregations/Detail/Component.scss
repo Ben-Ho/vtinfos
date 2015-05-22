@@ -31,8 +31,13 @@
     }
 
     .coordinator, .talk-organiser {
-        width: 50%;
-        float: left;
+        margin-bottom: 20px;
+    }
+    &.gt400 {
+        .coordinator, .talk-organiser {
+            width: 50%;
+            float: left;
+        }
     }
 }
 
@@ -88,10 +93,6 @@
 .cssClass .talk-organiser .phone,
 .cssClass .speakers-list .speakers .speaker .phone {
     clear: left;
-}
-
-.cssClass .speakers-list {
-    margin-top: 20px;
 }
 
 .cssClass .speakers-list .speakers .speaker .name {
