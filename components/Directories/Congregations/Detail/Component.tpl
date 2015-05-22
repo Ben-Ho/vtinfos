@@ -8,10 +8,7 @@
             <div class="ministryschool-time"><span class="label"><?=$this->data->trl('Predigtdienstschule:');?></span> <?=$this->row->ministryschool_time;?></div>
         </div>
         <div class="address">
-            <div class="street"><?=$this->row->street;?></div>
-            <div class="zip"><?=$this->row->zip;?></div>
-            <div class="city"><?=$this->row->city;?></div>
-            <div class="country"><?=$this->country;?></div>
+            <?=$this->row->street;?>, <?=$this->row->zip;?> <?=$this->row->city;?>, <?=$this->country;?>
         </div>
         <div class="note"><?=$this->row->note;?></div>
     </div>

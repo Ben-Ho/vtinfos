@@ -41,27 +41,6 @@
     }
 }
 
-.cssClass .congregation-info {
-    .address {
-        .street, .zip, .city {
-            float: left;
-        }
-        .zip, .city {
-            margin-right: 2px;
-        }
-        .city:after {
-            content: ",";
-        }
-        .street:after {
-            content: ",";
-            margin-right: 2px;
-        }
-        .country {
-            float: left;
-        }
-    }
-}
-
 .cssClass.st480 .coordinator,
 .cssClass.st480 .talk-organiser {
     width: 100%;
