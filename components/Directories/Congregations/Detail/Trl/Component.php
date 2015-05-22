@@ -21,7 +21,8 @@ class Directories_Congregations_Detail_Trl_Component extends Kwc_Directories_Ite
             foreach ($speaker['talks'] as $talk) {
                 $talks[] = array(
                     'number' => $talk['number'],
-                    'title' => $talk['row']->getParentRow('Talk')->getTitle($this->getData()->getLanguage())
+                    'title' => $talk['row']->getParentRow('Talk')->getTitle($this->getData()->getLanguage()),
+                    'language' => Talks::getLanguage($talk['row']->language, $this->getData())
                 );
             }
             $ret['speakers'][$key]['talks'] = $talks;

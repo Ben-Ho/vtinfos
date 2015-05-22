@@ -410,4 +410,44 @@
 <de>Kein Bart</de>
 <en>No beard</en>
 </text>
+<text>
+<id>85</id>
+<de>Deutsch</de>
+<en>German</en>
+</text>
+<text>
+<id>86</id>
+<de>Englisch</de>
+<en>English</en>
+</text>
+<text>
+<id>87</id>
+<de>Französisch</de>
+<en>French</en>
+</text>
+<text>
+<id>88</id>
+<de>Chinesisch</de>
+<en>Chinese</en>
+</text>
+<text>
+<id>89</id>
+<de>Persisch</de>
+<en>Persian</en>
+</text>
+<text>
+<id>90</id>
+<de>Gebärdensprache</de>
+<en>sign language</en>
+</text>
+<text>
+<id>91</id>
+<de>Twi</de>
+<en>Twi</en>
+</text>
+<text>
+<id>92</id>
+<de>Ga</de>
+<en>Ga</en>
+</text>
 </trl>
