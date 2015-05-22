@@ -46,10 +46,16 @@ class Directories_Congregations_Detail_Component extends Kwc_Directories_Item_De
 
         $speakerModel = Kwf_Model_Abstract::getInstance('Speakers');
         if ($ret['row']->coordinator) {
-            $ret['coordinator'] = $speakerModel->getRow($ret['row']->coordinator);
+            $row = $speakerModel->getRow($ret['row']->coordinator);
+            if (!$row->deleted) {
+                $ret['coordinator'] = $row;
+            }
         }
         if ($ret['row']->talk_organiser) {
-            $ret['talk_organiser'] = $speakerModel->getRow($ret['row']->talk_organiser);
+            $row = $speakerModel->getRow($ret['row']->talk_organiser);
+            if (!$row->deleted) {
+                $ret['talk_organiser'] = $row;
+            }
         }
         $ret['pdfDownloadUrl'] = Kwf_Media::getUrl('CongregationsPdf', $ret['row']->id, 'congregation;'.$this->getData()->getLanguage(), $this->getData()->trl('Versammlungs.pdf'));
         return $ret;
