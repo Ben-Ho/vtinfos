@@ -10,6 +10,7 @@
         <link rel="apple-touch-icon" href="/assets/web/images/logo.png" />
         <meta name="msapplication-square152x152logo" content="/assets/web/images/logo.png">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#085ac0">
         <link rel="manifest" href="/manifest.json" />
     </head>
     <body class="frontend login">
