@@ -1,6 +1,10 @@
 .cssClass {
     width: 100%;
 }
+.cssClass .problemSolvingRegion {
+    display: table;
+    margin: auto;
+}
 
 .frontend.login #page #outerHeader #header .leftRegion {
     width: auto;

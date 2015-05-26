@@ -1,8 +1,8 @@
 <div class="<?=$this->cssClass?>">
     <?=$this->component($this->form)?>
-    <? if ($this->lostPassword) { ?>
-        <p><?=$this->data->trlKwf("If you have lost your password,")?>
-        <?=$this->componentLink($this->lostPassword, $this->data->trlKwf('request a new one here'))?>.
-        </p>
-    <? } ?>
+    <div class="problemSolvingRegion">
+        <?=$this->data->trl('Wenn du dein Passwort vergessen hast,')?>
+        <?=$this->componentLink($this->lostPassword, $this->data->trl('kannst du hier ein neues anfordern.'))?><br/>
+        <?=$this->data->trl('Bei Login-Problemen bitte an +43/699 12 63 41 50 wenden.');?>
+    </div>
 </div>

@@ -5,7 +5,6 @@ class Login_Form_Component extends Kwc_User_Login_Form_Component
     {
         $ret = parent::getSettings();
         $ret['placeholder']['submitButton'] = trlStatic('Anmelden');
-        $ret['generators']['child']['component']['footer'] = 'Login_Form_Contact_Component';
         return $ret;
     }
 
