@@ -7,8 +7,8 @@
         <meta name="apple-mobile-web-app-capable" content="yes">
         <link rel="shortcut icon" href="/assets/web/images/favicon.ico" />
         <link rel="shortcut icon" href="/assets/web/images/favicon.ico" type="image/x-icon" />
-        <link rel="apple-touch-icon" href="/assets/web/images/logo.png" />
-        <meta name="msapplication-square152x152logo" content="/assets/web/images/logo.png">
+        <link rel="apple-touch-icon" href="/assets/web/images/logo.jpg" />
+        <meta name="msapplication-square512x512logo" content="/assets/web/images/logo.jpg">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#085ac0">
         <link rel="manifest" href="/manifest.json" />
