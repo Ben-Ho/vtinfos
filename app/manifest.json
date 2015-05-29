@@ -2,7 +2,7 @@
   "short_name": "vtinfos",
   "name": "vtinfos.com",
   "icons": {
-      "152": "http://v2.vtinfos.com/assets/web/images/logo.png"
+      "152": "http://v2.vtinfos.com/assets/web/images/logo.jpg"
   },
   "start_url": "/",
   "display": "standalone"
