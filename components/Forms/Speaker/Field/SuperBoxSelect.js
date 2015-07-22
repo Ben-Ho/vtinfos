@@ -31,6 +31,12 @@ Kwf.onJElementReady('.formsSpeakerFieldSuperBoxSelect', function (el) {
                 language = trl('Twi');
             } else if (key == 'ga') {
                 language = trl('Ga');
+            } else if (key == 'tr') {
+                language = trl('Türkisch');
+            } else if (key == 'sr') {
+                language = trl('Serbisch');
+            } else if (key == 'ru') {
+                language = trl('Russisch');
             }
             jsCode += '<div class="languageName" data-code="'+key+'">'+language+'</div>';
             for (var i = 0; i < selection[key].length; i++) {

@@ -12,7 +12,7 @@ class Talks extends Kwf_Model_Db
 
     public static function getLanguages()
     {
-        return array('de', 'en', 'fr', 'zh', 'fa', 'gebaerde', 'twi', 'ga');
+        return array('de', 'en', 'fr', 'zh', 'fa', 'gebaerde', 'twi', 'ga', 'tr', 'sr', 'ru');
     }
 
     public static function getLanguage($code, $data = null)
@@ -64,6 +64,24 @@ class Talks extends Kwf_Model_Db
                 return $data->trl('Ga');
             } else {
                 return trlStatic('Ga');
+            }
+        } else if ($code == 'tr') {
+            if ($data) {
+                return $data->trl('Türkisch');
+            } else {
+                return trlStatic('Türkisch');
+            }
+        } else if ($code == 'sr') {
+            if ($data) {
+                return $data->trl('Serbisch');
+            } else {
+                return trlStatic('Serbisch');
+            }
+        } else if ($code == 'ru') {
+            if ($data) {
+                return $data->trl('Russisch');
+            } else {
+                return trlStatic('Russisch');
             }
         } else {
             if ($data) {
