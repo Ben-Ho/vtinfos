@@ -25,7 +25,6 @@ class Contact_Component extends Kwc_Form_Component
             $admins[0]->save();
             $row->addTo($admins[0]->email);
         }
-        $row->setFrom($row->email);
         $row->subject = 'Anfrage auf vtinfos';
         parent::_beforeSave($row);
     }

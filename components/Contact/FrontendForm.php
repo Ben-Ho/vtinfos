@@ -7,6 +7,7 @@ class Contact_FrontendForm extends Kwf_Form
         $row->firstname = $user->firstname;
         $row->lastname = $user->lastname;
         $row->email = $user->email;
+        $row->setFrom($user->email);
         parent::_beforeInsert($row);
     }
 
