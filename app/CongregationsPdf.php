@@ -276,7 +276,8 @@ class CongregationsPdf extends Kwf_Pdf_TcPdf implements Kwf_Media_Output_Interfa
         $this->SetFont($this->_defaultFontFamily, $defaultFontStyle, $defaultFontSize, $this->_defaultFontFontfile);
         foreach ($speakerRow->getChildRows('SpeakerToTalks') as $talkRelationRow) {
             $title = $talkRelationRow->getParentRow('Talk')->getTitle($this->subroot->getLanguage());
-            $this->Write(5, str_pad($talkRelationRow->number, 3, '0', STR_PAD_LEFT).' '.$title, '', false, 'L', true, 0, false, false, 0, '', '');
+            $language = Talks::getLanguage($talkRelationRow->language, $this->subroot);
+            $this->Write(5, str_pad($talkRelationRow->number, 3, '0', STR_PAD_LEFT).' '.$title.' ('.$language.')', '', false, 'L', true, 0, false, false, 0, '', '');
         }
     }
 }
