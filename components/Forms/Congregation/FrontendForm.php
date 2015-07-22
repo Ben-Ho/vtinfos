@@ -29,6 +29,7 @@ class Forms_Congregation_FrontendForm extends Kwf_Form
         $user = Kwf_Registry::get('userModel')->getAuthedUser();
         $select->whereEquals('congregation_id', $user->congregation_id);
         $select->whereEquals('deleted', 0);
+        $select->order('lastname');
         $speakerRows = Kwf_Model_Abstract::getInstance('Speakers')->getRows($select);
         $selectBox = new Kwf_Form_Field_Select('coordinator', trlStatic('Koordinator'));
         $selectBox->setShowNoSelection(true);
