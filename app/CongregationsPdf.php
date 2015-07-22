@@ -223,13 +223,6 @@ class CongregationsPdf extends Kwf_Pdf_TcPdf implements Kwf_Media_Output_Interfa
     {
         if (!$speakerRow) return $this->subroot->trl('keine Auswahl');
         $speakerDetail  = "$speakerRow->name\n";
-        $country = $this->subroot->trl('keine Auswahl');
-        if ($speakerRow->country) {
-            $country = Kwf_Model_Abstract::getInstance('Kwf_Util_Model_Countries')
-                    ->getNameByLanguageAndId($this->subroot->getLanguage(), $speakerRow->country);
-        }
-        $address = $speakerRow->street.', '.$speakerRow->zip.' '.$speakerRow->city.' - '.$country;
-        $speakerDetail .= "$address\n";
         $phone = $speakerRow->phone;
         if ($speakerRow->phone2) {
             $phone .= ', '.$speakerRow->phone2;

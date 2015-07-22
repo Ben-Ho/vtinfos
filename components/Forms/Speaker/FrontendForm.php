@@ -19,19 +19,6 @@ class Forms_Speaker_FrontendForm extends Kwf_Form
         ));
         $selectBox->setWidth($width);
         $this->add($selectBox);
-//         $this->add(new Kwf_Form_Field_TextField('street', trlStatic('Straße')))
-//             ->setWidth($width);
-//         $this->add(new Kwf_Form_Field_TextField('zip', trlStatic('PLZ')))
-//             ->setWidth($width);
-//         $this->add(new Kwf_Form_Field_TextField('city', trlStatic('Stadt')))
-//             ->setWidth($width);
-//         $selectBox = new Kwf_Form_Field_Select('country', trlStatic('Land'));
-//         $selectBox->setWidth($width);
-//         $selectBox->setValues(array(
-//             'Österreich' => trlStatic('Österreich'),
-//             'Deutschland' => trlStatic('Deutschland')
-//         ));
-//         $this->add($selectBox);
         $this->add(new Kwf_Form_Field_TextField('phone', trlStatic('Telefonnummer')))
             ->setWidth($width);
         $this->add(new Kwf_Form_Field_TextField('phone2', trlStatic('Telefonnummer').' 2'))
