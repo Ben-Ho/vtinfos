@@ -7,9 +7,9 @@ vtinfos.Structure = Ext.extend(Ext.Panel,
         var talksGrid = new Kwf.Auto.GridPanel({
             title: trl('Vorträge des ausgewählten Redners'),
             region: 'east',
-            width: 300,
+            width: 420,
             split: true,
-            controllerUrl: '/admin/talks/speakers-to-talks',
+            controllerUrl: '/admin/talks/speakers-to-talks'
         });
 
         var speakersGrid = new Kwf.Auto.GridPanel({

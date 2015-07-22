@@ -14,6 +14,15 @@ class Talks_SpeakersToTalksController extends Kwf_Controller_Action_Auto_Grid
             $talks[$talkRow->id] = $talkRow->number.' '.$talkRow->title;
         }
 
+        $comboBox = new Kwf_Form_Field_Select();
+        $languages = array();
+        foreach (Talks::getLanguages() as $code) {
+            $languages[$code] = Talks::getLanguage($code);
+        }
+        $comboBox->setValues($languages);
+        $this->_columns->add(new Kwf_Grid_Column('language', trl('Sprache'), 100))
+            ->setEditor($comboBox);
+
         $comboBox = new Kwf_Form_Field_ComboBox();
         $comboBox->setValues($talks);
         $this->_columns->add(new Kwf_Grid_Column('talk_id', trl('Vortragstitel'), 300))
