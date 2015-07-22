@@ -17,6 +17,7 @@ class Contact_FrontendForm extends Kwf_Form
 
         $this->add(new Kwf_Form_Field_Select('topic', trlStatic('Grund')))
             ->setValues(array(//(neue Versammlung, Fehler auf der Seite, Wünsche, Sonstiges)
+                'wrongData' => trlStatic('Fehler bei Daten'),
                 'newCongregation' => trlStatic('Neue Versammlung'),
                 'bug' => trlStatic('Fehler auf Seite gefunden'),
                 'wishes' => trlStatic('Wunsch'),
