@@ -450,4 +450,44 @@
 <de>Ga</de>
 <en>Ga</en>
 </text>
+    <text>
+        <id>93</id>
+        <de>Versammlungen-Übersicht</de>
+        <en>Congregation-Overview</en>
+    </text>
+    <text>
+        <id>94</id>
+        <de>Dienstzusammenkunft</de>
+        <en>Ministry-School</en>
+    </text>
+    <text>
+        <id>95</id>
+        <de>Öffentl. Vortrag</de>
+        <en>Public Talk</en>
+    </text>
+    <text>
+        <id>96</id>
+        <de>keine Auswahl</de>
+        <en>no selection</en>
+    </text>
+    <text>
+        <id>97</id>
+        <de>Tel.Nr.</de>
+        <en>Phone</en>
+    </text>
+    <text>
+        <id>98</id>
+        <de>Anmerkung</de>
+        <en>Note</en>
+    </text>
+    <text>
+        <id>99</id>
+        <de>Hat Voll-/Modebart</de>
+        <en>has beard</en>
+    </text>
+    <text>
+        <id>100</id>
+        <de>Versammlungs.pdf</de>
+        <en>Congregations.pdf</en>
+    </text>
 </trl>

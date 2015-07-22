@@ -267,7 +267,7 @@ class CongregationsPdf extends Kwf_Pdf_TcPdf implements Kwf_Media_Output_Interfa
         if ($speakerRow->phone2) {
             $phone .= ', '.$speakerRow->phone2;
         }
-        $this->Write(20, $this->subroot->trl('Tel.Nr.:').' '.$phone, '', false, 'L', true, 0, false, false, 0, '', '');
+        $this->Write(20, $this->subroot->trl('Tel.Nr.').': '.$phone, '', false, 'L', true, 0, false, false, 0, '', '');
 
         if ($speakerRow->note) {
             $this->Write(20, $this->subroot->trl('Anmerkung').': '.$speakerRow->note, '', false, 'L', true, 0, false, false, 0, '', '');
