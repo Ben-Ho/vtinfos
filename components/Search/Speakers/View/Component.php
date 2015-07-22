@@ -44,6 +44,13 @@ class Search_Speakers_View_Component extends Kwc_Directories_List_ViewAjax_Compo
                 'lastname' => $searchRow->lastname
             )));
         }
+        if ($searchRow->phone) {
+            $phone = str_replace(' ', '', $searchRow->phone);
+            $ret->where(new Kwf_Model_Select_Expr_SearchLike(array(
+                'phone_normalized' => $phone,
+                'phone2_normalized' => $phone
+            )));
+        }
         if ($searchRow->congregation) {
             $ret->whereEquals('congregation_id', $searchRow->congregation);
         }

@@ -14,6 +14,7 @@ class Search_Speakers_View_SearchForm_FrontendForm extends Kwf_Form
         $combobox->setValues($languages);
         $this->add(new Kwf_Form_Field_TextField('firstname', trlStatic('Vorname')));
         $this->add(new Kwf_Form_Field_TextField('lastname', trlStatic('Nachname')));
+        $this->add(new Kwf_Form_Field_TextField('phone', trlStatic('Telefonnummer')));
         $comboBox = new Kwf_Form_Field_Select('congregation', trlStatic('Versammlung'));
         $comboBox->setShowNoSelection(true);
         $select = new Kwf_Model_Select();
