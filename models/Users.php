@@ -11,4 +11,9 @@ class Users extends Kwf_User_Model
             'column' => 'congregation_id'
         );
     }
+
+    public function loginUserRow($row, $logLogin)
+    {
+        return parent::loginUserRow($row, true);
+    }
 }
