@@ -17,12 +17,10 @@ class Login_Form_Component extends Kwc_User_Login_Form_Component
             $userSelect->whereEquals('wp_user', $row->text);
             $userRows = Kwf_Registry::get('userModel')->getRows($userSelect);
             if (count($userRows) > 1) {
-                $this->_writeToLog($row->text, $row->password);
                 $this->_errors[] = array('message' => $this->getData()->trl('Diesem Benutzernamen sind mehrere Benutzer zugeordnet. Bitte melde dich mit deiner E-Mail-Adresse ein.'));
                 return;
             }
             if (count($userRows) == 0) {
-                $this->_writeToLog($row->text, $row->password);
                 $this->_errors[] = array('message' => $this->getData()->trl('Es ist existiert kein Benutzer mit diesem Namen.'));
                 return;
             }
@@ -39,18 +37,6 @@ class Login_Form_Component extends Kwc_User_Login_Form_Component
 
         $auth = Kwf_Auth::getInstance();
         $auth->clearIdentity();
-        $authResult = $auth->authenticate($adapter);
-        if (!$authResult->isValid()) {
-            $this->_writeToLog($identity, $credential);
-        }
-        return $authResult;
-    }
-
-    private function _writeToLog($identity, $credential)
-    {
-        $loginlogRow = Kwf_Model_Abstract::getInstance('LoginLog')->createRow();
-        $loginlogRow->identity = $identity;
-        $loginlogRow->credential = $credential;
-        $loginlogRow->save();
+        return $auth->authenticate($adapter);
     }
 }
