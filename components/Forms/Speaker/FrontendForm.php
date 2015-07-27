@@ -19,9 +19,9 @@ class Forms_Speaker_FrontendForm extends Kwf_Form
         ));
         $selectBox->setWidth($width);
         $this->add($selectBox);
-        $this->add(new Kwf_Form_Field_TextField('phone', trlStatic('Telefonnummer')))
+        $this->add(new Forms_Speaker_Field_PhoneField('phone', trlStatic('Telefonnummer')))
             ->setWidth($width);
-        $this->add(new Kwf_Form_Field_TextField('phone2', trlStatic('Telefonnummer').' 2'))
+        $this->add(new Forms_Speaker_Field_PhoneField('phone2', trlStatic('Telefonnummer').' 2'))
             ->setWidth($width);
         $this->add(new Kwf_Form_Field_TextField('email', trlStatic('Email-Adresse')))
             ->setWidth($width);
@@ -33,9 +33,6 @@ class Forms_Speaker_FrontendForm extends Kwf_Form
 
         $select = new Kwf_Model_Select();
         $select->order('number');
-//         $this->rightColumn->add(new Kwf_Form_Field_MultiCheckbox('SpeakerToTalks', 'Talk', trlStatic('Vorträge')))
-//             ->setShowCheckAllLinks(false)
-//             ->setValuesSelect($select);
         $this->add(new Forms_Speaker_Field_SuperBoxSelect('SpeakerToTalks', 'Talk', trlStatic('Vorträge')))
             ->setValuesSelect($select);
     }

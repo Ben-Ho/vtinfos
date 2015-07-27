@@ -490,4 +490,9 @@
         <de>Versammlungs.pdf</de>
         <en>Congregations.pdf</en>
     </text>
+    <text>
+        <id>101</id>
+        <de>Bitte Telefonnummer in dieser Form '+43 1234 567890'</de>
+        <en>Please insert phone number like this '+43 1234 567890'</en>
+    </text>
 </trl>
