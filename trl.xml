@@ -495,4 +495,14 @@
         <de>Bitte Telefonnummer in dieser Form '+43 1234 567890'</de>
         <en>Please insert phone number like this '+43 1234 567890'</en>
     </text>
+    <text>
+        <id>102</id>
+        <de>Spanisch</de>
+        <en>Spanish</en>
+    </text>
+    <text>
+        <id>103</id>
+        <de>Arabisch</de>
+        <en>Arabic</en>
+    </text>
 </trl>

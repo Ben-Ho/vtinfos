@@ -37,6 +37,10 @@ Kwf.onJElementReady('.formsSpeakerFieldSuperBoxSelect', function (el) {
                 language = trl('Serbisch');
             } else if (key == 'ru') {
                 language = trl('Russisch');
+            } else if (key == 'es') {
+                language = trl('Spanisch');
+            } else if (key == 'ar') {
+                language = trl('Arabisch');
             }
             jsCode += '<div class="languageName" data-code="'+key+'">'+language+'</div>';
             for (var i = 0; i < selection[key].length; i++) {

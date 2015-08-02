@@ -83,6 +83,18 @@ class Talks extends Kwf_Model_Db
             } else {
                 return trlStatic('Russisch');
             }
+        } else if ($code == 'es') {
+            if ($data) {
+                return $data->trl('Spanisch');
+            } else {
+                return trlStatic('Spanisch');
+            }
+        } else if ($code == 'ar') {
+            if ($data) {
+                return $data->trl('Arabisch');
+            } else {
+                return trlStatic('Arabisch');
+            }
         } else {
             if ($data) {
                 return $data->trl('Unbekannt');
