@@ -8,7 +8,11 @@
             <div class="ministryschool-time"><span class="label"><?=$this->data->trl('Predigtdienstschule:');?></span> <?=$this->row->ministryschool_time;?></div>
         </div>
         <div class="address">
-            <?=$this->row->street;?>, <?=$this->row->zip;?> <?=$this->row->city;?>, <?=$this->country;?>
+            <?=$this->address;?>
+            <a target="_blank" href="<?=$this->gmapUrl;?>">
+                <img src="/assets/silkicons/map.png" width="16" height="16"
+                    alt="<?=$this->data->trl('Adresse in Maps öffnen');?>"/>
+            </a>
         </div>
         <div class="note"><?=$this->row->note;?></div>
     </div>

@@ -58,6 +58,8 @@ class Directories_Congregations_Detail_Component extends Kwc_Directories_Item_De
             }
         }
         $ret['pdfDownloadUrl'] = Kwf_Media::getUrl('CongregationsPdf', $ret['row']->id, 'congregation;'.$this->getData()->getLanguage(), $this->getData()->trl('Versammlungs.pdf'));
+        $ret['address'] = $ret['row']->street.', '.$ret['row']->zip.' '.$ret['row']->city.', '.$ret['row']->country;
+        $ret['gmapUrl'] = 'https://www.google.at/maps/place/'.urlencode($ret['address']);
         return $ret;
     }
 }
