@@ -67,12 +67,12 @@
 </text>
 <text>
 <de>Vortragseinteiler</de>
-<en>Talks-Organiser</en>
+<en>Talk Coordinator</en>
 <id>14</id>
 </text>
 <text>
 <de>Vortragseinteiler wurde nicht gesetzt!</de>
-<en>Talks-Organiser wasn't set</en>
+<en>Talk Coordinator wasn't set</en>
 <id>15</id>
 </text>
 <text>
@@ -398,7 +398,7 @@
 <text>
 <id>82</id>
 <de>Kreis</de>
-<en>Circle</en>
+<en>Circuit</en>
 </text>
 <text>
 <id>83</id>
