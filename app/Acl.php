@@ -35,6 +35,10 @@ class Acl extends Kwf_Acl_Component
             '/admin/talks/talks'));
         $this->allow('admin', 'talks_talks');
 
+        $this->add(new Kwf_Acl_Resource_MenuUrl('user_users',
+                array('text'=>trl('Vortragseinteiler'), 'icon'=>'user.png'),
+                '/admin/user/users'));
+
 
         $this->addResource(new Kwf_Acl_Resource_MenuUrl('talks_circles',
                 array('text' => trl('Kreise')),

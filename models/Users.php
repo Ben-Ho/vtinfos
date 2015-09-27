@@ -10,6 +10,7 @@ class Users extends Kwf_User_Model
             'refModelClass' => 'Congregations',
             'column' => 'congregation_id'
         );
+        $this->_exprs['congregation_name'] = new Kwf_Model_Select_Expr_Parent('Congregation', 'name');
     }
 
     public function loginUserRow($row, $logLogin)
