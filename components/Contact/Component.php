@@ -19,6 +19,7 @@ class Contact_Component extends Kwc_Form_Component
         } else {
             $select = new Kwf_Model_Select();
             $select->whereEquals('role', 'admin');
+            $select->whereEquals('deleted', false);
             $select->order('received_inquires', 'ASC');
             $admins = Kwf_Registry::get('userModel')->getRows($select);
             $admins[0]->received_inquires++;
