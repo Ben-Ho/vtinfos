@@ -4,6 +4,7 @@ class Directories_Congregations_Detail_Component extends Kwc_Directories_Item_De
     public static function getSettings()
     {
         $ret = parent::getSettings();
+        $ret['generators']['child']['component']['lastChange'] = 'Directories_Congregations_Detail_LastChange_Component';
         $ret['plugins'] = array('Login_Plugin_Component');
         $ret['assets']['dep'][] = 'KwfResponsiveEl';
         $ret['cssClass'] = 'webStandard';

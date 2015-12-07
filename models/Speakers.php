@@ -31,5 +31,13 @@ class Speakers extends Kwf_Model_Db
         $this->_exprs['group_id'] = new Kwf_Model_Select_Expr_Parent('Congregation', 'group_id');
         $this->_exprs['phone_normalized'] = new Kwf_Model_Select_Expr_Sql("REPLACE(phone, ' ', '')");
         $this->_exprs['phone2_normalized'] = new Kwf_Model_Select_Expr_Sql("REPLACE(phone2, ' ', '')");
+        $select = new Kwf_Model_Select();
+        $select->order('last_change', 'DESC');
+        $this->_exprs['talks_last_change'] = new Kwf_Model_Select_Expr_Child_First('SpeakerToTalks', 'last_change', $select);
+        $this->_exprs['speaker_last_change'] = new Kwf_Model_Select_Expr_If(
+            new Kwf_Model_Select_Expr_Higher('talks_last_change', new Kwf_Model_Select_Expr_Field('last_change')),
+            new Kwf_Model_Select_Expr_Field('talks_last_change'),
+            new Kwf_Model_Select_Expr_Field('last_change')
+        );
     }
 }

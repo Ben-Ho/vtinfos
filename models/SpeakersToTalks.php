@@ -2,6 +2,7 @@
 class SpeakersToTalks extends Kwf_Model_Db
 {
     protected $_table = 't_speakers_to_talks';
+    protected $_rowClass = 'Rows_SpeakerToTalk';
 
     protected $_referenceMap = array(
         'Speaker' => array(
