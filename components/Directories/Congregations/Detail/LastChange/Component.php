@@ -11,11 +11,7 @@ class Directories_Congregations_Detail_LastChange_Component extends Kwc_Abstract
     public function getTemplateVars(Kwf_Component_Renderer_Abstract $renderer = null)
     {
         $ret = parent::getTemplateVars($renderer);
-        $lastChange = $this->getData()->parent->row->congregation_last_change;
-        if ($lastChange == 0) {
-            $lastChange = $this->getData()->trl('keine Änderung');
-        }
-        $ret['lastChange'] = $lastChange;
+        $ret['lastChange'] = $this->getData()->parent->row->congregation_last_change;
         return $ret;
     }
 }
