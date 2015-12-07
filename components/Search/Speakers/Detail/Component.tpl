@@ -1,5 +1,8 @@
 <div class="<?=$this->cssClass;?>">
-    <div class="name"><?=$this->row->name; ?></div>
+    <div class="name">
+        <span class="lastname"><?=$this->row->lastname;?></span>&nbsp;
+        <span class="firstname"><?=$this->row->firstname;?></span>
+    </div>
     <div class="degree">
         <? if ($this->row->degree == 'e') { ?>
             <?= $this->data->trl('Ä'); ?>

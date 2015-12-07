@@ -11,6 +11,9 @@
     .name {
         float: left;
         margin-right: 3px;
+        .lastname {
+            text-transform: uppercase;
+        }
     }
     .degree {
         float: left;

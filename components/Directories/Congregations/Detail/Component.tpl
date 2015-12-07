@@ -20,7 +20,10 @@
     <div class="coordinator">
         <h2><?=$this->data->trl('Koordinator');?></h2>
         <? if ($this->coordinator) { ?>
-            <div class="name"><?=$this->coordinator->name;?></div>
+            <div class="name">
+                <span class="lastname"><?=$this->coordinator->lastname;?></span>&nbsp;
+                <span class="firstname"><?=$this->coordinator->firstname;?></span>
+            </div>
             <div class="degree">
                 <? if ($this->coordinator->degree == 'e') { ?>
                     <?= $this->data->trl('Ä'); ?>
@@ -37,7 +40,10 @@
     <div class="talk-organiser">
         <h2><?=$this->data->trl('Vortragseinteiler');?></h2>
         <? if ($this->talk_organiser) { ?>
-            <div class="name"><?=$this->talk_organiser->name;?></div>
+            <div class="name">
+                <span class="lastname"><?=$this->talk_organiser->lastname;?></span>&nbsp;
+                <span class="firstname"><?=$this->talk_organiser->firstname;?></span>
+            </div>
             <div class="degree">
                 <? if ($this->talk_organiser->degree == 'e') { ?>
                     <?= $this->data->trl('Ä'); ?>
@@ -57,7 +63,10 @@
         <div class="speakers">
             <? foreach ($this->speakers as $speaker) { ?>
                 <div class="speaker">
-                    <div class="name"><?=$speaker['row']->name; ?></div>
+                    <div class="name">
+                        <span class="lastname"><?=$speaker['row']->lastname;?></span>&nbsp;
+                        <span class="firstname"><?=$speaker['row']->firstname;?></span>
+                    </div>
                     <div class="degree">
                         <? if ($speaker['row']->degree == 'e') { ?>
                             <?= $this->data->trl('Ä'); ?>
