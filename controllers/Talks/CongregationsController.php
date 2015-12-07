@@ -32,7 +32,10 @@ class Talks_CongregationsController extends Kwf_Controller_Action_Auto_Grid
             ->setEditor(new Kwf_Form_Field_TextField());
         $this->_columns->add(new Kwf_Grid_Column('note', trl('Anmerkung')))
             ->setEditor(new Kwf_Form_Field_TextField());
-//         Kwf_Form_Field_GoogleMapsField
+        $this->_columns->add(new Kwf_Grid_Column('latitude', trl('Latitude')))
+        ->setEditor(new Kwf_Form_Field_TextField());
+        $this->_columns->add(new Kwf_Grid_Column('longitude', trl('Longitude')))
+            ->setEditor(new Kwf_Form_Field_TextField());
     }
 
     protected function _getSelect()
