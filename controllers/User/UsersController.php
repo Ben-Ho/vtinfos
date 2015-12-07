@@ -1,6 +1,8 @@
 <?php
 class User_UsersController extends Kwf_Controller_Action_User_UsersController
 {
+    protected $_queryFields = array('id', 'email', 'firstname', 'lastname', 'congregation_name', 'wp_user');
+
     protected function _initColumns()
     {
         parent::_initColumns();
