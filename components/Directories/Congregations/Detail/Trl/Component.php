@@ -27,6 +27,7 @@ class Directories_Congregations_Detail_Trl_Component extends Kwc_Directories_Ite
             }
             $ret['speakers'][$key]['talks'] = $talks;
         }
+        $ret['pdfDownloadUrl'] = Kwf_Media::getUrl('CongregationsPdf', $ret['row']->id, 'congregation;'.$this->getData()->getLanguage(), $this->getData()->trl('Versammlungs.pdf'));
         return $ret;
     }
 }
