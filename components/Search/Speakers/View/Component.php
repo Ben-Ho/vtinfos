@@ -61,7 +61,8 @@ class Search_Speakers_View_Component extends Kwc_Directories_List_ViewAjax_Compo
                 $ret->whereEquals('circle_id', str_replace('c_', '', $searchRow->circle));
             }
         }
-        if ($searchRow->distance) {
+        $distance = trim($searchRow->distance);
+        if ($distance && is_numeric($distance)) {
             $user = Kwf_Registry::get('userModel')->getAuthedUser();
             $latitude = $user->getParentRow('Congregation')->latitude;
             $longitude = $user->getParentRow('Congregation')->longitude;
