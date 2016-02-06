@@ -505,4 +505,9 @@
         <de>Arabisch</de>
         <en>Arabic</en>
     </text>
+    <text>
+        <id>104</id>
+        <de>Suchergebnisse</de>
+        <en>Search results</en>
+    </text>
 </trl>

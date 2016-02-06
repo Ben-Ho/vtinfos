@@ -4,7 +4,7 @@ class Search_Speakers_View_Count_Component extends Kwc_Directories_List_View_Cou
     public static function getSettings()
     {
         $ret = parent::getSettings();
-        $ret['placeholder']['total'] = trlStatic('Anzahl Suchergebnisse').': ';
+        $ret['placeholder']['total'] = trlStatic('Suchergebnisse').': ';
         return $ret;
     }
 }
