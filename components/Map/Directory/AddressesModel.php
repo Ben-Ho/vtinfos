@@ -19,11 +19,11 @@ class Map_Directory_AddressesModel extends Kwf_Model_FnF
         );
         $uniqueRows = array();
         foreach ($rows as $row) {
-            if (!isset($uniqueRows[$row['street'].$row['zip'].$row['city']])) {
+            if (!isset($uniqueRows[$row['latitude'].$row['longitude']])) {
                 $row['congregationIds'] = '';
-                $uniqueRows[$row['street'].$row['zip'].$row['city']] = $row;
+                $uniqueRows[$row['latitude'].$row['longitude']] = $row;
             }
-            $uniqueRows[$row['street'].$row['zip'].$row['city']]['congregationIds'] .= $row['id'].';';
+            $uniqueRows[$row['latitude'].$row['longitude']]['congregationIds'] .= $row['id'].';';
         }
         $config['data'] = array_values($uniqueRows);
         parent::__construct($config);
