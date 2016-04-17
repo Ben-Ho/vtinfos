@@ -34,6 +34,7 @@ class CsvExport implements Kwf_Media_Output_Interface
                         'name' => $speakerRow->firstname.' '.$speakerRow->lastname,
                         'phone' => $speakerRow->phone
                     );
+                    $talks = array();
                     foreach ($speakerRow->getChildRows('SpeakerToTalks') as $talkRow) {
                         $talks[] = $talkRow->number;
                     }
