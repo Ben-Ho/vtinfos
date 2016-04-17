@@ -26,6 +26,7 @@ class CsvExport implements Kwf_Media_Output_Interface
             $select = new Kwf_Model_Select();
             $select->whereEquals('name', $circleName);
             $circleRow = Kwf_Model_Abstract::getInstance('Circles')->getRow($select);
+            if (!$circleRow) continue;
             foreach ($circleRow->getChildRows('Congregations') as $congregationRow) {
                 foreach ($congregationRow->getChildRows('Speakers') as $speakerRow) {
                     $dataRow = array(
