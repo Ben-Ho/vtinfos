@@ -12,7 +12,7 @@ class Talks extends Kwf_Model_Db
 
     public static function getLanguages()
     {
-        return array('de', 'en', 'fr', 'zh', 'fa', 'gebaerde', 'twi', 'ga', 'tr', 'sr', 'ru', 'es', 'ar');
+        return array('de', 'en', 'fr', 'zh', 'fa', 'gebaerde', 'twi', 'ga', 'tr', 'sr', 'ru', 'es', 'ar', 'tgl');
     }
 
     public static function getLanguage($code, $data = null)
@@ -94,6 +94,12 @@ class Talks extends Kwf_Model_Db
                 return $data->trl('Arabisch');
             } else {
                 return trlStatic('Arabisch');
+            }
+        } else if ($code == 'tgl') {
+            if ($data) {
+                return $data->trl('Tagalog');
+            } else {
+                return trlStatic('Tagalog');
             }
         } else {
             if ($data) {
