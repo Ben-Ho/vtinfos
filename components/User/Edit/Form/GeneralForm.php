@@ -32,6 +32,8 @@ class User_Edit_Form_GeneralForm extends Kwc_Abstract_Composite_Form
                     ->setAllowBlank(false)
                     ->setWidth($width);
 
+        $this->add(new Kwf_Form_Field_Checkbox('wants_reminder', trl('Erinnerungsmail')));
+
         parent::_initFields();
     }
 }
