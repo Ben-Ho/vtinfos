@@ -1,0 +1,25 @@
+.cssClass {
+    .edit {
+        background-color: red;
+        width: 20px;
+        height: 20px;
+    }
+    .editRegion {
+        display: none;
+    }
+
+    .week {
+        display: table;
+        margin-bottom: 10px;
+        .monday, .data, .edit {
+            display: table-cell;
+            padding-left: 5px;
+        }
+    }
+
+    .week.editEntry {
+        .editRegion {
+            display: block;
+        }
+    }
+}
