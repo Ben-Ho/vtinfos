@@ -28,7 +28,7 @@ class Talks_CongregationsController extends Kwf_Controller_Action_Auto_Grid
             ->setEditor(new Kwf_Form_Field_SelectCountry());
         $this->_columns->add(new Kwf_Grid_Column('talk_time', trl('Vortrag Zeit/Tag')))
             ->setEditor(new Kwf_Form_Field_TextField());
-        $this->_columns->add(new Kwf_Grid_Column('ministryschool_time', trl('Predigtdienstschule Zeit/Tag')))
+        $this->_columns->add(new Kwf_Grid_Column('ministryschool_time', trl('Leben- und Dienstzusammenkunft')))
             ->setEditor(new Kwf_Form_Field_TextField());
         $this->_columns->add(new Kwf_Grid_Column('note', trl('Anmerkung')))
             ->setEditor(new Kwf_Form_Field_TextField());

@@ -6,7 +6,7 @@
     <div class="congregation-info">
         <div class="time">
             <div class="talk-time"><span class="label"><?=$this->data->trl('Vortragszeit:');?></span> <?=$this->row->talk_time;?></div>
-            <div class="ministryschool-time"><span class="label"><?=$this->data->trl('Predigtdienstschule:');?></span> <?=$this->row->ministryschool_time;?></div>
+            <div class="ministryschool-time"><span class="label"><?=$this->data->trl('Leben- und Dienstzusammenkunft:');?></span> <?=$this->row->ministryschool_time;?></div>
         </div>
         <div class="address">
             <?=$this->address;?>

@@ -20,7 +20,7 @@ class Forms_Congregation_FrontendForm extends Kwf_Form
             ->setWidth($width);
         $this->add(new Kwf_Form_Field_TextField('talk_time', trlStatic('Vortragszeit')))
             ->setWidth($width);
-        $this->add(new Kwf_Form_Field_TextField('ministryschool_time', trlStatic('Predigtdienstschulzeit')))
+        $this->add(new Kwf_Form_Field_TextField('ministryschool_time', trlStatic('Leben- und Dienstzusammenkunft')))
             ->setWidth($width);
         $this->add(new Kwf_Form_Field_TextArea('note', trlStatic('Anmerkung')))
             ->setWidth($width);
