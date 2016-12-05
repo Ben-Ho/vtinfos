@@ -12,6 +12,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#085ac0">
         <link rel="manifest" href="/manifest.json" />
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.1/awesomplete.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.1/awesomplete.css" />
     </head>
     <body class="frontend scrolled">
         <div class="pageWrapper">

@@ -11,7 +11,6 @@ class Calendar_CongregationsController extends Kwf_Controller_Action
         return true;
     }
 
-    //TODO fortlaufende id auf uuid umstellen
     public function indexAction()
     {
         $filter = $this->_getParam('congregationName');
@@ -22,8 +21,8 @@ class Calendar_CongregationsController extends Kwf_Controller_Action
         $congregations = array();
         foreach (Kwf_Model_Abstract::getInstance('Congregations')->getRows($select) as $congregationRow) {
             $congregations[] = array(
-                'id' => $congregationRow->id,
-                'name' => $congregationRow->name
+                'label' => $congregationRow->name,
+                'value' => $congregationRow->id
             );
         }
         echo json_encode(array(

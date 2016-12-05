@@ -20,11 +20,15 @@ Kwf.onJElementReady('.cssClass', function(el) {
                         '</div>' +
                         '<div class="edit"></div>' +
                         '<div class="editRegion">' +
-                            '<div class="congregationSelect"><input placeholder="'+trl('Versammlungsname')+'" class="congregation" type="text">' +
-                                '<select class="congregations"><option disabled selected value>'+trl('Versammlung')+'</option></select>' +
+                            '<div class="congregationSelect">' +
+                                '<input placeholder="'+trl('Versammlungsname')+'" class="congregation awesomplete" type="text">' +
                             '</div>' +
-                            '<div class="speaker"><select class="speakers"><option disabled selected value>'+trl('Redner')+'</option></select></div>' +
-                            '<div class="talk"><select class="talks"><option disabled selected value>'+trl('Vortrag')+'</option></select></div>' +
+                            '<div class="speakerSelect">' +
+                                '<input placeholder="'+trl('Redner')+'" class="speaker awesomplete" type="text">' +
+                            '</div>' +
+                            '<div class="talkSelect">' +
+                                '<input placeholder="'+trl('Vortrag')+'" class="talk awesomplete" type="text">' +
+                            '</div>' +
                         '</div>' +
                     '</div>'
                 );
@@ -47,7 +51,6 @@ Kwf.onJElementReady('.cssClass', function(el) {
                         },
                         success: function(response, result, options) {
                             response = $.parseJSON(response);
-                            console.log('hier');
                             var weekEl = $(ev.currentTarget).closest('.week');
                             weekEl.find('.monday').html(response.week.monday);
                             weekEl.find('.speaker').html(response.week.speaker);
@@ -58,8 +61,33 @@ Kwf.onJElementReady('.cssClass', function(el) {
                     currentEl.addClass('editEntry');
                 }
             });
+            el.find('.congregation').each(function(index, congregationEl) {
+                congregationEl.awesomplete = new Awesomplete(congregationEl, {
+                    replace: function(selection) {
+                        this.input.value = selection.label;
+                        this.input.congregationId = selection.value;
+                    }
+                });
+                congregationEl.awesomplete.on('awesomplete-selectcomplete', function() {
+                    console.log('auswahl fertig');
+                    console.log(arguments);
+                });
+            });
+            el.find('.speaker').each(function(index, speakerEl) {
+                speakerEl.awesomplete = new Awesomplete(speakerEl, {
+                    replace: function(selection) {
+                        this.input.value = selection.label;
+                        this.input.speakerId = selection.value;
+                    }
+                })
+            });
             el.find('.congregation').on('keyup', function(ev) {
                 var congregationName = $(ev.currentTarget).val();
+                // Damit u.a. pfeiltasten bei awesomplete funktioniert
+                if (ev.currentTarget.lastValue && ev.currentTarget.lastValue == congregationName) {
+                    return;
+                }
+                ev.currentTarget.lastValue = congregationName;
                 if (congregationName.length < 4) return;
 
                 $.ajax(config.congregationsUrl, {
@@ -68,45 +96,28 @@ Kwf.onJElementReady('.cssClass', function(el) {
                     },
                     success: function(response, result, options) {
                         response = $.parseJSON(response);
-                        var congregationSelect = $(ev.currentTarget).closest('.editRegion').find('.congregations');
-                        congregationSelect.empty();
-                        for (var i = 0; i < response.congregations.length; i++) {
-                            congregationSelect.append(
-                                '<option value="'+response.congregations[i].id+'">'
-                                    +response.congregations[i].name+
-                                '</option>'
-                            );
-                        }
-                        if (response.congregations.length >= 1) {
-                            loadSpeakers(response.congregations[0].id, $(ev.currentTarget).closest('.editRegion'));
-                        }
+                        ev.currentTarget.awesomplete.list = response.congregations;
                     }
                 });
             });
-            var loadSpeakers = function(congregationId, element) {
+            el.find('.speaker').on('keyup', function(ev) {
+                var congregationId = $(ev.currentTarget).closest('.week').find('congregation')[0].congregationId;
+                var speakerName = $(ev.currentTarget).val();
+                debugger;
+                if (ev.currentTarget.lastValue && ev.currentTarget.lastValue == speakerName) {
+                    return;
+                }
+                ev.currentTarget.lastValue = speakerName;
                 $.ajax(config.speakersUrl, {
                     data: {
-                        congregationId: congregationId
+                        congregationId: ev.currentTarget.congregationId,
+                        speakerName: speakerName
                     },
                     success: function(response, result, options) {
                         response = $.parseJSON(response);
-                        var speakersSelect = element.find('.speakers');
-                        speakersSelect.empty();
-                        for (var i = 0; i < response.speakers.length; i++) {
-                            speakersSelect.append(
-                                '<option value="'+response.speakers[i].id+'">'
-                                    +response.speakers[i].name+
-                                '</option>'
-                            );
-                        }
-                        if (response.speakers.length >= 1) {
-                            loadTalks(response.speakers[0].id, element);
-                        }
+                        ev.currentTarget.awesomplete.list = response.speakers;
                     }
                 });
-            };
-            el.find('.congregations').on('change', function(ev) {
-                loadSpeakers($(ev.currentTarget).val(), $(ev.currentTarget).closest('.editRegion'));
             });
             var loadTalks = function(speakerId, element) {
                 $.ajax(config.talksUrl, {
