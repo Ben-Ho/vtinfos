@@ -6,33 +6,33 @@ class Directories_Congregations_Detail_Events extends Kwc_Directories_Item_Detai
         $ret = parent::getListeners();
         $ret[] = array(
             'class' => 'Speakers',
-            'event' => 'Kwf_Component_Event_Row_Inserted',
+            'event' => 'Kwf_Events_Event_Row_Inserted',
             'callback' => 'onSpeakerRowEvent'
         );
         $ret[] = array(
             'class' => 'Speakers',
-            'event' => 'Kwf_Component_Event_Row_Updated',
+            'event' => 'Kwf_Events_Event_Row_Updated',
             'callback' => 'onSpeakerRowEvent'
         );
         $ret[] = array(
             'class' => 'SpeakersToTalks',
-            'event' => 'Kwf_Component_Event_Row_Inserted',
+            'event' => 'Kwf_Events_Event_Row_Inserted',
             'callback' => 'onSpeakerToTalkRowEvent'
         );
         $ret[] = array(
             'class' => 'SpeakersToTalks',
-            'event' => 'Kwf_Component_Event_Row_Updated',
+            'event' => 'Kwf_Events_Event_Row_Updated',
             'callback' => 'onSpeakerToTalkRowEvent'
         );
         return $ret;
     }
 
-    public function onSpeakerRowEvent(Kwf_Component_Event_Row_Abstract $event)
+    public function onSpeakerRowEvent(Kwf_Events_Event_Row_Abstract $event)
     {
         $this->_deleteCacheForCongregationId($event->row->congregation_id);
     }
 
-    public function onSpeakerToTalkRowEvent(Kwf_Component_Event_Row_Abstract $event)
+    public function onSpeakerToTalkRowEvent(Kwf_Events_Event_Row_Abstract $event)
     {
         $this->_deleteCacheForCongregationId($event->row->getParentRow('Speaker')->congregation_id);
     }

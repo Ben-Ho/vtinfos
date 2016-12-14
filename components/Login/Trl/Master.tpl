@@ -1,1 +1,1 @@
-<? include('components/Login/Master.tpl'); ?>
+<?php  include('components/Login/Master.tpl'); ?>

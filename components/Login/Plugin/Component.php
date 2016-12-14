@@ -1,9 +1,9 @@
 <?php
 class Login_Plugin_Component extends Kwf_Component_Plugin_LoginRedirect_Component
 {
-    public static function getSettings()
+    public static function getSettings($param = null)
     {
-        $ret = parent::getSettings();
+        $ret = parent::getSettings($param);
         $ret['validUserRoles'] = array('admin', 'superuser', 'talk-organiser');
         return $ret;
     }

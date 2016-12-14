@@ -1,5 +1,7 @@
-Kwf.Utils.ResponsiveEl('.cssClass', [400, 800]);
-Kwf.onJElementReady('.cssClass', function (el) {
+var onReady = require('kwf/on-ready');
+var $ = require('jQuery');
+//responsiveEl('.kwcClass', [400, 800]);
+onReady.onRender('.kwcClass', function (el) {
 //     $(window).scroll(function (event, a, b, c, d) {
 //         if ($(window).scrollTop() == 0) {
 //             $('body').removeClass('scrolled');

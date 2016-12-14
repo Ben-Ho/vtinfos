@@ -1,4 +1,4 @@
-<div class="<?=$this->cssClass?>">
+<div class="<?=$this->rootElementClass?>">
     <div class="mobileTitle">
         <a href="/" class="logo">VT</a>
         <div class="title">

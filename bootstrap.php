@@ -1,6 +1,6 @@
 <?php
 chdir(dirname(__FILE__));
-require_once 'kwf-lib/Kwf/Setup.php';
+require 'vendor/koala-framework/koala-framework/Kwf/Setup.php';
 Kwf_Setup::setUp();
 if (isset($_SERVER['REQUEST_URI']) && $_SERVER['REQUEST_URI'] == '/manifest.json') {
     echo file_get_contents('./app/manifest.json');

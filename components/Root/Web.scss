@@ -1,24 +1,26 @@
+@import "form/default-styles";
+@import "config/colors";
 @import "kwf/css3/border-radius";
 
-.webStandard { font-family: sans-serif; font-size: 14px; color: var(typo); }
-.webStandard strong { font-weight: bold; }
-.webStandard em { font-style: italic; }
+.kwfUp-webStandard { font-family: sans-serif; font-size: 14px; color: $typo; }
+.kwfUp-webStandard strong { font-weight: bold; }
+.kwfUp-webStandard em { font-style: italic; }
 
-.webStandard p { line-height: 18px; color: var(typo); margin-bottom: 10px; }
+.kwfUp-webStandard p { line-height: 18px; color: $typo; margin-bottom: 10px; }
 
-.webStandard h1 { font-size: 25px; margin-bottom: 10px; color: var(mainColor); } /* Überschrift 1 */
-.webStandard h2 { font-size: 20px; margin-bottom: 10px; color: var(mainColor); } /* Überschrift 2 */
-.webStandard h3 { font-size: 14px; margin-bottom: 5px; } /* Überschrift 3 */
+.kwfUp-webStandard h1 { font-size: 25px; margin-bottom: 10px; color: $mainColor; } /* Überschrift 1 */
+.kwfUp-webStandard h2 { font-size: 20px; margin-bottom: 10px; color: $mainColor; } /* Überschrift 2 */
+.kwfUp-webStandard h3 { font-size: 14px; margin-bottom: 5px; } /* Überschrift 3 */
 
-.webStandard a { text-decoration: none; color: var(mainColor); outline: none; }
-.webStandard a:hover { text-decoration: none; color: var(secColor); }
-.webStandard a:link { text-decoration: none; }
+.kwfUp-webStandard a { text-decoration: none; color: $mainColor; outline: none; }
+.kwfUp-webStandard a:hover { text-decoration: none; color: $secColor; }
+.kwfUp-webStandard a:link { text-decoration: none; }
 
-.webStandard ol,
-.webStandard ul { margin-bottom: 10px; margin-left: 20px; }
-.webStandard li { list-style-type: square; margin-bottom: 5px; line-height: 18px; color: var(typo); }
+.kwfUp-webStandard ol,
+.kwfUp-webStandard ul { margin-bottom: 10px; margin-left: 20px; }
+.kwfUp-webStandard li { list-style-type: square; margin-bottom: 5px; line-height: 18px; color: $typo; }
 
-.webForm .submitWrapper .button {
+.kwfUp-webForm .submitWrapper .button {
     margin-top: 5px;
 }
 
@@ -44,7 +46,7 @@
     #outerContent {
         padding-top: 110px;
     }
-    &.frontend .pageWrapper.gt1000 .menues {
+    &.kwfUp-frontend .pageWrapper.gt1000 .menues {
         width: 80%;
     }
 }
@@ -52,26 +54,26 @@
 
 
 
-html body.frontend {
+html body.kwfUp-frontend {
     background-color: #dedede;
 }
 
-.frontend .pageWrapper.gt1000 {
+.kwfUp-frontend .pageWrapper.gt1000 {
     padding-bottom: 20px;
     background-color: transparent;
 }
-.frontend .pageWrapper {
+.kwfUp-frontend .pageWrapper {
     background-image: none;
     background-color: white;
 }
 
-.frontend #page {
+.kwfUp-frontend #page {
     width: 100%;
     margin: 0;
     padding: 0;
     @include border-radius-pie(0px);
 }
-.frontend .pageWrapper.gt1000 #page {
+.kwfUp-frontend .pageWrapper.gt1000 #page {
     width: 80%;
     margin: auto;
     background-color: #fff;
@@ -120,14 +122,14 @@ html body.frontend {
     }
 }
 
-body.ext-ie6 { text-align: center; }
+body.ext2-ie6 { text-align: center; }
 
 #page #outerHeader #header,
 #page #outerContent #content,
 #page #outerFooter #footer { margin: 0px auto; text-align: left; }
 
 
-#page #outerContent { background: var(light); }
+#page #outerContent { background: $light; }
 #page #outerContent #content { padding: 0px 0px 0px 0px; }
 #page #outerContent #content #innerContent {
     padding-left: 20px;
@@ -138,43 +140,47 @@ body.ext-ie6 { text-align: center; }
 
 #page #outerFooter #footer { padding: 15px; height: 20px; position: relative; }
 
-.webListNone ul { margin: 0px; }
-.webListNone,
-.webListNone li { margin-bottom: 0px; }
+.kwfUp-webListNone ul { margin: 0px; }
+.kwfUp-webListNone,
+.kwfUp-webListNone li { margin-bottom: 0px; }
 
-.webForm input,
-.webForm textarea,
-.webForm label,
-.webForm button,
-.webForm select {
+.kwfUp-webForm input,
+.kwfUp-webForm textarea,
+.kwfUp-webForm label,
+.kwfUp-webForm button,
+.kwfUp-webForm select {
     font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;
     font-size: 14px;
-    color: var(typo);
+    color: $typo;
     line-height: 18px;
 }
 
-.webForm label { text-align: left; }
-.webForm .submitWrapper { margin: 10px 0px 10px 140px; }
-.webForm button {
-    color: var(light);
+.kwfUp-webForm label { text-align: left; }
+.kwfUp-webForm .submitWrapper { margin: 10px 0px 10px 140px; }
+.kwfUp-webForm button {
+    color: $light;
     background: none !important;
     border: none !important;
     width: 100%;
     height: 100%;
 }
-.webForm button:hover { color: var(light); }
+.kwfUp-webForm button:hover { color: $light; }
 
-.webForm .beforeButton,
-.webForm .afterButton {
+.kwfUp-webForm .beforeButton,
+.kwfUp-webForm .afterButton {
     display: block;
     float: left;
     width: 0px;
     height: 27px;
 }
-.webForm .button {
+.kwfUp-webForm .button {
     float: left;
     height: 30px;
     line-height: 30px;
     background-color: #085AC0;
     background-image: none;
+}
+
+.kwfUp-webForm {
+    @include form-default-styles;
 }

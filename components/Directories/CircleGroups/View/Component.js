@@ -1,5 +1,8 @@
-Kwf.Utils.ResponsiveEl('.cssClass', [400, 800]);
-Kwf.onJElementReady('.cssClass', function (el) {
+var onReady = require('kwf/on-ready');
+var $ = require('jQuery');
+var responsiveEl = require('kwf/responsive-el');
+responsiveEl('.kwcClass', [400, 800]);
+onReady.onRender('.kwcClass', function (el) {
     $(el).children().each(function (index, element) {
         if (index % 2 == 0) {
             $(element).addClass('second');
@@ -8,7 +11,7 @@ Kwf.onJElementReady('.cssClass', function (el) {
             $(element).addClass('third');
         }
         $(element).click(function (event) {
-            var element = $(event.target).closest('.cssClass');
+            var element = $(event.target).closest('.kwcClass');
             if (element.hasClass('gt400')) return true;
             var circleGroupElement = $(event.target).closest('.directoriesCircleGroupsDetail');
             if (circleGroupElement.hasClass('selected')) return true;

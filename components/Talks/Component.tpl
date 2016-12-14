@@ -1,10 +1,10 @@
-<div class="<?=$this->cssClass?>">
+<div class="<?=$this->rootElementClass?>">
     <table class="talks">
-        <? foreach ($this->talks as $talk) { ?>
+        <?php  foreach ($this->talks as $talk) { ?>
             <tr class="talk">
                 <td><?=$talk->number;?></td><td><?=$talk->getTitle($this->language);?></td>
             </tr>
-        <? } ?>
+        <?php  } ?>
         <tr><td>
     </table>
 </div>

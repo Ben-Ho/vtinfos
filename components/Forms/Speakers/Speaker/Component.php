@@ -1,9 +1,9 @@
 <?php
 class Forms_Speakers_Speaker_Component extends Forms_Speaker_Component
 {
-    public static function getSettings()
+    public static function getSettings($param = null)
     {
-        $ret = parent::getSettings();
+        $ret = parent::getSettings($param);
         $ret['hideFormOnSuccess'] = false;
         $ret['generators']['child']['component']['success'] = null;
         $ret['placeholder']['submitButton'] = trlStatic('Speichern');

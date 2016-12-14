@@ -1,4 +1,4 @@
-<div class="<?=$this->cssClass?>">
+<div class="<?=$this->rootElementClass?>">
     <h1 class="mainHeadline"><?=$this->data->trlKwf('Lost your password?')?></h1>
     <p>
         <?=$this->data->trl('Bitte gib deine E-Mail-Adresse ein. Falls kein Account mit deiner E-Mail-Adresse existiert, melde dich unter +43 699 12634150.')?>

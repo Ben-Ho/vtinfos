@@ -1,9 +1,9 @@
 <?php
 class Directories_Circles_Directory_Component extends Kwc_Directories_Item_DirectoryNoAdmin_Component
 {
-    public static function getSettings()
+    public static function getSettings($param = null)
     {
-        $ret = parent::getSettings();
+        $ret = parent::getSettings($param);
         $ret['generators']['detail']['component'] = 'Directories_Circles_Detail_Component';
         $ret['generators']['detail']['model'] = 'Circles';
         $ret['generators']['detail']['class'] = 'Directories_Circles_Directory_Generator';

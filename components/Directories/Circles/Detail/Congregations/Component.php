@@ -1,9 +1,9 @@
 <?php
 class Directories_Circles_Detail_Congregations_Component extends Kwc_Directories_List_Component
 {
-    public static function getSettings()
+    public static function getSettings($param = null)
     {
-        $ret = parent::getSettings();
+        $ret = parent::getSettings($param);
         $ret['generators']['child']['component']['view'] = 'Directories_Congregations_View_Component';
         $ret['useDirectorySelect'] = false;
         $ret['plugins'] = array('Login_Plugin_Component');

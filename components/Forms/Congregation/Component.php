@@ -1,9 +1,9 @@
 <?php
 class Forms_Congregation_Component extends Kwc_Form_Component
 {
-    public static function getSettings()
+    public static function getSettings($param = null)
     {
-        $ret = parent::getSettings();
+        $ret = parent::getSettings($param);
         $ret['componentName'] = trlStatic('Versammlungsformular');
         $ret['generators']['child']['component']['header'] = 'Forms_Congregation_Header_Component';
         $ret['hideFormOnSuccess'] = false;
@@ -13,7 +13,7 @@ class Forms_Congregation_Component extends Kwc_Form_Component
         return $ret;
     }
 
-    public function getTemplateVars(Kwf_Component_Renderer_Abstract $renderer = null)
+    public function getTemplateVars(Kwf_Component_Renderer_Abstract $renderer)
     {
         $user = Kwf_Registry::get('userModel')->getAuthedUser();
         if ($user->congregation_id) {

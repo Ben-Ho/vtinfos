@@ -1,9 +1,9 @@
 <?php
 class Login_Form_Component extends Kwc_User_Login_Form_Component
 {
-    public static function getSettings()
+    public static function getSettings($param = null)
     {
-        $ret = parent::getSettings();
+        $ret = parent::getSettings($param);
         $ret['placeholder']['submitButton'] = trlStatic('Anmelden');
         return $ret;
     }

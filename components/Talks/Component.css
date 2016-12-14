@@ -1,12 +1,12 @@
-.cssClass .talks {
+.kwcClass .talks {
     padding: 0;
     padding-top: 10px;
 }
 
-.cssClass .talks .talk {
+.kwcClass .talks .talk {
     vertical-align: top;
 }
 
-.cssClass .talks .talk td {
+.kwcClass .talks .talk td {
     padding-right: 3px;
 }

@@ -1,9 +1,9 @@
 <?php
 class Directories_CircleGroups_Directory_Component extends Kwc_Directories_Item_DirectoryNoAdmin_Component
 {
-    public static function getSettings()
+    public static function getSettings($param = null)
     {
-        $ret = parent::getSettings();
+        $ret = parent::getSettings($param);
         $ret['componentName'] = trlStatic('Versammlungen').'.'.trlStatic('Nach Kreisen');
         $ret['generators']['detail']['component'] = 'Directories_CircleGroups_Detail_Component';
         $ret['generators']['detail']['model'] = 'CircleGroups';

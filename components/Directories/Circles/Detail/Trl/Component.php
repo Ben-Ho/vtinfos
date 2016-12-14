@@ -1,7 +1,7 @@
 <?php
 class Directories_Circles_Detail_Trl_Component extends Kwc_Directories_Item_Detail_Trl_Component
 {
-    public function getTemplateVars(Kwf_Component_Renderer_Abstract $renderer = null)
+    public function getTemplateVars(Kwf_Component_Renderer_Abstract $renderer)
     {
         $ret = parent::getTemplateVars($renderer);
         $ret['pdfDownloadUrl'] = Kwf_Media::getUrl(

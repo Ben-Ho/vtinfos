@@ -1,6 +1,8 @@
-Kwf.onJElementReady('.cssClass', function (el) {
+var onReady = require('kwf/on-ready');
+var $ = require('jQuery');
+onReady.onRender('.kwcClass', function (el) {
     el.find('.calculateTime').click(function (event) {
-        Ext.Ajax.request({
+        Ext2.Ajax.request({
             url: '/admin/component/edit/Map_Detail_Drivetime_Component/Calculate/json-index',
             params: {
                 congregationId: $(event.currentTarget).data('congregation-id'),

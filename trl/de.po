@@ -1,0 +1,306 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+
+msgid "Anmelden"
+msgstr "Anmelden"
+
+msgid "Bitte geben Sie Ihre korrekten Zugangsdaten ein!"
+msgstr "Bitte geben Sie Ihre korrekten Zugangsdaten ein!"
+
+msgid "Login"
+msgstr "Login"
+
+msgid "Versammlungs-Kreise"
+msgstr "Versammlungs-Kreise"
+
+msgid "Versammlungen"
+msgstr "Versammlungen"
+
+msgid "Versammlung"
+msgstr "Versammlung"
+
+msgid "Vortragszeit:"
+msgstr "Vortragszeit:"
+
+msgid "Leben- und Dienstzusammenkunft"
+msgstr "Leben- und Dienstzusammenkunft"
+
+msgid "Koordinator"
+msgstr "Koordinator"
+
+msgid "Ä"
+msgstr "Ä"
+
+msgid "DAG"
+msgstr "DAG"
+
+msgid "Tel:"
+msgstr "Tel:"
+
+msgid "Koordinator wurde nicht gesetzt!"
+msgstr "Koordinator wurde nicht gesetzt!"
+
+msgid "Vortragseinteiler"
+msgstr "Vortragseinteiler"
+
+msgid "Vortragseinteiler wurde nicht gesetzt!"
+msgstr "Vortragseinteiler wurde nicht gesetzt!"
+
+msgid "Redner"
+msgstr "Redner"
+
+msgid "Suche"
+msgstr "Suche"
+
+msgid "Abmelden"
+msgstr "Abmelden"
+
+msgid "Versammlungen A-Z"
+msgstr "Versammlungen A-Z"
+
+msgid "Suche nach Vortrag"
+msgstr "Suche nach Vortrag"
+
+msgid "Zeige Vorträge"
+msgstr "Zeige Vorträge"
+
+msgid "Suchfomular (Vortrag)"
+msgstr "Suchfomular (Vortrag)"
+
+msgid "Vortragsnummer/-titel"
+msgstr "Vortragsnummer/-titel"
+
+msgid "Vorname"
+msgstr "Vorname"
+
+msgid "Nachname"
+msgstr "Nachname"
+
+msgid "Luftlinie (km)"
+msgstr "Luftlinie (km)"
+
+msgid "Rednerformular"
+msgstr "Rednerformular"
+
+msgid "Anlegen"
+msgstr "Anlegen"
+
+msgid "Dir ist keine Versammlung zugewiesen. Deswegen kannst du keine Redner anlegen."
+msgstr "Dir ist keine Versammlung zugewiesen. Deswegen kannst du keine Redner anlegen."
+
+msgid "Vorrecht"
+msgstr "Vorrecht"
+
+msgid "Ältester"
+msgstr "Ältester"
+
+msgid "Dienstamtgehilfe"
+msgstr "Dienstamtgehilfe"
+
+msgid "Straße"
+msgstr "Straße"
+
+msgid "PLZ"
+msgstr "PLZ"
+
+msgid "Stadt"
+msgstr "Stadt"
+
+msgid "Land"
+msgstr "Land"
+
+msgid "Österreich"
+msgstr "Österreich"
+
+msgid "Deutschland"
+msgstr "Deutschland"
+
+msgid "Telefonnummer"
+msgstr "Telefonnummer"
+
+msgid "Email-Adresse"
+msgstr "Email-Adresse"
+
+msgid "Vorträge"
+msgstr "Vorträge"
+
+msgid "Notiz"
+msgstr "Notiz"
+
+msgid "Rednerformular Liste"
+msgstr "Rednerformular Liste"
+
+msgid "Meine Redner"
+msgstr "Meine Redner"
+
+msgid "Redner bearbeiten"
+msgstr "Redner bearbeiten"
+
+msgid "Neuen Redner anlegen"
+msgstr "Neuen Redner anlegen"
+
+msgid "Speichern"
+msgstr "Speichern"
+
+msgid "Redner löschen"
+msgstr "Redner löschen"
+
+msgid "Versammlungsformular"
+msgstr "Versammlungsformular"
+
+msgid "Versammlung bearbeiten"
+msgstr "Versammlung bearbeiten"
+
+msgid "Name"
+msgstr "Name"
+
+msgid "Vortragszeit"
+msgstr "Vortragszeit"
+
+msgid "Predigtdienstschulzeit"
+msgstr "Predigtdienstschulzeit"
+
+msgid "Kontakt-Formular"
+msgstr "Kontakt-Formular"
+
+msgid "Abschicken"
+msgstr "Abschicken"
+
+msgid "Kontakt"
+msgstr "Kontakt"
+
+msgid "Grund"
+msgstr "Grund"
+
+msgid "Neue Versammlung"
+msgstr "Neue Versammlung"
+
+msgid "Fehler auf Seite gefunden"
+msgstr "Fehler auf Seite gefunden"
+
+msgid "Wunsch"
+msgstr "Wunsch"
+
+msgid "Sonstiges"
+msgstr "Sonstiges"
+
+msgid "Vortragsthemen"
+msgstr "Vortragsthemen"
+
+msgid "ID-Auswahl"
+msgstr "ID-Auswahl"
+
+msgid "Nummer"
+msgstr "Nummer"
+
+msgid "Titel"
+msgstr "Titel"
+
+msgid "Gelöscht"
+msgstr "Gelöscht"
+
+msgid "Ort"
+msgstr "Ort"
+
+msgid "Telefon"
+msgstr "Telefon"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Vortrag Zeit/Tag"
+msgstr "Vortrag Zeit/Tag"
+
+msgid "Kreise"
+msgstr "Kreise"
+
+msgid "Zugangsdaten"
+msgstr "Zugangsdaten"
+
+msgid "Passwort ändern"
+msgstr "Passwort ändern"
+
+msgid "Suchfeld"
+msgstr "Suchfeld"
+
+msgid "Stunden"
+msgstr "Stunden"
+
+msgid "Minuten"
+msgstr "Minuten"
+
+msgid "Hält keine Vorträge"
+msgstr "Hält keine Vorträge"
+
+msgid "Berechne Zeit"
+msgstr "Berechne Zeit"
+
+msgid "Kreis"
+msgstr "Kreis"
+
+msgid "Hat Bart"
+msgstr "Hat Bart"
+
+msgid "Kein Bart"
+msgstr "Kein Bart"
+
+msgid "Deutsch"
+msgstr "Deutsch"
+
+msgid "Englisch"
+msgstr "Englisch"
+
+msgid "Französisch"
+msgstr "Französisch"
+
+msgid "Chinesisch"
+msgstr "Chinesisch"
+
+msgid "Persisch"
+msgstr "Persisch"
+
+msgid "Gebärdensprache"
+msgstr "Gebärdensprache"
+
+msgid "Twi"
+msgstr "Twi"
+
+msgid "Ga"
+msgstr "Ga"
+
+msgid "Versammlungen-Übersicht"
+msgstr "Versammlungen-Übersicht"
+
+msgid "Dienstzusammenkunft"
+msgstr "Dienstzusammenkunft"
+
+msgid "Öffentl. Vortrag"
+msgstr "Öffentl. Vortrag"
+
+msgid "keine Auswahl"
+msgstr "keine Auswahl"
+
+msgid "Tel.Nr."
+msgstr "Tel.Nr."
+
+msgid "Anmerkung"
+msgstr "Anmerkung"
+
+msgid "Hat Voll-/Modebart"
+msgstr "Hat Voll-/Modebart"
+
+msgid "Versammlungs.pdf"
+msgstr "Versammlungs.pdf"
+
+msgid "Bitte Telefonnummer in dieser Form '+43 1234 567890'"
+msgstr "Bitte Telefonnummer in dieser Form '+43 1234 567890'"
+
+msgid "Spanisch"
+msgstr "Spanisch"
+
+msgid "Arabisch"
+msgstr "Arabisch"
+
+msgid "Suchergebnisse"
+msgstr "Suchergebnisse"

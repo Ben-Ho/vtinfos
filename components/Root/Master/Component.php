@@ -1,9 +1,9 @@
 <?php
 class Root_Master_Component extends Kwc_Root_TrlRoot_Master_Component
 {
-    public static function getSettings()
+    public static function getSettings($param = null)
     {
-        $ret = parent::getSettings();
+        $ret = parent::getSettings($param);
         $ret['generators']['box']['component']['title'] = 'Title_Component';
         $ret['generators']['box']['component']['bottomMenu'] = 'Menu_Bottom_Component';
         $ret['generators']['box']['component']['metaTags'] = 'Kwc_Box_MetaTagsContent_Component';

@@ -1,4 +1,4 @@
-<div class="<?=$this->cssClass?>">
+<div class="<?=$this->rootElementClass?>">
     <?=$this->component($this->form)?>
     <div class="problemSolvingRegion">
         <?=$this->data->trl('Wenn du dein Passwort vergessen hast,')?>

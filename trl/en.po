@@ -1,0 +1,306 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+
+msgid "Anmelden"
+msgstr "Login"
+
+msgid "Bitte geben Sie Ihre korrekten Zugangsdaten ein!"
+msgstr "Please insert correct username and password!"
+
+msgid "Login"
+msgstr "Login"
+
+msgid "Versammlungs-Kreise"
+msgstr "Congregation-Groups"
+
+msgid "Versammlungen"
+msgstr "Congregations"
+
+msgid "Versammlung"
+msgstr "Congregation"
+
+msgid "Vortragszeit:"
+msgstr "Talk-Time:"
+
+msgid "Leben- und Dienstzusammenkunft"
+msgstr "Life and Ministry Meeting"
+
+msgid "Koordinator"
+msgstr "Coordinator"
+
+msgid "Ä"
+msgstr "E"
+
+msgid "DAG"
+msgstr "MA"
+
+msgid "Tel:"
+msgstr "Phone:"
+
+msgid "Koordinator wurde nicht gesetzt!"
+msgstr "Coordinator wasn't set"
+
+msgid "Vortragseinteiler"
+msgstr "Talk Coordinator"
+
+msgid "Vortragseinteiler wurde nicht gesetzt!"
+msgstr "Talk Coordinator wasn't set"
+
+msgid "Redner"
+msgstr "Speaker"
+
+msgid "Suche"
+msgstr "Search"
+
+msgid "Abmelden"
+msgstr "Logout"
+
+msgid "Versammlungen A-Z"
+msgstr "Congregation A-Z"
+
+msgid "Suche nach Vortrag"
+msgstr "Search for Talk"
+
+msgid "Zeige Vorträge"
+msgstr "Show Talks"
+
+msgid "Suchfomular (Vortrag)"
+msgstr "Searchform (Talk)"
+
+msgid "Vortragsnummer/-titel"
+msgstr "Talknumber/-title"
+
+msgid "Vorname"
+msgstr "First name"
+
+msgid "Nachname"
+msgstr "Last name"
+
+msgid "Luftlinie (km)"
+msgstr "Beeline (km)"
+
+msgid "Rednerformular"
+msgstr "Speakerform"
+
+msgid "Anlegen"
+msgstr "Create"
+
+msgid "Dir ist keine Versammlung zugewiesen. Deswegen kannst du keine Redner anlegen."
+msgstr "No congregation assigned to you. So you can't create a speaker."
+
+msgid "Vorrecht"
+msgstr "Privilege"
+
+msgid "Ältester"
+msgstr "Eldest"
+
+msgid "Dienstamtgehilfe"
+msgstr "Ministry-Assistent"
+
+msgid "Straße"
+msgstr "Street"
+
+msgid "PLZ"
+msgstr "Postal"
+
+msgid "Stadt"
+msgstr "City"
+
+msgid "Land"
+msgstr "Country"
+
+msgid "Österreich"
+msgstr "Austria"
+
+msgid "Deutschland"
+msgstr "Germany"
+
+msgid "Telefonnummer"
+msgstr "Phonenumber"
+
+msgid "Email-Adresse"
+msgstr "E-Mail-Address"
+
+msgid "Vorträge"
+msgstr "Talks"
+
+msgid "Notiz"
+msgstr "Note"
+
+msgid "Rednerformular Liste"
+msgstr "Speakerform list"
+
+msgid "Meine Redner"
+msgstr "My Speakers"
+
+msgid "Redner bearbeiten"
+msgstr "Edit speakers"
+
+msgid "Neuen Redner anlegen"
+msgstr "Create new speaker"
+
+msgid "Speichern"
+msgstr "Save"
+
+msgid "Redner löschen"
+msgstr "Delete speaker"
+
+msgid "Versammlungsformular"
+msgstr "Congregationform"
+
+msgid "Versammlung bearbeiten"
+msgstr "Edit congregation"
+
+msgid "Name"
+msgstr "Name"
+
+msgid "Vortragszeit"
+msgstr "Talk-time"
+
+msgid "Predigtdienstschulzeit"
+msgstr "Ministry-School-time"
+
+msgid "Kontakt-Formular"
+msgstr "Contactform"
+
+msgid "Abschicken"
+msgstr "Send"
+
+msgid "Kontakt"
+msgstr "Contact"
+
+msgid "Grund"
+msgstr "Reason"
+
+msgid "Neue Versammlung"
+msgstr "New Congregation"
+
+msgid "Fehler auf Seite gefunden"
+msgstr "Error found on page"
+
+msgid "Wunsch"
+msgstr "Wish"
+
+msgid "Sonstiges"
+msgstr "Other"
+
+msgid "Vortragsthemen"
+msgstr "Talk-Topics"
+
+msgid "ID-Auswahl"
+msgstr "ID-Selection"
+
+msgid "Nummer"
+msgstr "Number"
+
+msgid "Titel"
+msgstr "Title"
+
+msgid "Gelöscht"
+msgstr "Deleted"
+
+msgid "Ort"
+msgstr "City"
+
+msgid "Telefon"
+msgstr "Phone"
+
+msgid "Email"
+msgstr "E-Mail"
+
+msgid "Vortrag Zeit/Tag"
+msgstr "Talk Time/Day"
+
+msgid "Kreise"
+msgstr "Groups"
+
+msgid "Zugangsdaten"
+msgstr "Login-Data"
+
+msgid "Passwort ändern"
+msgstr "Change password"
+
+msgid "Suchfeld"
+msgstr "Searchfield"
+
+msgid "Stunden"
+msgstr "hours"
+
+msgid "Minuten"
+msgstr "minutes"
+
+msgid "Hält keine Vorträge"
+msgstr "Does not give lectures"
+
+msgid "Berechne Zeit"
+msgstr "Calculate time"
+
+msgid "Kreis"
+msgstr "Circuit"
+
+msgid "Hat Bart"
+msgstr "Has beard"
+
+msgid "Kein Bart"
+msgstr "No beard"
+
+msgid "Deutsch"
+msgstr "German"
+
+msgid "Englisch"
+msgstr "English"
+
+msgid "Französisch"
+msgstr "French"
+
+msgid "Chinesisch"
+msgstr "Chinese"
+
+msgid "Persisch"
+msgstr "Persian"
+
+msgid "Gebärdensprache"
+msgstr "sign language"
+
+msgid "Twi"
+msgstr "Twi"
+
+msgid "Ga"
+msgstr "Ga"
+
+msgid "Versammlungen-Übersicht"
+msgstr "Congregation-Overview"
+
+msgid "Dienstzusammenkunft"
+msgstr "Ministry-School"
+
+msgid "Öffentl. Vortrag"
+msgstr "Public Talk"
+
+msgid "keine Auswahl"
+msgstr "no selection"
+
+msgid "Tel.Nr."
+msgstr "Phone"
+
+msgid "Anmerkung"
+msgstr "Note"
+
+msgid "Hat Voll-/Modebart"
+msgstr "has beard"
+
+msgid "Versammlungs.pdf"
+msgstr "Congregations.pdf"
+
+msgid "Bitte Telefonnummer in dieser Form '+43 1234 567890'"
+msgstr "Please insert phone number like this '+43 1234 567890'"
+
+msgid "Spanisch"
+msgstr "Spanish"
+
+msgid "Arabisch"
+msgstr "Arabic"
+
+msgid "Suchergebnisse"
+msgstr "Search results"

@@ -1,5 +1,5 @@
-Ext.ns('vtinfos');
-vtinfos.Talks = Ext.extend(Ext.Panel,{
+Ext2.ns('vtinfos');
+vtinfos.Talks = Ext2.extend(Ext2.Panel,{
     layout: 'border',
     initComponent: function ()
     {
@@ -24,4 +24,4 @@ vtinfos.Talks = Ext.extend(Ext.Panel,{
         vtinfos.Structure.superclass.initComponent.call(this);
     }
 });
-Ext.reg('vtinfos.talks', vtinfos.Talks);
+Ext2.reg('vtinfos.talks', vtinfos.Talks);

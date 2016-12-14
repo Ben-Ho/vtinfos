@@ -1,1 +1,2 @@
-Kwf.Utils.ResponsiveEl('.pageWrapper', [673, 1000]);
+// var responsiveEl = require('kwf/responsive-el');
+// responsiveEl('.pageWrapper', [673, 1000]);

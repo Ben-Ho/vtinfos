@@ -9,3 +9,9 @@ eventlog
 kwf-lib
 config.local.ini
 library
+/build
+/vendor
+/bower.json
+/.bowerrc
+/node_modules
+/package.json

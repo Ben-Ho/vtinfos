@@ -1,17 +1,16 @@
 <?php
 class Directories_Congregations_Detail_Component extends Kwc_Directories_Item_Detail_Component
 {
-    public static function getSettings()
+    public static function getSettings($param = null)
     {
-        $ret = parent::getSettings();
+        $ret = parent::getSettings($param);
         $ret['generators']['child']['component']['lastChange'] = 'Directories_Congregations_Detail_LastChange_Component';
         $ret['plugins'] = array('Login_Plugin_Component');
-        $ret['assets']['dep'][] = 'KwfResponsiveEl';
-        $ret['cssClass'] = 'webStandard';
+        $ret['rootElementClass'] = 'kwfUp-webStandard';
         return $ret;
     }
 
-    public function getTemplateVars(Kwf_Component_Renderer_Abstract $renderer = null)
+    public function getTemplateVars(Kwf_Component_Renderer_Abstract $renderer)
     {
         $ret = parent::getTemplateVars($renderer);
         $ret['row'] = $this->getData()->getRow();

@@ -1,4 +1,4 @@
-.cssClass {
+.kwcClass {
     h1 {
         margin-bottom: 10px;
     }
@@ -44,49 +44,49 @@
     }
 }
 
-.cssClass.st480 .coordinator,
-.cssClass.st480 .talk-organiser {
+.kwcClass.st480 .coordinator,
+.kwcClass.st480 .talk-organiser {
     width: 100%;
     float: none;
 }
-.cssClass.st480 .talk-organiser {
+.kwcClass.st480 .talk-organiser {
     margin-top: 5px;
 }
 
-.cssClass .speakers-list .speakers .speaker {
+.kwcClass .speakers-list .speakers .speaker {
     margin-bottom: 20px;
 }
 
-.cssClass .coordinator .name,
-.cssClass .talk-organiser .name,
-.cssClass .speakers-list .speakers .speaker .name {
+.kwcClass .coordinator .name,
+.kwcClass .talk-organiser .name,
+.kwcClass .speakers-list .speakers .speaker .name {
     float: left;
     margin-right: 3px;
 }
 
-.cssClass .coordinator .degree,
-.cssClass .talk-organiser .degree,
-.cssClass .speakers-list .speakers .speaker .degree {
+.kwcClass .coordinator .degree,
+.kwcClass .talk-organiser .degree,
+.kwcClass .speakers-list .speakers .speaker .degree {
     float: left;
     color: #999999;
 }
 
-.cssClass .coordinator .phone,
-.cssClass .talk-organiser .phone,
-.cssClass .speakers-list .speakers .speaker .phone {
+.kwcClass .coordinator .phone,
+.kwcClass .talk-organiser .phone,
+.kwcClass .speakers-list .speakers .speaker .phone {
     clear: left;
 }
 
-.cssClass .speakers-list .speakers .speaker .name {
+.kwcClass .speakers-list .speakers .speaker .name {
     font-weight: bold;
     font-size: 15px;
 }
 
-.cssClass .speakers-list .speakers .speaker .talks {
+.kwcClass .speakers-list .speakers .speaker .talks {
     padding: 5px;
 }
 
-.cssClass .speakers-list .speakers .speaker table.talks tr td {
+.kwcClass .speakers-list .speakers .speaker table.talks tr td {
     vertical-align: top;
     padding-right: 3px;
     margin-bottom: 3px;

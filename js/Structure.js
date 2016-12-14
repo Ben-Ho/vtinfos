@@ -1,5 +1,5 @@
-Ext.ns('vtinfos');
-vtinfos.Structure = Ext.extend(Ext.Panel,
+Ext2.ns('vtinfos');
+vtinfos.Structure = Ext2.extend(Ext2.Panel,
 {
     layout: 'border',
     initComponent : function()
@@ -33,7 +33,7 @@ vtinfos.Structure = Ext.extend(Ext.Panel,
                 item: speakersGrid
             }]
         });
-        var centerRegion = new Ext.Panel({
+        var centerRegion = new Ext2.Panel({
             layout: 'border',
             region: 'center',
             split: true,
@@ -61,7 +61,7 @@ vtinfos.Structure = Ext.extend(Ext.Panel,
                 item: circleGrid
             }]
         });
-        var circlePanel = new Ext.Panel({
+        var circlePanel = new Ext2.Panel({
             layout: 'border',
             region: 'west',
             split: true,
@@ -73,9 +73,9 @@ vtinfos.Structure = Ext.extend(Ext.Panel,
         vtinfos.Structure.superclass.initComponent.call(this);
     }
 });
-Ext.reg('vtinfos.structure', vtinfos.Structure);
+Ext2.reg('vtinfos.structure', vtinfos.Structure);
 
-Ext.util.Format.name = function(value, p, record, rowIndex, colIndex, store, column) {
+Ext2.util.Format.name = function(value, p, record, rowIndex, colIndex, store, column) {
     var list = column.editor.field.initialConfig.store.data;
     for (var i = 0; i < list.length; i++) {
         if (list[i][0] == value) {

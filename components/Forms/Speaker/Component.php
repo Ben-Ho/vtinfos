@@ -1,9 +1,9 @@
 <?php
 class Forms_Speaker_Component extends Kwc_Form_Component
 {
-    public static function getSettings()
+    public static function getSettings($param = null)
     {
-        $ret = parent::getSettings();
+        $ret = parent::getSettings($param);
         $ret['componentName'] = trlStatic('Rednerformular');
         $ret['generators']['child']['component']['success'] = 'Forms_Speaker_Success_Component';
         $ret['placeholder']['submitButton'] = trlStatic('Anlegen');

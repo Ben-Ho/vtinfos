@@ -1,1 +1,2 @@
-Kwf.Utils.ResponsiveEl('.cssClass', [400]);
+// var responsiveEl = require('kwf/responsive-el');
+// responsiveEl('.kwcClass', [400]);

@@ -1,16 +1,16 @@
-.cssClass {
+.kwcClass {
     width: 100%;
 }
-.cssClass .problemSolvingRegion {
+.kwcClass .problemSolvingRegion {
     display: table;
     margin: auto;
 }
 
-.frontend.login #page #outerHeader #header .leftRegion {
+.kwfUp-frontend.login #page #outerHeader #header .leftRegion {
     width: auto;
     float: none;
 }
-.frontend.login #page #outerHeader #header .leftRegion #logo {
+.kwfUp-frontend.login #page #outerHeader #header .leftRegion #logo {
     margin: auto;
     float: none;
     width: 123px;
@@ -18,10 +18,10 @@
     font-size: 33px;
 }
 
-.frontend.login #page #outerHeader #header .leftRegion #logo .domain {
+.kwfUp-frontend.login #page #outerHeader #header .leftRegion #logo .domain {
     padding-top: 26px;
 }
-.frontend.login #page #outerHeader #header .leftRegion #logo .tld {
+.kwfUp-frontend.login #page #outerHeader #header .leftRegion #logo .tld {
     line-height: 20px;
 }
 .kwcForm.default > div.kwcForm > form .form_auto_login .kwfFormFieldWrapper > input {

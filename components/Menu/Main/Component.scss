@@ -1,4 +1,4 @@
-.cssClass {
+.kwcClass {
     overflow: hidden;
     height: 0px;
     -webkit-transition: all 1s; /* For Safari 3.1 to 6.0 */
@@ -36,7 +36,7 @@
         }
     }
 }
-.gt400 .cssClass {
+.gt400 .kwcClass {
     height: 40px;
     ul.menu {
         display: table;
@@ -84,7 +84,7 @@
         }
     }
 }
-.gt800 .cssClass {
+.gt800 .kwcClass {
     ul.menu {
         table-layout: fixed;
         > li {

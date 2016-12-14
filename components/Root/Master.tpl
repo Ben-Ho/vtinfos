@@ -1,5 +1,5 @@
-<?=$this->doctype('XHTML1_STRICT');?>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="<?=$this->pageLanguage?>">
     <head>
         <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
         <?=$this->includeCode('header')?>
@@ -28,11 +28,11 @@
                         <div id="innerContent">
                             <?=$this->component($this->data);?>
                         </div>
-                        <div class="clear"></div>
+                        <div class="kwfUp-clear"></div>
                     </div>
                 </div>
                 <div id="outerFooter">
-                    <div id="footer" class="webStandard">
+                    <div id="footer" class="kwfUp-webStandard">
                         <?=$this->component($this->boxes['bottomMenu']);?>
                         <?=$this->component($this->boxes['languageSwitcher']);?>
                     </div>

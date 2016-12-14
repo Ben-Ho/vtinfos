@@ -1,10 +1,10 @@
-<div class="<?=$this->cssClass?>">
+<div class="<?=$this->rootElementClass?>">
     <?=$this->data->trl('Letzte Änderung:');?>
     <span class="date">
-        <? if ($this->lastChange == 0) { ?>
+        <?php  if ($this->lastChange == 0) { ?>
             <?=$this->data->trl('keine Änderung');?>
-        <? } else { ?>
+        <?php  } else { ?>
             <?=$this->date($this->lastChange);?>
-        <? } ?>
+        <?php  } ?>
     </span>
 </div>

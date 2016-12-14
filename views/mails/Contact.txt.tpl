@@ -1,5 +1,5 @@
 Anfrage über:
-<? if ($this->topic == 'newCongregation') {
+<?php  if ($this->topic == 'newCongregation') {
     echo 'Neue Versammlung';
 } else if ($this->topic == 'bug') {
     echo 'Fehler auf der Seite gefunden';
