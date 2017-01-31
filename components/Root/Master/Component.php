@@ -4,6 +4,7 @@ class Root_Master_Component extends Kwc_Root_TrlRoot_Master_Component
     public static function getSettings($param = null)
     {
         $ret = parent::getSettings($param);
+        unset($ret['generators']['flag']);
         $ret['generators']['box']['component']['title'] = 'Title_Component';
         $ret['generators']['box']['component']['bottomMenu'] = 'Menu_Bottom_Component';
         $ret['generators']['box']['component']['metaTags'] = 'Kwc_Box_MetaTagsContent_Component';
@@ -31,6 +32,13 @@ class Root_Master_Component extends Kwc_Root_TrlRoot_Master_Component
         );
 
         $ret['editComponents'] = array('metaTags', 'flag');
+
+        $ret['masterLayout'] = array(
+            'class' => 'Root_Master_Layout',
+            'layoutConfig' => 'web/components/Root/Master/layout.config.scss',
+            'layoutName' => 'default',
+        );
+
         return $ret;
     }
 }

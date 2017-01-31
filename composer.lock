@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "f6ecc652ebda889a37cbcce35536fb8f",
+    "content-hash": "ee06057fc0becd2eba942b44cf53faf6",
     "packages": [
         {
             "name": "jbroadway/urlify",
@@ -279,6 +279,42 @@
             "description": "Framework and CMS based on Zend Framework and ExtJS",
             "homepage": "http://www.koala-framework.org/",
             "time": "2017-01-26 14:00:56"
+        },
+        {
+            "name": "koala-framework/kwc-susy",
+            "version": "1.0.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/koala-framework/kwc-susy.git",
+                "reference": "724900d8a7bd5f74223c3b3f461f89df9db0b436"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/koala-framework/kwc-susy/zipball/724900d8a7bd5f74223c3b3f461f89df9db0b436",
+                "reference": "724900d8a7bd5f74223c3b3f461f89df9db0b436",
+                "shasum": ""
+            },
+            "require": {
+                "koala-framework/koala-framework": "~4.0"
+            },
+            "type": "library",
+            "extra": {
+                "require-bower": {
+                    "susy": "2.2.6"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Susy_": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "description": "Susy Layout Tookit Integration for Koala Framework",
+            "homepage": "http://www.koala-framework.org/",
+            "time": "2016-10-27 10:18:18"
         },
         {
             "name": "koala-framework/kwf-trl-jsparser",
@@ -1031,7 +1067,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "koala-framework/koala-framework": 20
+        "koala-framework/koala-framework": 20,
+        "koala-framework/kwc-susy": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

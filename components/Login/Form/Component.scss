@@ -1,20 +1,19 @@
-.kwcClass.gt350 {
-    .kwcForm {
+@import "kwc-susy/master-layout-helper";
+@import "config/colors";
+
+@include set-master-layout(default);
+
+.kwcClass {
+    @include kwf-breakpoint(md) {
         margin: auto;
         width: 351px;
-    }
-
-    .loginInput.kwfField {
-        .kwfFormFieldWrapper {
-            display: block;
-        }
     }
 }
 
 .kwcClass {
     margin-bottom: 25px;
 
-    .loginInput.kwfField {
+    .loginInput {
         clear: none;
         margin-bottom: 0px;
         padding-top: 10px;
@@ -37,18 +36,13 @@
                 border-style: solid;
                 border-color: #DDDDDD;
                 border-width: 1px;
+                box-sizing: border-box;
+                padding: 10px;
             }
         }
     }
 
-    .form_auto_login.kwfField {
-        label {
-            float: left;
-            margin-right: 5px;
-        }
-    }
-
-    .submitWrapper.kwfButtonFlat {
+    .submitWrapper {
         margin: auto;
         width: 50%;
         padding-top: 20px;
@@ -62,8 +56,7 @@
             width: 0px;
         }
 
-        .button
-        {
+        .button {
             background-color: #085AC0;
             background-image: none;
             height: 40px;

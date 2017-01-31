@@ -1,3 +1,8 @@
+@import "kwc-susy/master-layout-helper";
+@import "config/colors";
+
+@include set-master-layout(default);
+
 .kwcClass {
     width: 100%;
 }
