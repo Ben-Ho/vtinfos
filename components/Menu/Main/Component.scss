@@ -1,3 +1,8 @@
+@import "kwc-susy/master-layout-helper";
+@import "config/colors";
+
+@include set-master-layout(default);
+
 .kwcClass {
     overflow: hidden;
     height: 0px;
@@ -36,63 +41,68 @@
         }
     }
 }
-.gt400 .kwcClass {
-    height: 40px;
-    ul.menu {
-        display: table;
-        width: 100%;
-        > li {
-            display: table-cell;
-            border-left-color: #186ad0;
-            border-left-style: solid;
-            border-left-width: 2px;
-            a, p {
-                border-bottom-color: #186ad0;
-                border-bottom-style: solid;
-                border-bottom-width: 2px;
-                padding-left: 10px;
-                padding-right: 0px;
-            }
-            &.first {
-                border-left: none;
-            }
-            &.hover {
-                background-color: #186ad0;
-            }
-            ul.subMenu {
-                display: none;
-                table-layout: fixed;
-                position: absolute;
-                left: 0px;
-                width: 100%;
-                > li {
-                    display: table-cell;
-                    width: 2%;
-                    text-align: center;
-                    border-left-color: #186ad0;
-                    border-left-style: solid;
-                    border-left-width: 2px;
-                    a {
-                        padding-left: 0px;
-                        padding-right: 0px;
-                    }
-                    &.first {
-                        border-left: none;
+.kwcClass {
+    @include kwf-breakpoint(md) {
+        height: 40px;
+        ul.menu {
+            display: table;
+            width: 100%;
+            padding-left: 0px;
+            > li {
+                display: table-cell;
+                border-left-color: #186ad0;
+                border-left-style: solid;
+                border-left-width: 2px;
+                a, p {
+                    border-bottom-color: #186ad0;
+                    border-bottom-style: solid;
+                    border-bottom-width: 2px;
+                    padding-left: 10px;
+                    padding-right: 0px;
+                }
+                &.first {
+                    border-left: none;
+                }
+                &.hover {
+                    background-color: #186ad0;
+                }
+                ul.subMenu {
+                    display: none;
+                    table-layout: fixed;
+                    position: absolute;
+                    left: 0px;
+                    width: 100%;
+                    > li {
+                        display: table-cell;
+                        width: 2%;
+                        text-align: center;
+                        border-left-color: #186ad0;
+                        border-left-style: solid;
+                        border-left-width: 2px;
+                        a {
+                            padding-left: 0px;
+                            padding-right: 0px;
+                        }
+                        &.first {
+                            border-left: none;
+                        }
                     }
                 }
             }
         }
     }
 }
-.gt800 .kwcClass {
-    ul.menu {
-        table-layout: fixed;
-        > li {
-            width: 2%;
-            text-align: center;
-            a {
-                padding-left: 0px;
-                padding-right: 0px;
+.kwcClass {
+    @include kwf-breakpoint(md) {
+        ul.menu {
+            table-layout: fixed;
+            > li {
+                width: 2%;
+                text-align: center;
+                a {
+                    padding-left: 0px;
+                    padding-right: 0px;
+                }
             }
         }
     }

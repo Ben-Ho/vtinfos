@@ -54,8 +54,10 @@ body {
     #outerContent {
         padding-top: 110px;
     }
-    &.kwfUp-frontend .pageWrapper.gt1000 .menues {
-        width: 80%;
+    &.kwfUp-frontend .pageWrapper .menues {
+        @include kwf-breakpoint(md) { //1000
+            width: 80%;
+        }
     }
 }
 
