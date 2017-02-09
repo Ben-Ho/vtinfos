@@ -1,6 +1,9 @@
+@import "kwc-susy/master-layout-helper";
 @import "form/default-styles";
 @import "config/colors";
 @import "kwf/css3/border-radius";
+
+@include set-master-layout(default);
 
 body {
     margin: 0;
@@ -57,34 +60,32 @@ body {
 }
 
 
-
-
 html body.kwfUp-frontend {
     background-color: #dedede;
 }
 
-.kwfUp-frontend .pageWrapper.gt1000 {
-    padding-bottom: 20px;
-    background-color: transparent;
-}
-.kwfUp-frontend .pageWrapper {
-    background-image: none;
-    background-color: white;
+html .kwfUp-frontend .pageWrapper {
+    @include kwf-breakpoint(md) { //1000
+        padding-bottom: 20px;
+    }
 }
 
 .kwfUp-frontend #page {
     width: 100%;
     margin: 0;
     padding: 0;
+    background-color: white;
     @include border-radius-pie(0px);
 }
-.kwfUp-frontend .pageWrapper.gt1000 #page {
-    width: 80%;
-    margin: auto;
-    background-color: #fff;
-    overflow: hidden;
-    box-shadow: 0px 3px 3px #888;
-    padding-bottom: 20px;
+.kwfUp-frontend .pageWrapper #page {
+    @include kwf-breakpoint(md) { //1000
+        width: 80%;
+        margin: auto;
+        background-color: #fff;
+        overflow: hidden;
+        box-shadow: 0px 3px 3px #888;
+        padding-bottom: 20px;
+    }
 }
 
 #page #outerHeader #header .leftRegion {
