@@ -1,6 +1,20 @@
+@import "kwc-susy/master-layout-helper";
+@import "form/default-styles";
+@import "config/colors";
+@import "kwf/css3/border-radius";
+
+@include set-master-layout(default);
+
 .kwcClass.kwcForm {
-    display: table;
+    max-width: 400px;
     margin: auto;
+
+    .kwfFormFieldTextField {
+        input, select {
+            width: 100%;
+        }
+    }
+
     .kwcForm .submitWrapper {
         margin: auto;
         display: table;
@@ -10,12 +24,6 @@
             background-image: none;
             height: 30px;
             line-height: 30px;
-        }
-    }
-    &.gt500 {
-        width: 365px;
-        .kwfFormFieldTextField input {
-            width: 217px;
         }
     }
 }

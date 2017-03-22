@@ -52,10 +52,14 @@ body {
         top: 0px;
     }
     #outerContent {
-        padding-top: 110px;
+        padding-top: 50px;
+        @include kwf-breakpoint(md) {
+            padding-top: 110px;
+        }
     }
+
     &.kwfUp-frontend .pageWrapper .menues {
-        @include kwf-breakpoint(md) { //1000
+        @include kwf-breakpoint(lg) {
             width: 80%;
         }
     }
@@ -67,7 +71,7 @@ html body.kwfUp-frontend {
 }
 
 html .kwfUp-frontend .pageWrapper {
-    @include kwf-breakpoint(md) { //1000
+    @include kwf-breakpoint(lg) {
         padding-bottom: 20px;
     }
 }
@@ -80,7 +84,7 @@ html .kwfUp-frontend .pageWrapper {
     @include border-radius-pie(0px);
 }
 .kwfUp-frontend .pageWrapper #page {
-    @include kwf-breakpoint(md) { //1000
+    @include kwf-breakpoint(lg) {
         width: 80%;
         margin: auto;
         background-color: #fff;
