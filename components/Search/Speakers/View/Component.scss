@@ -1,3 +1,10 @@
+@import "kwc-susy/master-layout-helper";
+@import "form/default-styles";
+@import "config/colors";
+@import "kwf/css3/border-radius";
+
+@include set-master-layout(default);
+
 .kwcClass {
     .viewContainer {
         margin-top: 20px;
@@ -9,9 +16,11 @@
         margin-bottom: 10px;
         position: relative;
     }
-    &.gt400 .kwfViewAjaxItem {
-        width: 49%;
-        float: left;
-        padding-left: 1%;
+    @include kwf-breakpoint(md) {
+        .kwfViewAjaxItem {
+            width: 49%;
+            float: left;
+            padding-left: 1%;
+        }
     }
 }

@@ -1,9 +1,6 @@
 <?php
-class Users extends Kwf_User_Model
+class UsersEdit extends Kwf_User_EditModel
 {
-    protected $_rowClass = 'Rows_User';
-    protected $_proxyModel = 'UsersEdit';
-
     protected function _init()
     {
         parent::_init();
@@ -12,10 +9,5 @@ class Users extends Kwf_User_Model
             'column' => 'congregation_id'
         );
         $this->_exprs['congregation_name'] = new Kwf_Model_Select_Expr_Parent('Congregation', 'name');
-    }
-
-    public function loginUserRow($row, $logLogin)
-    {
-        return parent::loginUserRow($row, true);
     }
 }

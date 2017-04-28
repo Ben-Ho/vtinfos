@@ -5,7 +5,6 @@ class Search_Speakers_View_Component extends Kwc_Directories_List_ViewAjax_Compo
     {
         $ret = parent::getSettings($param);
         $ret['generators']['child']['component']['searchForm'] = 'Search_Speakers_View_SearchForm_Component';
-        $ret['generators']['child']['component']['count'] = 'Search_Speakers_View_Count_Component';
         $ret['plugins'] = array('Login_Plugin_Component');
         $ret['assets']['dep'][] = 'KwfSwitchDisplay';
         $ret['placeholder']['noEntriesFound'] = '';
