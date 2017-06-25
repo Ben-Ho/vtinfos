@@ -1,6 +1,6 @@
 {
     "require": {
-        "koala-framework/koala-framework": "4.2.x-dev",
+        "koala-framework/koala-framework": "4.4.x-dev",
         "koala-framework/kwc-susy": "1.0.x-dev"
     },
     "minimum-stability": "dev",
