@@ -1,5 +1,6 @@
 var onReady = require('kwf/on-ready');
 var $ = require('jQuery');
+var getViewport = require('web/commonjs/getViewport');
 //responsiveEl('.kwcClass', [400, 800]);
 onReady.onRender('.kwcClass', function (el) {
 //     $(window).scroll(function (event, a, b, c, d) {
@@ -11,8 +12,7 @@ onReady.onRender('.kwcClass', function (el) {
 //     });
 
     $(el).find('.mobileTitle').click(function(event) {
-        if ($(event.currentTarget).find('.title').hasClass('gt400'))
-            return;
+        if (getViewport().width >= 768) return;
         if ($(event.currentTarget).hasClass('logout'))
             return;
         var menu = $(el).find('.menuMain');

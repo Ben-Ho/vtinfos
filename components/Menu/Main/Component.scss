@@ -4,10 +4,12 @@
 @include set-master-layout(default);
 
 .kwcClass {
-    overflow: hidden;
+    overflow: auto;
     height: 0px;
     -webkit-transition: all 1s; /* For Safari 3.1 to 6.0 */
     transition: all 1s;
+    max-height: 100vh;
+
     ul.menu {
         padding: 0px;
         position: relative;
@@ -18,7 +20,6 @@
         }
         li {
             a, p {
-                width: 100%;
                 height: 100%;
                 display: block;
                 color: #fff;
@@ -44,7 +45,7 @@
 }
 .kwcClass {
     @include kwf-breakpoint(md) {
-        height: 40px;
+        height: auto;
         ul.menu {
             display: table;
             width: 100%;
