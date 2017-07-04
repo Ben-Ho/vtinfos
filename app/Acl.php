@@ -33,7 +33,13 @@ class Acl extends Kwf_Acl_Component
         $this->addResource(new Kwf_Acl_Resource_MenuUrl('talks_talks',
             array('text' => trl('Vortragsthemen')),
             '/admin/talks/talks'));
+            $this->add(new Zend_Acl_Resource('talks_talk'), 'talks_talks');
         $this->allow('admin', 'talks_talks');
+
+        $this->addResource(new Kwf_Acl_Resource_MenuUrl('talks_talk-categories',
+            array('text' => trl('Vortragskategorien')),
+            '/admin/talks/talk-categories'));
+        $this->allow('admin', 'talks_talk-categories');
 
         $this->add(new Kwf_Acl_Resource_MenuUrl('user_users',
                 array('text'=>trl('Vortragseinteiler'), 'icon'=>'user.png'),

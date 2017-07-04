@@ -7,7 +7,8 @@ class Talks extends Kwf_Model_Db
 
     protected $_dependentModels = array(
         'TalkToSpeakers' => 'SpeakersToTalks',
-        'TalkTitles' => 'TalkTitles'
+        'TalkTitles' => 'TalkTitles',
+        'TalksToCategories' => 'TalksToCategories'
     );
 
     public static function getLanguages()
