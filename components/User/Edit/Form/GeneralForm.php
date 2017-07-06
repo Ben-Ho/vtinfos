@@ -3,7 +3,7 @@ class User_Edit_Form_GeneralForm extends Kwc_Abstract_Composite_Form
 {
     protected function _init()
     {
-        $this->setModel(Zend_Registry::get('userModel')->getKwfModel());
+        $this->setModel(Kwf_Registry::get('userModel')->getEditModel());
         parent::_init();
     }
 
