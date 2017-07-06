@@ -59,7 +59,7 @@ class Forms_Speaker_Field_SuperBoxSelect extends Kwf_Form_Field_Abstract
         return $this->_relModel;
     }
 
-    public function load(Kwf_Model_Row_Interface $row, $postData = array())
+    public function load($row, $postData = array())
     {
         if (!$row) return array();
 
