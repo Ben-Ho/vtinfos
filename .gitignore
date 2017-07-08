@@ -1,5 +1,6 @@
 querylog
 *.kdev4
+.idea
 .project
 .buildpath
 .settings
