@@ -19,19 +19,16 @@
             border-top-width: 2px;
         }
         li {
-            a, p {
+            a, span {
                 height: 100%;
                 display: block;
                 color: #fff;
                 font-size: 18px;
                 padding: 10px;
             }
-            p {
-                margin-bottom: 0px;
-            }
             ul.subMenu {
                 li {
-                    a, p {
+                    a, span {
                         font-size: 15px;
                         padding-left: 25px;
                     }
@@ -55,7 +52,7 @@
                 border-left-color: #186ad0;
                 border-left-style: solid;
                 border-left-width: 2px;
-                a, p {
+                a, span {
                     border-bottom-color: #186ad0;
                     border-bottom-style: solid;
                     border-bottom-width: 2px;
@@ -73,6 +70,7 @@
                     table-layout: fixed;
                     position: absolute;
                     left: 0px;
+                    padding-left: 0px;
                     width: 100%;
                     > li {
                         display: table-cell;
@@ -87,6 +85,9 @@
                         }
                         &.first {
                             border-left: none;
+                        }
+                        &.last {
+                            padding-bottom: 0px;
                         }
                     }
                 }
