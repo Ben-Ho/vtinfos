@@ -1,5 +1,5 @@
 <div class="<?=$this->rootElementClass?>">
-    <input type="search" class="talkSearch">
+    <input type="text" class="talkSearch">
     <table class="talks">
         <?php  foreach ($this->talks as $talk) { ?>
             <tr class="talk">
