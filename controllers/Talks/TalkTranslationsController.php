@@ -18,4 +18,12 @@ class Talks_TalkTranslationsController extends Kwf_Controller_Action_Auto_Grid
         $select->whereEquals('talk_id', $this->_getParam('talk_id'));
         return $select;
     }
+
+    protected function _beforeSave(Kwf_Model_Row_Interface $row, $submitRow)
+    {
+        if ($row->language || $row->title) {
+            $row->talk_id = $this->_getParam('talk_id');
+        }
+        parent::_beforeSave($row, $submitRow);
+    }
 }
