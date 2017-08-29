@@ -5,19 +5,13 @@ class Map_ViewMap_Component extends Kwc_Directories_List_ViewMap_Component
     {
         $ret = parent::getSettings($param);
         $ret['plugins'] = array('Login_Plugin_Component');
-        $ret['mapOptions'] = array(
-            'zoom' => 7,
-            'zoom_properties' => 1,
-            'height' => 400,
-            'width' => '',
-            'scale' => 1,
-            'satelite' => 1,
-            'overview' => 1,
-//             'minimumResolution' => 7, // min zoomstufe wenn nötig
-//             'maximumResolution' => 12, // max zoomstufe wenn nötig
-            //'latitude' => 123, //optional, if not set center of shown cooridnates is used
-            //'longitude' => 123, //optional, if not set center of shown cooridnates is used
-        );
+        $ret['mapOptions']['zoom'] = 7;
+        $ret['mapOptions']['zoom_properties'] = 1;
+        $ret['mapOptions']['height'] = 400;
+        $ret['mapOptions']['width'] = '';
+        $ret['mapOptions']['scale'] = 1;
+        $ret['mapOptions']['satelite'] = 1;
+        $ret['mapOptions']['overview'] = 1;
         return $ret;
     }
 
