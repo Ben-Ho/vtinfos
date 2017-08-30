@@ -174,12 +174,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/koala-framework/koala-framework.git",
-                "reference": "485daddf8b1592975132fbe4401ad56102d2af5e"
+                "reference": "1fa2bae4e5de22ae36353fca12eb2b5bbe654059"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/koala-framework/koala-framework/zipball/485daddf8b1592975132fbe4401ad56102d2af5e",
-                "reference": "485daddf8b1592975132fbe4401ad56102d2af5e",
+                "url": "https://api.github.com/repos/koala-framework/koala-framework/zipball/1fa2bae4e5de22ae36353fca12eb2b5bbe654059",
+                "reference": "1fa2bae4e5de22ae36353fca12eb2b5bbe654059",
                 "shasum": ""
             },
             "require": {
@@ -276,7 +276,7 @@
             ],
             "description": "Framework and CMS based on Zend Framework and ExtJS",
             "homepage": "http://www.koala-framework.org/",
-            "time": "2017-08-29 08:04:08"
+            "time": "2017-08-29 10:37:15"
         },
         {
             "name": "koala-framework/kwc-susy",

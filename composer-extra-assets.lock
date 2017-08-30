@@ -519,9 +519,9 @@
                 }
             },
             "caniuse-db": {
-                "version": "1.0.30000718",
+                "version": "1.0.30000721",
                 "from": "caniuse-db@>=1.0.30000372 <2.0.0",
-                "resolved": "https://registry.npmjs.org/caniuse-db/-/caniuse-db-1.0.30000718.tgz"
+                "resolved": "https://registry.npmjs.org/caniuse-db/-/caniuse-db-1.0.30000721.tgz"
             },
             "caseless": {
                 "version": "0.12.0",
@@ -1374,9 +1374,9 @@
                 "resolved": "https://registry.npmjs.org/ms/-/ms-2.0.0.tgz"
             },
             "nan": {
-                "version": "2.6.2",
+                "version": "2.7.0",
                 "from": "nan@>=2.3.2 <3.0.0",
-                "resolved": "https://registry.npmjs.org/nan/-/nan-2.6.2.tgz"
+                "resolved": "https://registry.npmjs.org/nan/-/nan-2.7.0.tgz"
             },
             "node-gyp": {
                 "version": "3.6.2",
