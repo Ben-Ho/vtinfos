@@ -1,34 +1,8 @@
-<nav class="{{ rootElementClass }}">
-    {% if parentPage %}
-        {% block parentPageName %}
-        <h2 class="parentPageName">{{ parentPage.name }}</h2>
-        {% endblock %}
+{% extends renderer.getComponentTemplate("Kwc_Menu_Expanded_Component") %}
+{% block menuLink %}
+    {% if m.data.componentClass != 'Kwc_Basic_LinkTag_FirstChildPage_Component' %}
+        {{ renderer.componentLink(m.data) }}
+    {% else %}
+        <span class="{{ 'item'|bemClass }} {{ 'item'|bemClass }}--clickable">{{ m.data.name }}</span>
     {% endif %}
-    <ul class="menu">
-        {% for m in menu %}
-            {{ m.preHtml|raw }}
-            <li class="{{ m.class }}">
-                {% block menuLink %}
-                {{ renderer.componentLink(m.data) }}
-                {% endblock %}
-                {% if m.submenu|length %}
-                    {% block subMenu %}
-                    <ul class="subMenu">
-                        {% for sm in m.submenu %}
-                            {{ sm.preHtml|raw }}
-                            <li class="{{ sm.class }}">
-                                {% block subMenuLink %}
-                                {{ renderer.componentLink(sm.data, sm.text) }}
-                                {% endblock %}
-                            </li>
-                            {{ sm.postHtml|raw }}
-                        {% endfor %}
-                    </ul>
-                    {% endblock %}
-                {% endif %}
-            </li>
-            {{ m.postHtml|raw }}
-        {% endfor %}
-    </ul>
-    <div class="kwfUp-clear"></div>
-</nav>
+{% endblock %}

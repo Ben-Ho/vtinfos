@@ -25,12 +25,14 @@
                 color: #fff;
                 font-size: 18px;
                 padding: 10px;
+                cursor: pointer;
             }
             ul.subMenu {
                 li {
                     a, span {
                         font-size: 15px;
                         padding-left: 25px;
+                        border-bottom-style: none;
                     }
                     &.last {
                         padding-bottom: 15px;
