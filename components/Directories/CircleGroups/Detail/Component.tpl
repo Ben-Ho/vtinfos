@@ -4,7 +4,7 @@
         <img src="/assets/silkicons/page_white_acrobat.png" width="16" height="16">
     </a>
     <?php if ($this->row->additional_link) { ?>
-        <a href="<?=$this->row->additional_link?>"><?=$this->data->trl('Andere Versammlungen')?></a>
+        <a class="additionalLink" href="<?=$this->row->additional_link?>"><?=$this->data->trl('Andere Versammlungen')?></a>
     <?php } ?>
     <?=$this->component($this->circles);?>
 </div>
