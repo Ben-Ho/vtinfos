@@ -8,5 +8,7 @@ class Talks_CircleGroupsController extends Kwf_Controller_Action_Auto_Grid
         parent::_initColumns();
         $this->_columns->add(new Kwf_Grid_Column('name', trl('Name')))
             ->setEditor(new Kwf_Form_Field_TextField());
+        $this->_columns->add(new Kwf_Grid_Column('additional_link', trl('Zusatzlink')))
+            ->setEditor(new Kwf_Form_Field_TextField());
     }
 }
