@@ -3,23 +3,19 @@ var $ = require('jQuery');
 var getViewport = require('web/commonjs/getViewport');
 
 onReady.onRender('.kwcClass', function (el) {
-    el.find('.item').on({
-        mouseenter: function(ev) {
+    $(el).find('ul.menu > li').hover(
+        function (event) {
             if (getViewport().width < 768) return;
+            // Reset old values
+            $(event.currentTarget).closest('ul').children('li').removeClass('hover');
+            $(event.currentTarget).closest('ul').find('ul.subMenu').css('display', 'none');
+            $(event.currentTarget).closest('.menuMain').height(41);
 
-            if ($(ev.currentTarget).find('.subMenu').length) {
-                $(ev.currentTarget).find('.subMenu').show();
-                $(ev.currentTarget).closest('.menuMain').css('height', '81px');
-            } else {
-                $(ev.currentTarget).closest('.menuMain').css('height', 'auto');
+            $(event.currentTarget).addClass('hover');
+            if ($(event.currentTarget).find('ul').length > 0) {
+                $(event.currentTarget).closest('.menuMain').height(80);
+                $(event.currentTarget).find('ul.subMenu').css('display', 'table');
             }
-        },
-        mouseleave: function(ev) {
-            if (getViewport().width < 768) return;
-
-            if ($(ev.currentTarget).find('.subMenu')) {
-                $(ev.currentTarget).find('.subMenu').hide();
-            }
-        }
-    });
+        }, function (event) {}
+    );
 });

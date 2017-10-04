@@ -5,15 +5,17 @@
 
 .kwcClass {
     overflow: auto;
-    height: 0px;
+    max-height: 0;
     -webkit-transition: all 1s; /* For Safari 3.1 to 6.0 */
     transition: all 1s;
-    max-height: 100vh;
 
     ul.menu {
         padding: 0px;
         position: relative;
-        > li {
+        > li.item {
+            &.first {
+                border-top-width: 0px;
+            }
             border-top-color: #186ad0;
             border-top-style: solid;
             border-top-width: 2px;
@@ -44,16 +46,19 @@
 }
 .kwcClass {
     @include kwf-breakpoint(md) {
-        height: auto;
+        overflow: hidden;
+        max-height: none;
+        height: 41px;
         ul.menu {
             display: table;
             width: 100%;
             padding-left: 0px;
-            > li {
+            > li.item {
                 display: table-cell;
                 border-left-color: #186ad0;
                 border-left-style: solid;
                 border-left-width: 2px;
+
                 a, span {
                     border-bottom-color: #186ad0;
                     border-bottom-style: solid;
@@ -62,6 +67,7 @@
                     padding-right: 0px;
                 }
                 &.first {
+                    border-top-width: 2px;
                     border-left: none;
                 }
                 &.hover {

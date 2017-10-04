@@ -1,3 +1,8 @@
+@import "kwc-susy/master-layout-helper";
+@import "config/colors";
+
+@include set-master-layout(default);
+
 .kwcClass {
     background-color: #085ac0;
     .logo {
@@ -11,6 +16,12 @@
         position: relative;
         padding: 5px;
         font-size: 20px;
+        &.open {
+            border-bottom-color: #186ad0;
+            border-bottom-style: solid;
+            border-bottom-width: 2px;
+        }
+
         .logo, .title {
             display: table-cell;
         }
