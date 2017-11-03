@@ -1,15 +1,13 @@
 {
     "require": {
-        "koala-framework/koala-framework": "4.4.x-dev",
+        "koala-framework/koala-framework": "4.5.x-dev",
         "koala-framework/kwc-susy": "1.0.x-dev",
         "tecnickcom/tcpdf": "6.0.097"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "extra": {
-        "require-bower": {
-            "jquery": "^1.11.3"
-        }
+        "require-bower": {}
     },
     "config": {
         "platform": {
