@@ -2,7 +2,8 @@
     "require": {
         "koala-framework/koala-framework": "4.5.x-dev",
         "koala-framework/kwc-susy": "1.0.x-dev",
-        "tecnickcom/tcpdf": "6.0.097"
+        "tecnickcom/tcpdf": "6.0.097",
+        "paragonie/random_compat": "~2.0"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
