@@ -4,7 +4,7 @@
         "es5-shim": "https://github.com/es-shims/es5-shim.git#4.5.9",
         "html5shiv": "https://github.com/aFarkas/html5shiv.git#3.7.3",
         "jquery": "https://github.com/jquery/jquery-dist.git#3.2.1",
-        "js-cookie": "https://github.com/js-cookie/js-cookie.git#2.1.4",
+        "js-cookie": "https://github.com/js-cookie/js-cookie.git#2.2.0",
         "matches-selector": "https://github.com/desandro/matches-selector.git#1.0.3",
         "susy": "https://github.com/ericam/susy.git#2.2.6",
         "tinymce": "https://github.com/tinymce/tinymce.git#4.1.9"
@@ -519,9 +519,9 @@
                 }
             },
             "caniuse-db": {
-                "version": "1.0.30000757",
+                "version": "1.0.30000760",
                 "from": "caniuse-db@>=1.0.30000372 <2.0.0",
-                "resolved": "https://registry.npmjs.org/caniuse-db/-/caniuse-db-1.0.30000757.tgz"
+                "resolved": "https://registry.npmjs.org/caniuse-db/-/caniuse-db-1.0.30000760.tgz"
             },
             "caseless": {
                 "version": "0.12.0",
@@ -855,9 +855,9 @@
                 "resolved": "https://registry.npmjs.org/form-data/-/form-data-2.3.1.tgz"
             },
             "fs-readdir-recursive": {
-                "version": "1.0.0",
+                "version": "1.1.0",
                 "from": "fs-readdir-recursive@>=1.0.0 <2.0.0",
-                "resolved": "https://registry.npmjs.org/fs-readdir-recursive/-/fs-readdir-recursive-1.0.0.tgz"
+                "resolved": "https://registry.npmjs.org/fs-readdir-recursive/-/fs-readdir-recursive-1.1.0.tgz"
             },
             "fs.realpath": {
                 "version": "1.0.0",

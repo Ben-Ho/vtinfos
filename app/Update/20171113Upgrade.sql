@@ -1,0 +1,14 @@
+--CREATE TABLE IF NOT EXISTS `kwf_updates` (
+--`id` int(11) NOT NULL,
+--  `name` varchar(255) NOT NULL,
+--  `executed_at` datetime DEFAULT NULL,
+--  `log` text NOT NULL
+--) ENGINE=InnoDB AUTO_INCREMENT=285 DEFAULT CHARSET=latin1;
+--
+--ALTER TABLE `kwf_updates`
+-- ADD PRIMARY KEY (`id`);
+--
+--ALTER TABLE `kwf_updates`
+--MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=285;
+--INSERT INTO `kwf_updates` (`id`, `name`, `executed_at`, `log`) VALUES
+--(1, 'Kwc_Advanced_GoogleMap_Update_22701', '2016-10-11 13:22:08', '')
