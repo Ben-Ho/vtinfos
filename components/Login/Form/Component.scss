@@ -6,7 +6,7 @@
 .kwcClass {
     @include kwf-breakpoint(md) {
         margin: auto;
-        width: 351px;
+        max-width: 360px;
     }
 }
 

@@ -27,10 +27,13 @@ div.kwcForm .formContainer form .formsSpeakerFieldSuperBoxSelect {
         clear: both;
         padding-top: 3px;
         .newValue {
+            width: auto !important;
+            float: left;
         }
         select.newValueSelect {
-            width: 100px !important;
+            width: 95px !important;
             height: 26px;
+            float: left;
         }
         .button {
             background-color: #085ac0;
@@ -39,7 +42,9 @@ div.kwcForm .formContainer form .formsSpeakerFieldSuperBoxSelect {
             text-align: center;
             line-height: 26px;
             height: 26px;
-            width: 26px;
+            width: 22px;
+            display: block;
+            float: left;
         }
     }
 }

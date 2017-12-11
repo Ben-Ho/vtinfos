@@ -152,19 +152,37 @@ body.ext2-ie6 { text-align: center; }
 .kwfUp-webListNone,
 .kwfUp-webListNone li { margin-bottom: 0px; }
 
-.kwfUp-webForm input,
-.kwfUp-webForm textarea,
-.kwfUp-webForm label,
-.kwfUp-webForm button,
-.kwfUp-webForm select {
+
+// Form-Styling
+.kwfUp-webForm {
+    @include form-default-styles;
+    max-width: 300px;
+    display: block;
+    margin: auto;
+}
+html .kwfUp-webForm input,
+html .kwfUp-webForm textarea,
+html .kwfUp-webForm label,
+html .kwfUp-webForm select {
     font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;
     font-size: 14px;
-    color: $typo;
     line-height: 18px;
+    width: 100%;
+    box-sizing: border-box;
+    float: none;
 }
-
-.kwfUp-webForm label { text-align: left; }
-.kwfUp-webForm .submitWrapper { margin: 10px 0px 10px 140px; }
+// bei checkbox soll hackerl neben label stehen
+html .kwfUp-webForm .kwfFormFieldCheckbox > label {
+    width: auto;
+    float: left;
+}
+html .kwfUp-webForm input[type=checkbox] {
+    width: auto;
+}
+.kwfUp-webForm .submitWrapper {
+    margin: auto;
+    display: table;
+}
 .kwfUp-webForm button {
     color: $light;
     background: none !important;
@@ -173,22 +191,15 @@ body.ext2-ie6 { text-align: center; }
     height: 100%;
 }
 .kwfUp-webForm button:hover { color: $light; }
-
 .kwfUp-webForm .beforeButton,
 .kwfUp-webForm .afterButton {
     display: block;
-    float: left;
     width: 0px;
     height: 27px;
 }
 .kwfUp-webForm .button {
-    float: left;
     height: 30px;
     line-height: 30px;
     background-color: #085AC0;
     background-image: none;
-}
-
-.kwfUp-webForm {
-    @include form-default-styles;
 }
