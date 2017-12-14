@@ -1,0 +1,5 @@
+speaker-search:
+    path: /api/v1/speakers/search
+    methods: [GET]
+    defaults:
+        _controller: AppBundle\Controller\SpeakersController::searchAction

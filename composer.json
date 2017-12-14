@@ -3,12 +3,35 @@
         "koala-framework/koala-framework": "4.5.x-dev",
         "koala-framework/kwc-susy": "1.0.x-dev",
         "tecnickcom/tcpdf": "6.0.097",
-        "paragonie/random_compat": "~2.0"
+        "paragonie/random_compat": "~2.0",
+        "symfony/symfony": "~2.8",
+        "friendsofsymfony/rest-bundle": "^1.7",
+        "symfony/monolog-bundle": "~2.8",
+        "sensio/framework-extra-bundle": "^3.0",
+        "koala-framework/kwf-reactjs": "1.0.x-dev"
+    },
+    "autoload": {
+        "psr-0": {
+            "AppBundle": "symfony/src",
+            "KwfComponentBundle": "symfony/src"
+        },
+        "classmap": [
+            "symfony/AppKernel.php"
+        ]
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "extra": {
-        "require-bower": {}
+        "require-npm": {
+            "redux": "^3.6.0",
+            "redux-thunk": "^2.1.0",
+            "redux-logger": "^2.7.4",
+            "react-redux": "^5.0.1",
+            "immutable": "^3.8.1",
+            "axios": "^0.15.2",
+            "redux-act": "^1.1.0",
+            "prop-types": "^15.5.10"
+        }
     },
     "config": {
         "platform": {

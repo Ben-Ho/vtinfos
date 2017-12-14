@@ -1,0 +1,30 @@
+# To get started with security, check out the documentation:
+# http://symfony.com/doc/current/book/security.html
+security:
+
+    access_decision_manager:
+        strategy: unanimous
+        allow_if_all_abstain: true
+
+    access_control:
+        - { path: ^/api, roles: [ROLE_USER] }
+
+    role_hierarchy:
+        ROLE_SUPERUSER: ROLE_USER
+        ROLE_ADMIN: ROLE_SUPERUSER
+
+    firewalls:
+        dev:
+            pattern: ^(/kwf/symfony/(_(profiler|wdt)|css|images|js)/)
+            security: false
+        secured_area:
+            pattern: ^/api
+            anonymous: true
+            stateless: true
+            simple_preauth:
+                authenticator: kwf_authenticator
+            provider: user_provider
+
+    providers:
+        user_provider:
+            id: kwf_user_provider

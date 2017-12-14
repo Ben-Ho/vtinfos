@@ -1,0 +1,9 @@
+# Learn more about services, parameters and containers at
+# http://symfony.com/doc/current/book/service_container.html
+
+services:
+# Models
+    app.model.speakers:
+        class: Speakers
+        factory: ['Kwf_Model_Abstract', getInstance]
+        arguments: ['Speakers']
