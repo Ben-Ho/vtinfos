@@ -1,0 +1,32 @@
+@import "config/colors";
+@import "kwc-susy/master-layout-helper";
+
+@include set-master-layout(default);
+
+html .kwfLocal {
+    div input, div select {
+        font-size: 20px;
+    }
+    div select:disabled {
+        color: $lightGrey;
+    }
+    &__field {
+        margin-bottom: 10px;
+    }
+    &__search {
+        color: #fff;
+        background-color: #085AC0;
+        padding: 5px 10px;
+        margin: auto;
+        margin-top: 15px;
+        display: table;
+        cursor: pointer;
+    }
+
+    &__checkbox {
+        label {
+            margin-left: 25px;
+            font-size: 20px;
+        }
+    }
+}

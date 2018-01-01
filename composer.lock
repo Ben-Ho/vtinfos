@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "fcb137cb2e3fbed355383a93cab3a226",
+    "content-hash": "f877c80793ce9e5f27cb70c8164e5b18",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -702,12 +702,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/koala-framework/koala-framework.git",
-                "reference": "f5138d25d14eebf57cdaf45f4841c53b42c43bc5"
+                "reference": "63b516b1b174fa28b09f258d1b519ec683275a6c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/koala-framework/koala-framework/zipball/f5138d25d14eebf57cdaf45f4841c53b42c43bc5",
-                "reference": "f5138d25d14eebf57cdaf45f4841c53b42c43bc5",
+                "url": "https://api.github.com/repos/koala-framework/koala-framework/zipball/63b516b1b174fa28b09f258d1b519ec683275a6c",
+                "reference": "63b516b1b174fa28b09f258d1b519ec683275a6c",
                 "shasum": ""
             },
             "require": {
@@ -804,7 +804,7 @@
             ],
             "description": "Framework and CMS based on Zend Framework and ExtJS",
             "homepage": "http://www.koala-framework.org/",
-            "time": "2017-12-06 13:19:21"
+            "time": "2017-12-21T12:57:19+00:00"
         },
         {
             "name": "koala-framework/kwc-susy",
@@ -840,7 +840,7 @@
             ],
             "description": "Susy Layout Tookit Integration for Koala Framework",
             "homepage": "http://www.koala-framework.org/",
-            "time": "2017-05-30 10:28:31"
+            "time": "2017-05-30T10:28:31+00:00"
         },
         {
             "name": "koala-framework/kwf-reactjs",
@@ -879,7 +879,7 @@
             ],
             "description": "React Integration for Koala Framework",
             "homepage": "http://www.koala-framework.org/",
-            "time": "2017-01-25 09:01:24"
+            "time": "2017-01-25T09:01:24+00:00"
         },
         {
             "name": "koala-framework/kwf-trl-jsparser",
@@ -916,7 +916,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "description": "Parses js code for trl-calls and returns list",
-            "time": "2017-06-13 13:20:18"
+            "time": "2017-06-13T13:20:18+00:00"
         },
         {
             "name": "koala-framework/library-css3pie",

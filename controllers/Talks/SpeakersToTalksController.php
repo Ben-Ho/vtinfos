@@ -45,7 +45,7 @@ class Talks_SpeakersToTalksController extends Kwf_Controller_Action_Auto_Grid
 }
 class Talks_SpeakersToTalksControllerTalkNumber extends Kwf_Data_Abstract
 {
-    public function load($row)
+    public function load($row, array $info = array())
     {
         return $row->number;
     }

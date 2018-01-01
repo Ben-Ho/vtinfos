@@ -1,7 +1,7 @@
 {
     "bower-dependencies": {
         "compass-mixins": "https://github.com/Igosuki/compass-mixins.git#0.12.10",
-        "es5-shim": "https://github.com/es-shims/es5-shim.git#4.5.9",
+        "es5-shim": "https://github.com/es-shims/es5-shim.git#4.5.10",
         "html5shiv": "https://github.com/aFarkas/html5shiv.git#3.7.3",
         "jquery": "https://github.com/jquery/jquery-dist.git#3.2.1",
         "js-cookie": "https://github.com/js-cookie/js-cookie.git#2.2.0",
@@ -34,9 +34,9 @@
                 "resolved": "https://registry.npmjs.org/acorn/-/acorn-4.0.13.tgz"
             },
             "ajv": {
-                "version": "5.5.1",
+                "version": "5.5.2",
                 "from": "ajv@>=5.1.0 <6.0.0",
-                "resolved": "https://registry.npmjs.org/ajv/-/ajv-5.5.1.tgz"
+                "resolved": "https://registry.npmjs.org/ajv/-/ajv-5.5.2.tgz"
             },
             "align-text": {
                 "version": "0.1.4",
@@ -579,9 +579,9 @@
                 }
             },
             "caniuse-db": {
-                "version": "1.0.30000783",
+                "version": "1.0.30000784",
                 "from": "caniuse-db@>=1.0.30000372 <2.0.0",
-                "resolved": "https://registry.npmjs.org/caniuse-db/-/caniuse-db-1.0.30000783.tgz"
+                "resolved": "https://registry.npmjs.org/caniuse-db/-/caniuse-db-1.0.30000784.tgz"
             },
             "caseless": {
                 "version": "0.12.0",
@@ -780,14 +780,14 @@
                 "resolved": "https://registry.npmjs.org/detect-indent/-/detect-indent-4.0.0.tgz"
             },
             "detective": {
-                "version": "4.7.0",
+                "version": "4.7.1",
                 "from": "detective@>=4.0.0 <5.0.0",
-                "resolved": "https://registry.npmjs.org/detective/-/detective-4.7.0.tgz",
+                "resolved": "https://registry.npmjs.org/detective/-/detective-4.7.1.tgz",
                 "dependencies": {
                     "acorn": {
-                        "version": "5.2.1",
+                        "version": "5.3.0",
                         "from": "acorn@>=5.2.1 <6.0.0",
-                        "resolved": "https://registry.npmjs.org/acorn/-/acorn-5.2.1.tgz"
+                        "resolved": "https://registry.npmjs.org/acorn/-/acorn-5.3.0.tgz"
                     }
                 }
             },
@@ -925,6 +925,11 @@
                 "version": "1.1.2",
                 "from": "find-up@>=1.0.0 <2.0.0",
                 "resolved": "https://registry.npmjs.org/find-up/-/find-up-1.1.2.tgz"
+            },
+            "float-label-css": {
+                "version": "1.0.2",
+                "from": "float-label-css@1.0.2",
+                "resolved": "https://registry.npmjs.org/float-label-css/-/float-label-css-1.0.2.tgz"
             },
             "follow-redirects": {
                 "version": "1.0.0",

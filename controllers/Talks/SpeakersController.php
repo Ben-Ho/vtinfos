@@ -73,7 +73,7 @@ class Talks_SpeakersController extends Kwf_Controller_Action_Auto_Grid
 }
 class Talks_SpeakersControllerDegree extends Kwf_Data_Abstract
 {
-    public function load($row)
+    public function load($row, array $info = array())
     {
         if ($row->degree == 'e') {
             return trl('Ä');

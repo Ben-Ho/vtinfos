@@ -1,0 +1,7 @@
+@import "config/colors";
+@import "kwc-susy/master-layout-helper";
+
+@include set-master-layout(default);
+
+html .kwfLocal {
+}

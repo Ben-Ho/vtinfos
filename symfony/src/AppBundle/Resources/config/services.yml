@@ -6,3 +6,5 @@ services:
         class: KwfBundle\Rest\Handler
         arguments:
             - "@app.model.speakers"
+            - "@security.authorization_checker"
+            - "@validator"

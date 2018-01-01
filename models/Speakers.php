@@ -4,6 +4,27 @@ class Speakers extends Kwf_Model_Db
     protected $_table = 't_speakers';
     protected $_rowClass = 'Rows_Speaker';
 
+    protected $_serialization = array(
+        'id' => 'rest_read',
+        'firstname' => 'rest_read',
+        'lastname' => 'rest_read',
+        'email' => 'rest_read',
+        'phone' => 'rest_read',
+        'phone2' => 'rest_read',
+        'note' => 'rest_read',
+        'degree' => 'rest_read',
+        'circle_name' => 'rest_read',
+        'congregation_name' => 'rest_read',
+        'congregation_url' => array(
+            'type' => 'ColumnNormalizer_Speakers_CongregationUrl',
+            'groups' => 'rest_read'
+        ),
+        'talks' => array(
+            'type' => 'ColumnNormalizer_Speakers_Talks',
+            'groups' => 'rest_read'
+        )
+    );
+
     protected $_referenceMap = array(
         'Congregation' => array(
             'refModelClass' => 'Congregations',
@@ -28,6 +49,7 @@ class Speakers extends Kwf_Model_Db
             new Kwf_Model_Select_Expr_String(' '),
             new Kwf_Model_Select_Expr_Field('firstname')
         ));
+        $this->_exprs['congregation_name'] = new Kwf_Model_Select_Expr_Parent('Congregation', 'name');
         $this->_exprs['group_id'] = new Kwf_Model_Select_Expr_Parent('Congregation', 'group_id');
         $this->_exprs['phone_normalized'] = new Kwf_Model_Select_Expr_Sql("REPLACE(phone, ' ', '')");
         $this->_exprs['phone2_normalized'] = new Kwf_Model_Select_Expr_Sql("REPLACE(phone2, ' ', '')");
