@@ -10,7 +10,7 @@ export const fetchResults = (params) => {
     return (dispatch, getState, api) => {
         dispatch(fetchingResults());
 
-        params.responseLanguage = getState().settings.responseLanguage;
+        params.language = getState().settings.language;
         api.get(`/api/v1/speakers/search`, {params: params})
             .then((response) => {
                 dispatch(receiveResults(response.data));
@@ -26,7 +26,7 @@ export const fetchMoreResults = () => {
         dispatch(fetchingResults());
 
         let lastRequestParams = getState().search.get('lastRequestParams');
-        lastRequestParams.responseLanguage = getState().settings.responseLanguage;
+        lastRequestParams.language = getState().settings.language;
         lastRequestParams.start = getState().search.get('results').size;
         api.get(`/api/v1/speakers/search`, {params: lastRequestParams})
             .then((response) => {

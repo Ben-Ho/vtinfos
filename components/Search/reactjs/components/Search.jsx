@@ -8,13 +8,13 @@ class Search extends Component {
         super(props);
         this.state = {
             talk: '',
-            talkLanguage: 'de', // select-feld
+            talkLanguage: props.language, // select-feld
             firstname: '',
             lastname: '',
             phone: '',
             circleOrCircleGroup: '', // select-feld
             congregation: '', // select-feld
-            maxDistance: 50,
+            maxDistance: props.language == 'de' ? 50 : '',
             noBeard: false
         };
     }
@@ -139,11 +139,12 @@ class Search extends Component {
 
 // values to initialise Search
 function mapStateToProps(state, ownProps) {
-    const { talkLanguages, circleGroups } = state;
+    const { talkLanguages, circleGroups, settings: {language} } = state;
 
     return {
         talkLanguages,
-        circleGroups
+        circleGroups,
+        language
     };
 }
 

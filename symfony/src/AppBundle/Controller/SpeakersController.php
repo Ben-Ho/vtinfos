@@ -13,7 +13,7 @@ class SpeakersController extends Controller
 
     public function searchAction(Request $request)
     {
-        $responseLanguage = $request->get('responseLanguage');
+        $language = $request->get('language');
         $limitMax = 20;
         $limitDefault = 10;
         $startDefault = 0;
@@ -83,7 +83,7 @@ class SpeakersController extends Controller
             'data'=> $this->handler()->getRowsGranted($select, 'read'),
             'total' => $this->handler()->countRows($select)
         ));
-        $view->getContext()->setAttribute('language', $responseLanguage);
+        $view->getContext()->setAttribute('language', $language);
         if ($talkLanguage = $request->get('talkLanguage')) {
             $view->getContext()->setAttribute('talkLanguage', $talkLanguage);
         }

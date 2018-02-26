@@ -14,7 +14,7 @@ class Search_Component extends Kwc_Abstract
         $ret = parent::getTemplateVars($renderer);
         $ret['config'] = array();
         $ret['config']['settings'] = array();
-        $ret['config']['settings']['responseLanguage'] = $this->getData()->getLanguage();
+        $ret['config']['settings']['language'] = $this->getData()->getLanguage();
 
         $ret['config']['talkLanguages'] = array();
         foreach (Talks::getLanguages() as $code) {
