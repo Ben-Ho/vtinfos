@@ -1,6 +1,6 @@
-var onReady = require('kwf/on-ready');
+require('./SuperBoxSelect.scss');
+var onReady = require('kwf/commonjs/on-ready');
 var $ = require('jQuery');
-var kwfTrl = require('kwf/trl');
 
 onReady.onRender('.formsSpeakerFieldSuperBoxSelect', function (el) {
     var getSelection = function (el) {
@@ -20,31 +20,31 @@ onReady.onRender('.formsSpeakerFieldSuperBoxSelect', function (el) {
             var jsCode = '<div class="languageBlock">';
             var language = '';
             if (key == 'de') {
-                language = kwfTrl.trl('Deutsch');
+                language = __trl('Deutsch');
             } else if (key == 'en') {
-                language = kwfTrl.trl('Englisch');
+                language = __trl('Englisch');
             } else if (key == 'fr') {
-                language = kwfTrl.trl('Französisch');
+                language = __trl('Französisch');
             } else if (key == 'zh') {
-                language = kwfkwfTrl.trl.kwfTrl.trl('Chinesisch');
+                language = kwfkwfTrl.trl.__trl('Chinesisch');
             } else if (key == 'fa') {
-                language = kwfTrl.trl('Persisch');
+                language = __trl('Persisch');
             } else if (key == 'gebaerde') {
-                language = kwfTrl.trl('Gebärdensprache');
+                language = __trl('Gebärdensprache');
             } else if (key == 'twi') {
-                language = kwfTrl.trl('Twi');
+                language = __trl('Twi');
             } else if (key == 'ga') {
-                language = kwfTrl.trl('Ga');
+                language = __trl('Ga');
             } else if (key == 'tr') {
-                language = kwfTrl.trl('Türkisch');
+                language = __trl('Türkisch');
             } else if (key == 'sr') {
-                language = kwfTrl.trl('Serbisch');
+                language = __trl('Serbisch');
             } else if (key == 'ru') {
-                language = kwfTrl.trl('Russisch');
+                language = __trl('Russisch');
             } else if (key == 'es') {
-                language = kwfTrl.trl('Spanisch');
+                language = __trl('Spanisch');
             } else if (key == 'ar') {
-                language = kwfTrl.trl('Arabisch');
+                language = __trl('Arabisch');
             }
             jsCode += '<div class="languageName" data-code="'+key+'">'+language+'</div>';
             for (var i = 0; i < selection[key].length; i++) {
@@ -56,7 +56,7 @@ onReady.onRender('.formsSpeakerFieldSuperBoxSelect', function (el) {
         }
         // add listener to displayed values
         $(el).find('.selectedValue .remove').click(function (ev) {
-            if (!confirm(kwfTrl.trl('Möchtest du diesen Vortrag wirklich löschen? Änderung wird mit Speichern endgültig übernommen.')))
+            if (!confirm(__trl('Möchtest du diesen Vortrag wirklich löschen? Änderung wird mit Speichern endgültig übernommen.')))
                 return;
             var talkNumber = $(ev.currentTarget).parent('.selectedValue').find('.value').html();
             var language = $(ev.currentTarget).parent().parent().find('.languageName').data('code');

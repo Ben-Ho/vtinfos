@@ -1,6 +1,9 @@
 RewriteEngine on
 
+RewriteRule ^assets/build/(.*)$ build/assets/$1 [L]
+
 RewriteCond %{REQUEST_URI} !^/*(bootstrap.php)/?
+RewriteCond %{REQUEST_URI} !/build/assets/
 RewriteRule ^(.*)$ bootstrap.php [L]
 
 php_flag magic_quotes_gpc off

@@ -7,14 +7,14 @@ vtinfos.TalkCategories = Ext2.extend(Ext2.Panel,{
             title: trl('Übersetzungen'),
             region: 'center',
             split: true,
-            controllerUrl: '/admin/talks/talk-category-translations'
+            controllerUrl: KWF_BASE_URL+'/admin/talks/talk-category-translations'
         });
         var talksGrid = new Kwf.Auto.GridPanel({
             title: trl('Kategorien'),
             region: 'west',
             width: 500,
             split: true,
-            controllerUrl: '/admin/talks/talk-categories',
+            controllerUrl: KWF_BASE_URL+'/admin/talks/talk-categories',
             bindings: [{
                 queryParam: 'category_id',
                 item: translationGrid

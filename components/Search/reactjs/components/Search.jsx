@@ -1,6 +1,7 @@
+import './Search.scss';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import trl from 'kwf/trl';
+import trl from 'kwf/commonjs/trl';
 import * as actions from "../store/search/actions";
 
 class Search extends Component {

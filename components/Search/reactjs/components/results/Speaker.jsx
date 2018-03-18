@@ -1,7 +1,8 @@
+import './Speaker.scss';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import trl from 'kwf/trl';
+import trl from 'kwf/commonjs/trl';
 
 class Speaker extends Component {
     constructor(props) {

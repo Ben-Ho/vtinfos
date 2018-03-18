@@ -8,6 +8,11 @@ class ColumnNormalizer_Speakers_CongregationUrl implements ColumnNormalizerInter
     {
         $language = $context['language'] == 'de' ? 'master' : $context['language'];
         $subroot = Kwf_Component_Data_Root::getInstance()->getComponentById('root-'.$language);
+
+        $congregationDir = Kwf_Component_Data_Root::getInstance()->getComponentByClass('Directories_Congregations_Directory_Component', array('subroot'=>$subroot));
+        d($congregationDir);
+        d($subroot->getComponentsBy);
+        d(\Kwf_Component_Data_Root::getInstance()->getComponentByDbId('congregations_'.$row->congregation_id, array('subroot'=>$subroot)));
         return \Kwf_Component_Data_Root::getInstance()->getComponentByDbId('congregations_'.$row->congregation_id, array('subroot'=>$subroot))->getUrl();
     }
 //

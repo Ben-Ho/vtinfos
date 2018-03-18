@@ -1,6 +1,6 @@
-var onReady = require('kwf/on-ready');
+var onReady = require('kwf/commonjs/on-ready');
 var $ = require('jQuery');
-var responsiveEl = require('kwf/responsive-el');
+var responsiveEl = require('kwf/commonjs/responsive-el');
 responsiveEl('.kwcClass', [400, 800]);
 onReady.onRender('.kwcClass', function (el) {
 

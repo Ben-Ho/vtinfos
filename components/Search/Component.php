@@ -5,6 +5,10 @@ class Search_Component extends Kwc_Abstract
     {
         $ret = parent::getSettings($param);
         $ret['componentName'] = trlStatic('React Suche');
+        //TODO durchtesten aller funktionen. (suche ist nämlich schon funktionsfähig genug)
+
+        //TODO verlinkung von speaker.jsx-versammlung cachen
+        //TODO fehler bei request muss loading zurücksetzen + meldung an user
         //TODO button "Auswahl als Standard speichern" im local-storage (mit Distance=50 als default)
         return $ret;
     }

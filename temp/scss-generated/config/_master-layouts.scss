@@ -1,0 +1,31 @@
+$all-master-layouts: ();
+$master-layouts: (
+    default: (
+        sm: (
+            layout: layout(auto 12 0.5 after),                   //containerbreite - spalten - gutter breite - gutter position
+            content-spans: 12,
+            box-spans: (
+            )
+        ),
+        md: (
+            layout: layout(auto 12 0.4 after),
+            breakpoint: 768px,
+            no-mediaqueries: true,
+            content-spans: 12,
+            box-spans: (
+            )
+        ),
+        lg: (
+            layout: layout(1200px 12 0.3 after),
+            breakpoint: 1200px,
+            no-mediaqueries: true,
+            content-spans: 12,
+            box-spans: (
+            )
+        )
+    )
+);
+
+$all-master-layouts: map-merge($all-master-layouts, $master-layouts);
+$master-layouts: $all-master-layouts;
+$all-master-layouts: null

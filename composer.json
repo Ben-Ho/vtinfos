@@ -1,14 +1,13 @@
 {
     "require": {
-        "koala-framework/koala-framework": "4.5.x-dev",
-        "koala-framework/kwc-susy": "1.0.x-dev",
+        "koala-framework/koala-framework": "5.0.x-dev",
+        "koala-framework/kwc-susy": "1.2.x-dev",
         "tecnickcom/tcpdf": "6.0.097",
         "paragonie/random_compat": "~2.0",
         "symfony/symfony": "~2.8",
         "friendsofsymfony/rest-bundle": "^1.7",
         "symfony/monolog-bundle": "~2.8",
-        "sensio/framework-extra-bundle": "^3.0",
-        "koala-framework/kwf-reactjs": "1.0.x-dev"
+        "sensio/framework-extra-bundle": "^3.0"
     },
     "autoload": {
         "psr-0": {
@@ -31,7 +30,11 @@
             "axios": "^0.15.2",
             "redux-act": "^1.1.0",
             "prop-types": "^15.5.10",
-            "float-label-css": "1.0.2"
+            "float-label-css": "1.0.2",
+            "react": "^15.3.0",
+            "react-dom": "^15.3.0",
+            "babel-preset-env": "^1.6.1",
+            "babel-preset-react": "^6.11.1"
         }
     },
     "config": {

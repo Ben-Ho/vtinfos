@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "f877c80793ce9e5f27cb70c8164e5b18",
+    "content-hash": "1bd7669ff80d815c57b2da423ae3d5a2",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -636,16 +636,16 @@
         },
         {
             "name": "koala-framework/extjs2",
-            "version": "v2.3.0-p12",
+            "version": "v2.3.0-p13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/koala-framework/extjs2.git",
-                "reference": "f6306b3a1c3765bcb39ceac947920623c2159088"
+                "reference": "8653ca4429c54f9292f206724e708ee7c76bd259"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/koala-framework/extjs2/zipball/f6306b3a1c3765bcb39ceac947920623c2159088",
-                "reference": "f6306b3a1c3765bcb39ceac947920623c2159088",
+                "url": "https://api.github.com/repos/koala-framework/extjs2/zipball/8653ca4429c54f9292f206724e708ee7c76bd259",
+                "reference": "8653ca4429c54f9292f206724e708ee7c76bd259",
                 "shasum": ""
             },
             "type": "library",
@@ -655,7 +655,7 @@
             ],
             "description": "ExtJS JavaScript Library",
             "homepage": "http://www.sencha.com/products/extjs/",
-            "time": "2016-09-12T07:05:29+00:00"
+            "time": "2018-02-06T11:39:53+00:00"
         },
         {
             "name": "koala-framework/file-watcher",
@@ -698,16 +698,16 @@
         },
         {
             "name": "koala-framework/koala-framework",
-            "version": "4.5.x-dev",
+            "version": "5.0.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/koala-framework/koala-framework.git",
-                "reference": "276661c1fd86058c22c4d387e91c00d163f9c69f"
+                "reference": "2db8638ef9254e4d26f6c8f95f15e6befe5c8ea7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/koala-framework/koala-framework/zipball/276661c1fd86058c22c4d387e91c00d163f9c69f",
-                "reference": "276661c1fd86058c22c4d387e91c00d163f9c69f",
+                "url": "https://api.github.com/repos/koala-framework/koala-framework/zipball/2db8638ef9254e4d26f6c8f95f15e6befe5c8ea7",
+                "reference": "2db8638ef9254e4d26f6c8f95f15e6befe5c8ea7",
                 "shasum": ""
             },
             "require": {
@@ -740,35 +740,52 @@
             "type": "library",
             "extra": {
                 "require-bower": {
-                    "jquery": "^3.2.1",
                     "compass-mixins": "0.12.10",
-                    "tinymce": "tinymce/tinymce#4.1.9",
-                    "matches-selector": "^1.0.3",
-                    "html5shiv": "^3.7.3",
-                    "es5-shim": "^4.5.1",
-                    "js-cookie": "^2.1.1"
+                    "tinymce": "tinymce/tinymce#4.1.9"
                 },
                 "require-npm": {
-                    "uglify-js": "~2.8.27",
-                    "node-sass": "~3.7.0",
-                    "amdlc": "~0.1.5",
-                    "browser-pack": "~5.0.1",
-                    "module-deps": "~3.8.0",
-                    "JSONStream": "~1.0.4",
-                    "modernizr": "^3.0.0",
-                    "postcss": "~5.0.13",
-                    "es6-promise": "~3.0.2",
-                    "css-selectors-count": "~1.0.1",
+                    "jquery": "^3.2.1",
+                    "matches-selector": "^1.2.0",
+                    "js-cookie": "^2.2.0",
+                    "node-sass": "^4.7.2",
+                    "amdlc": "^0.1.9",
+                    "browser-pack": "^6.0.2",
+                    "module-deps": "^4.1.1",
+                    "JSONStream": "^1.3.2",
+                    "postcss": "^6.0.14",
+                    "css-selectors-count": "^1.0.1",
                     "postcss-chunk": "git://github.com/koala-framework/postcss-chunk.git#1b5a343cd4017d5608ece9f5f7a702f4db821171",
-                    "autoprefixer": "~6.1.0",
+                    "autoprefixer": "^7.2.3",
                     "postcss-prefixer-keyframes": "git://github.com/koala-framework/postcss-prefixer-keyframes",
                     "postcss-prefixer-font-face": "git://github.com/koala-framework/postcss-prefixer-font-face",
                     "postcss-media-queries-drop-redundant": "git://github.com/koala-framework/postcss-media-queries-drop-redundant",
-                    "babel-cli": "^6.11.4",
-                    "babel-preset-es2015": "^6.13.2",
                     "babel-plugin-transform-runtime": "^6.12.0",
                     "insert-module-globals": "^7.0.1",
-                    "underscore": "^1.8.3"
+                    "underscore": "^1.8.3",
+                    "babel-core": "^6.18.0",
+                    "babel-loader": "^7.1.2",
+                    "babel-preset-es2015": "^6.18.0",
+                    "css-loader": "^0.26.2",
+                    "extract-text-webpack-plugin": "^3.0.2",
+                    "postcss-loader": "^2.0.9",
+                    "sass-loader": "^6.0.2",
+                    "file-loader": "^1.1.6",
+                    "script-loader": "^0.7.0",
+                    "style-loader": "^0.13.2",
+                    "underscore-template-loader": "^0.8.0",
+                    "webpack": "^3.10.0",
+                    "webpack-dev-server": "^2.4.1",
+                    "ini": "^1.3.5",
+                    "babel-polyfill": "^6.16.0",
+                    "json-sass": "^1.3.5",
+                    "string-replace-loader": "^1.3.0",
+                    "html-webpack-plugin": "^2.28.0",
+                    "gettext-parser": "^1.3.0",
+                    "glob": "^7.1.2",
+                    "webpack-config": "^7.5.0",
+                    "bower-resolve-webpack-plugin": "^1.0.4",
+                    "uglifyjs-webpack-plugin": "^1.1.4",
+                    "uglify-js": "^3.2.2"
                 },
                 "expose-npm-packages": true,
                 "require-dev-bower": {
@@ -804,24 +821,24 @@
             ],
             "description": "Framework and CMS based on Zend Framework and ExtJS",
             "homepage": "http://www.koala-framework.org/",
-            "time": "2018-02-26T10:59:25+00:00"
+            "time": "2018-03-08T11:56:21+00:00"
         },
         {
             "name": "koala-framework/kwc-susy",
-            "version": "1.0.x-dev",
+            "version": "1.2.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/koala-framework/kwc-susy.git",
-                "reference": "47042e57187f323e9f5e046a0499c02d12b0674f"
+                "reference": "13bacd4f9b10e1d8707c98c97503d87fdb4b5a56"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/koala-framework/kwc-susy/zipball/47042e57187f323e9f5e046a0499c02d12b0674f",
-                "reference": "47042e57187f323e9f5e046a0499c02d12b0674f",
+                "url": "https://api.github.com/repos/koala-framework/kwc-susy/zipball/13bacd4f9b10e1d8707c98c97503d87fdb4b5a56",
+                "reference": "13bacd4f9b10e1d8707c98c97503d87fdb4b5a56",
                 "shasum": ""
             },
             "require": {
-                "koala-framework/koala-framework": "~4.0"
+                "koala-framework/koala-framework": "~5.0"
             },
             "type": "library",
             "extra": {
@@ -840,46 +857,7 @@
             ],
             "description": "Susy Layout Tookit Integration for Koala Framework",
             "homepage": "http://www.koala-framework.org/",
-            "time": "2017-05-30T10:28:31+00:00"
-        },
-        {
-            "name": "koala-framework/kwf-reactjs",
-            "version": "1.0.x-dev",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/koala-framework/kwf-reactjs.git",
-                "reference": "1ca2af89ae23618cb3d5d5f2780f48ff99fddaac"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/koala-framework/kwf-reactjs/zipball/1ca2af89ae23618cb3d5d5f2780f48ff99fddaac",
-                "reference": "1ca2af89ae23618cb3d5d5f2780f48ff99fddaac",
-                "shasum": ""
-            },
-            "require": {
-                "koala-framework/koala-framework": "~4.1"
-            },
-            "type": "library",
-            "extra": {
-                "require-npm": {
-                    "babel-preset-react": "^6.11.1",
-                    "react": "^15.3.0",
-                    "react-dom": "^15.3.0"
-                },
-                "expose-npm-packages": true
-            },
-            "autoload": {
-                "psr-0": {
-                    "React_": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-2-Clause"
-            ],
-            "description": "React Integration for Koala Framework",
-            "homepage": "http://www.koala-framework.org/",
-            "time": "2017-01-25T09:01:24+00:00"
+            "time": "2017-07-06T12:05:28+00:00"
         },
         {
             "name": "koala-framework/kwf-trl-jsparser",
@@ -1990,16 +1968,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v2.8.34",
+            "version": "v2.8.36",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "0455b5d26c5814062d7e9ea1ac99174ca13ad80e"
+                "reference": "4fdb16d12e1fa746da67d3250a3f3668538e813d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/0455b5d26c5814062d7e9ea1ac99174ca13ad80e",
-                "reference": "0455b5d26c5814062d7e9ea1ac99174ca13ad80e",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/4fdb16d12e1fa746da67d3250a3f3668538e813d",
+                "reference": "4fdb16d12e1fa746da67d3250a3f3668538e813d",
                 "shasum": ""
             },
             "require": {
@@ -2125,7 +2103,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2018-01-29T10:48:31+00:00"
+            "time": "2018-03-05T19:06:36+00:00"
         },
         {
             "name": "tecnickcom/tcpdf",
@@ -2192,16 +2170,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v1.35.0",
+            "version": "v1.35.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "daa657073e55b0a78cce8fdd22682fddecc6385f"
+                "reference": "9c24f2cd39dc1906b76879e099970b7e53724601"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/daa657073e55b0a78cce8fdd22682fddecc6385f",
-                "reference": "daa657073e55b0a78cce8fdd22682fddecc6385f",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/9c24f2cd39dc1906b76879e099970b7e53724601",
+                "reference": "9c24f2cd39dc1906b76879e099970b7e53724601",
                 "shasum": ""
             },
             "require": {
@@ -2253,7 +2231,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2017-09-27T18:06:46+00:00"
+            "time": "2018-03-03T16:21:29+00:00"
         },
         {
             "name": "willdurand/jsonp-callback-validator",
@@ -2350,8 +2328,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "koala-framework/koala-framework": 20,
-        "koala-framework/kwc-susy": 20,
-        "koala-framework/kwf-reactjs": 20
+        "koala-framework/kwc-susy": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
