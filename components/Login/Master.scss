@@ -3,10 +3,10 @@
 
 @include set-master-layout(default);
 
-.kwcClass{
-    &__problemSolvingRegion {
+.kwcClass {
+    .kwfUp-header {
+        padding-top: 30px;
         display: table;
         margin: auto;
-        margin-top: 15px;
     }
 }

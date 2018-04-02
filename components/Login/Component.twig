@@ -1,0 +1,9 @@
+<div class="{{ rootElementClass }}">
+    {{ renderer.component(form) }}
+
+    <div class="{{ 'problemSolvingRegion'|bemClass }}">
+        {{ data.trl('Wenn du dein Passwort vergessen hast,') }}
+        {{ renderer.componentLink(lostPassword, data.trl('kannst du hier ein neues anfordern.')) }}<br/>
+        {{ data.trl('Bei Login-Problemen bitte an +43/699 12 63 41 50 wenden.') }}
+    </div>
+</div>

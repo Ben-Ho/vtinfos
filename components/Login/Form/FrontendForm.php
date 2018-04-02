@@ -6,12 +6,13 @@ class Login_Form_FrontendForm extends Kwf_Form
         parent::_init();
         $this->_model = new Kwf_Model_FnF();
 
-        $this->add(new Kwf_Form_Field_TextField('text', trlStatic('Login')))
-            ->setCls('loginInput')
+        $this->add(new Kwf_Form_Field_TextField('text', trlKwfStatic('User')))
+            ->setEmptyText(trlKwfStatic('E-Mail Address'))
+            ->setAutofocus(true)
             ->setAllowBlank(false);
 
         $this->add(new Kwf_Form_Field_Password('password', trlKwfStatic('Password')))
-            ->setCls('loginInput')
+            ->setEmptyText('••••••••')
             ->setAllowBlank(false);
     }
 }

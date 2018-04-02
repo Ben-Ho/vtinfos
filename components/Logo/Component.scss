@@ -1,0 +1,20 @@
+.kwcClass {
+    background-repeat: no-repeat;
+    background-color: #085AC0;
+    width: 123px;
+    height: 123px;
+    font-family: Helvetica, Arial;
+    text-align: center;
+    font-size: 33px;
+
+    &__domain {
+        padding-top: 26px;
+        color: white;
+        font-weight: bolder;
+    }
+    &__tld {
+        color: white;
+        font-weight: lighter;
+        line-height: 20px;
+    }
+}

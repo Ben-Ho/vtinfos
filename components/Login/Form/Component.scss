@@ -3,80 +3,11 @@
 
 @include set-master-layout(default);
 
-.kwcClass {
-    @include kwf-breakpoint(md) {
-        margin: auto;
-        max-width: 360px;
-    }
-}
+html .kwcClass {
+    max-width: 360px;
+    margin: auto;
 
-.kwcClass {
-    margin-bottom: 25px;
-
-    .loginInput {
-        clear: none;
-        margin-bottom: 0px;
-        padding-top: 10px;
-
-        label {
-            float: none;
-            line-height: 30px;
-        }
-
-        .kwfFormFieldWrapper.hasLabel {
-            margin-left: 0px;
-            padding-left: 0px;
-
-            input.loginInput {
-                float: none;
-                width: 100%;
-                max-width: 100%;
-                height: 50px;
-                font-size: 20px;
-                border-style: solid;
-                border-color: #DDDDDD;
-                border-width: 1px;
-                box-sizing: border-box;
-                padding: 10px;
-            }
-        }
-    }
-
-    .submitWrapper {
-        margin: auto;
-        width: 50%;
-        padding-top: 20px;
-
-        .afterButton {
-            width: 0px;
-        }
-
-        .beforeButton {
-            background-image: none;
-            width: 0px;
-        }
-
-        .button {
-            background-color: #085AC0;
-            background-image: none;
-            height: 40px;
-            width: 100%;
-            button {
-                width: 100%;
-                height: 100%;
-                span {
-                    font-size: 20px;
-                }
-            }
-        }
-
-        .button:hover {
-            button {
-                background-color: #0046AC;
-                span {
-                    color: #ffffff;
-                }
-            }
-        }
+    .kwfUp-kwfField {
+        font-size: 20px;
     }
 }
