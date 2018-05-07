@@ -4,6 +4,7 @@ class DataProtection_Component extends Kwc_Abstract_Composite_Component
     public static function getSettings($param = null)
     {
         $ret = parent::getSettings($param);
+        $ret['componentName'] = trlStatic('Datenschutz-Popup');
         $ret['generators']['child']['component']['form'] = 'DataProtection_Form_Component';
         $ret['viewCache'] = false;
         return $ret;

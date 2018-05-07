@@ -4,7 +4,7 @@ class DataProtection_Form_Component extends Kwc_Form_Component
     public static function getSettings($param = null)
     {
         $ret = parent::getSettings($param);
-        $ret['placeholder']['submitButton'] = trlStatic('Akzeptieren');
+        $ret['placeholder']['submitButton'] = trlStatic('Speichern');
         return $ret;
     }
 
@@ -13,7 +13,7 @@ class DataProtection_Form_Component extends Kwc_Form_Component
         parent::_initForm();
         $this->_form->setModel(new Kwf_Model_FnF());
         $this->_form->add(new Kwf_Form_Field_Checkbox('data_privacy'))
-            ->setBoxLabel(trl('Akzeptiere den Datenschutz'))
+            ->setBoxLabel(trl('Ich habe die Zustimmung erhalten.'))
             ->setAllowBlank(false);
     }
 
