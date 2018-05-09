@@ -38,6 +38,7 @@ class Search_Speakers_View_SearchForm_FrontendForm extends Kwf_Form
         $comboBox->setValues($data);
         $this->add($comboBox);
         $this->add(new Kwf_Form_Field_TextArea('distance', trlStatic('Luftlinie (km)')))
+            ->setDefaultValue("50")
             ->setHeight(18)
             ->setWidth(219);
         $this->add(new Kwf_Form_Field_Checkbox('no_beard', trlStatic('Kein Voll-/Modebart')));
