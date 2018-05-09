@@ -5,6 +5,7 @@ class DataProtection_Form_Component extends Kwc_Form_Component
     {
         $ret = parent::getSettings($param);
         $ret['placeholder']['submitButton'] = trlStatic('Speichern');
+        $ret['generators']['child']['component']['success'] = 'DataProtection_Form_Success_Component';
         return $ret;
     }
 
@@ -28,3 +29,4 @@ class DataProtection_Form_Component extends Kwc_Form_Component
         }
     }
 }
+
