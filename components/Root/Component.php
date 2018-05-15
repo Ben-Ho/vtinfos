@@ -16,6 +16,14 @@ class Root_Component extends Kwc_Root_TrlRoot_Component
         $ret['editComponents'] = array('title', 'metaTags');
 
         $ret['contentWidth'] = 780;
+        $ret['assets']['files'][] = 'web/components/Root/Web.scss';
+        return $ret;
+    }
+
+    public function getMasterTemplateVars(Kwf_Component_Data $innerComponent, Kwf_Component_Renderer_Abstract $renderer)
+    {
+        $ret = parent::getMasterTemplateVars($innerComponent, $renderer);
+//        d($ret);
         return $ret;
     }
 }

@@ -24,5 +24,8 @@ module.exports = new WebpackConfig.Config().extend(
     },
     resolve: {
         extensions: ['.jsx']
+    },
+    devServer: {
+        disableHostCheck: true
     }
 });

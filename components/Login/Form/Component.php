@@ -5,6 +5,7 @@ class Login_Form_Component extends Kwc_User_Login_Form_Component
     {
         $ret = parent::getSettings($param);
         $ret['placeholder']['submitButton'] = trlStatic('Anmelden');
+        $ret['decorator'] = 'Form_Decorator_FloatLabel';
         return $ret;
     }
 

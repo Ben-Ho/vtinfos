@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="{{ pageLanguage }}">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+        {{ includeCode('header') }}
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="theme-color" content="#085ac0">
+        <link rel="manifest" href="/manifest.json" />
+
+        <link rel="shortcut icon" href="/assets/web/images/favicon.ico" />
+        <link rel="shortcut icon" href="/assets/web/images/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="/assets/web/images/logo.jpg" />
+        <meta name="msapplication-square512x512logo" content="/assets/web/images/logo.jpg">
+    </head>
+    <body class="{{ rootElementClass }}">
+        <div class="kwfUp-pageWrapper">
+            <div class="kwfUp-page">
+                <div class="kwfUp-outerHeader">
+                    <div class="kwfUp-header">
+                        {{ renderer.component(boxes.logo) }}
+                    </div>
+                </div>
+                <div class="kwfUp-outerContent">
+                    <div class="kwfUp-content">
+                        <div class="kwfUp-innerContent">
+                            {{ renderer.componentWithMaster(componentWithMaster) }}
+                        </div>
+                    </div>
+                </div>
+                <div class="kwfUp-outerFooter">
+                    <div class="kwfUp-footer">
+                        {{ renderer.component(boxes.languageSwitcher) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{ includeCode('footer') }}
+    </body>
+</html>

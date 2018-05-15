@@ -31,7 +31,7 @@ class Root_Master_Component extends Kwc_Root_TrlRoot_Master_Component
             'unique' => true
         );
 
-        $ret['editComponents'] = array('metaTags', 'flag');
+        $ret['editComponents'] = array('metaTags');
 
         $ret['masterLayout'] = array(
             'class' => 'Root_Master_Layout',

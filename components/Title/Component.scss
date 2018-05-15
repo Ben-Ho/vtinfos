@@ -5,14 +5,15 @@
 
 .kwcClass {
     background-color: #085ac0;
-    .logo {
+
+    &__logo {
         padding: 5px;
         display: block;
         background-color: #fff;
         color: #085ac0;
         font-weight: bold;
     }
-    .mobileTitle {
+    &__mobileTitle {
         position: relative;
         padding: 5px;
         font-size: 20px;
@@ -22,16 +23,16 @@
             border-bottom-width: 2px;
         }
 
-        .logo, .title {
+        .kwcClass__logo, .kwcClass__title {
             display: table-cell;
         }
-        .title {
+        .kwcClass__title {
             width: 100%;
             color: #fff;
             font-weight: bold;
             padding-left: 10px;
         }
-        .logout {
+        .kwcClass__logout {
             height: 100%;
             display: block;
             width: 40px;
@@ -39,13 +40,13 @@
             right: 0;
             position: absolute;
             background-color: #D01818;
-            .icon {
+            .kwcClass__icon {
                 display: table;
                 margin: auto;
                 margin-top: 7px;
             }
         }
-        .languages {
+        .kwcClass__languages {
             background-color: #fff;
             position: absolute;
             top: 0;
@@ -53,7 +54,7 @@
             display: block;
             height: 100%;
             width: 45px;
-            .icon {
+            .kwcClass__icon {
                 display: table;
                 margin: auto;
                 margin-top: 5px;

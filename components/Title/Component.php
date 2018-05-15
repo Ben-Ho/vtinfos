@@ -13,7 +13,12 @@ class Title_Component extends Kwc_Abstract_Composite_Component
     public function getTemplateVars(Kwf_Component_Renderer_Abstract $renderer)
     {
         $ret = parent::getTemplateVars($renderer);
-        $ret['pageName'] = $this->getData()->getPage()->getRow()->name;
+        $ret['pageName'] = $this->getData()->getPage()->row->name;
+//        $ret['pageName'] = '';
+//        $pageData = $this->getData()->getPage();
+//        if (isset($pageData->row)) {
+//            $ret['pageName'] = $pageData->row->name;
+//        }
         return $ret;
     }
 }
