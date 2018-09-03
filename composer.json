@@ -35,6 +35,14 @@
             "react-dom": "^15.3.0",
             "babel-preset-env": "^1.6.1",
             "babel-preset-react": "^6.11.1"
+        },
+        "mouf": {
+            "nodejs": {
+                "version": "8.11.2",
+                "targetDir": "vendor/nodejs/nodejs",
+                "forceLocal": true,
+                "includeBinInPath": true
+            }
         }
     },
     "config": {
