@@ -10,11 +10,11 @@ onReady.onRender('.kwcClass', function (el) {
             // Reset old values
             $(event.currentTarget).closest('ul').children('li').removeClass('hover');
             $(event.currentTarget).closest('ul').find('ul.subMenu').css('display', 'none');
-            $(event.currentTarget).closest('.menuMain').height(41);
+            $(event.currentTarget).closest('.kwcClass').height(41);
 
             $(event.currentTarget).addClass('hover');
             if ($(event.currentTarget).find('ul').length > 0) {
-                $(event.currentTarget).closest('.menuMain').height(80);
+                $(event.currentTarget).closest('.kwcClass').height(80);
                 $(event.currentTarget).find('ul.subMenu').css('display', 'table');
             }
         }, function (event) {}

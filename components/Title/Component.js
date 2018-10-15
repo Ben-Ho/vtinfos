@@ -5,7 +5,6 @@ var getViewport = require('web/commonjs/getViewport');
 
 onReady.onRender('.kwcClass', function (el) {
     $(el).find('.kwcClass__mobileTitle').click(function(event) {
-        debugger
         if (getViewport().width >= 768) return;
 
         if ($(event.currentTarget).hasClass('kwcClass__logout'))
