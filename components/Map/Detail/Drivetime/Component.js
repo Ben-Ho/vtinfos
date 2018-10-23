@@ -1,4 +1,3 @@
-require('./Component.scss');
 var onReady = require('kwf/commonjs/on-ready');
 var $ = require('jQuery');
 onReady.onRender('.kwcClass', function (el) {

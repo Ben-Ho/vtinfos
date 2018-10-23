@@ -1,4 +1,3 @@
-require('./SuperBoxSelect.scss');
 var onReady = require('kwf/commonjs/on-ready');
 var $ = require('jQuery');
 

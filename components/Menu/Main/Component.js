@@ -1,4 +1,3 @@
-require('./Component.scss');
 var onReady = require('kwf/commonjs/on-ready');
 var $ = require('jQuery');
 var getViewport = require('web/commonjs/getViewport');
