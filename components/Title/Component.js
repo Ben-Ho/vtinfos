@@ -19,8 +19,8 @@ onReady.onRender('.kwcClass', function (el) {
         }
     });
 
-    $(el).find('.kwcClass__mobileTitle .kwcClass__languages').click(function(event) {
-        $(event.currentTarget).closest('.kwcClass__title').find('.kwcClass__language').toggleClass('shown');
+    $(el).find('.kwcClass__mobileTitle .kwcClass__languages').click(function(event) { // klick auf icon
+        $(event.currentTarget).closest('.kwcClass').find('.kwfUp-language').toggleClass('shown'); // einblenden von language-select
         event.stopPropagation();
     });
 });
