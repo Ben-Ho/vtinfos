@@ -1,5 +1,5 @@
 .kwcClass {
-    .directoriesCircleGroupsDetail {
+    .kwfUp-directoriesCircleGroupsDetail {
         -webkit-transition: all 0.5s; /* For Safari 3.1 to 6.0 */
         transition: all 0.5s;
         height: 100px;
@@ -11,7 +11,7 @@
         }
     }
     &.gt400 {
-        .directoriesCircleGroupsDetail {
+        .kwfUp-directoriesCircleGroupsDetail {
             height: auto;
             float: left;
             width: 49.5%;
@@ -22,7 +22,7 @@
         }
     }
     &.gt400.gt800 {
-        .directoriesCircleGroupsDetail {
+        .kwfUp-directoriesCircleGroupsDetail {
             float: left;
             width: 33%;
             margin-right: 0%;

@@ -1,10 +1,10 @@
-.kwcClass.kwcForm {
-    .kwcForm.kwfUp-webForm form {
-        .form_deleted, .form_inactive {
+.kwcClass.kwfUp-kwcForm {
+    .kwfUp-formContainer form {
+        .kwfUp-form_deleted, .kwfUp-form_inactive, .kwfUp-form_has_beard {
             label {
                 float: left;
             }
-            .kwfFormFieldWrapper {
+            .kwfUp-kwfFormFieldWrapper {
                 input {
                     margin-left: 5px;
                     width: 20px !important;
