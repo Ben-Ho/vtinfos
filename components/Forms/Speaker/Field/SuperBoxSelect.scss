@@ -2,9 +2,9 @@ div.kwfUp-kwcForm .kwfUp-formContainer form .kwfUp-formsSpeakerFieldSuperBoxSele
     .selectedValues {
         .selectedValue {
             margin-left: 2px;
-            float: left;
             text-align: right;
             padding: 3px;
+            display: inline-block;
             &:hover {
                 background-color: #085ac0;
                 color: #fff;
@@ -28,23 +28,22 @@ div.kwfUp-kwcForm .kwfUp-formContainer form .kwfUp-formsSpeakerFieldSuperBoxSele
         padding-top: 3px;
         .newValue {
             width: auto !important;
-            float: left;
         }
         select.newValueSelect {
             width: 95px !important;
             height: 26px;
-            float: left;
         }
-        .button {
+        button {
             background-color: #085ac0;
             color: #fff;
             cursor: pointer;
             text-align: center;
+            margin: 0;
+            padding: 0;
+            display: inline-block;
             line-height: 26px;
             height: 26px;
             width: 22px;
-            display: block;
-            float: left;
         }
     }
 }

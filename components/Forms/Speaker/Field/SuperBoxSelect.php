@@ -139,7 +139,7 @@ class Forms_Speaker_Field_SuperBoxSelect extends Kwf_Form_Field_Abstract
             $ret['html'] .= '        <option value="'.$code.'">'.$language.'</option>'."\n";
         }
         $ret['html'] .= '        </select>'."\n";
-        $ret['html'] .= '        <span class="button">+</span>'."\n";
+        $ret['html'] .= '        <button type="button">+</span>'."\n";
         $ret['html'] .= '    </div>'."\n";
         $ret['html'] .= '</div>';
         return $ret;
