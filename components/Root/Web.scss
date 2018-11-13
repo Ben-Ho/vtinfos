@@ -29,37 +29,6 @@ body {
 .kwfUp-webStandard ul { margin-bottom: 10px; margin-left: 20px; }
 .kwfUp-webStandard li { list-style-type: square; margin-bottom: 5px; line-height: 18px; color: $typo; }
 
-.kwfUp-menues {
-    box-shadow: 0px 2px 1px #f2f2f2;
-    margin-bottom: 2px;
-    z-index: 10;
-    /* hack to bring menu to single layer to disable continous redraw */
-    backface-visibility: hidden;
-}
-
-// Auskommentiert nach update auf 5.0
-.scrolled {
-    .menues {
-        -webkit-transition: box-shadow 0.5s; /* For Safari 3.1 to 6.0 */
-        transition: box-shadow 0.5s;
-        box-shadow: 0px 3px 3px #888;
-        position: fixed;
-        top: 0px;
-    }
-//    #outerContent {
-//        padding-top: 50px;
-//        @include kwf-breakpoint(md) {
-//            padding-top: 110px;
-//        }
-//    }
-//
-//    &.kwfUp-frontend #pageWrapper .menues {
-//        @include kwf-breakpoint(lg) {
-//            width: 80%;
-//        }
-//    }
-}
-
 /* Styling page-like design */
 html body.kwfUp-frontend {
     background-color: #dedede;
@@ -92,33 +61,6 @@ html .kwfUp-frontend .kwfUp-pageWrapper {
 }
 /* end styling page-like design */
 
-// auskommentiert nach update auf 5.0
-//#page #outerHeader #header .leftRegion {
-//    width: 123px;
-//    float: left;
-//}
-//#page #outerHeader #header .leftRegion .logout {
-//    background-color: #F17F08;
-//    line-height: 30px;
-//    text-align: center;
-//    width: 123px;
-//    display: block;
-//    height: 30px;
-//    text-transform: uppercase;
-//    color: #fff;
-//    text-decoration: none;
-//    font-weight: bold;
-//    float:left;
-//    margin-top: 1px;
-//}
-//
-//body.ext2-ie6 { text-align: center; }
-//
-//#page #outerHeader #header,
-//#page #outerContent #content,
-//#page #outerFooter #footer { margin: 0px auto; text-align: left; }
-
-
 .kwfUp-page .kwfUp-outerContent .kwfUp-content .kwfUp-innerContent {
     padding-left: 20px;
     padding-top: 20px;
@@ -126,21 +68,6 @@ html .kwfUp-frontend .kwfUp-pageWrapper {
     padding-bottom: 20px;
 }
 
-// auskommentiert nach update auf 5.0
-//#page #outerFooter #footer { padding: 15px; position: relative; }
-//
-//.kwfUp-webListNone ul { margin: 0px; }
-//.kwfUp-webListNone,
-//.kwfUp-webListNone li { margin-bottom: 0px; }
-
-// auskommentiert nach update auf 5.0
-//// Form-Styling
-//.kwfUp-webForm {
-//    @include form-default-styles;
-//    max-width: 300px;
-//    display: block;
-//    margin: auto;
-//}
 .kwfUp-webForm .kwfUp-kwfField {
     margin-bottom: 15px;
 }
@@ -152,14 +79,6 @@ html .kwfUp-frontend .kwfUp-pageWrapper {
     width: 100%;
     box-sizing: border-box;
 }
-//// bei checkbox soll hackerl neben label stehen
-//html .kwfUp-webForm .kwfFormFieldCheckbox > label {
-//    width: auto;
-//    float: left;
-//}
-//html .kwfUp-webForm input[type=checkbox] {
-//    width: auto;
-//}
 
 .kwfUp-webForm button {
     color: $light;
