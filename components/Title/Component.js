@@ -3,11 +3,11 @@ var $ = require('jQuery');
 var getViewport = require('web/commonjs/getViewport');
 
 onReady.onRender('.kwcClass', function (el) {
+    $(el).find('.kwcClass__logout').click(function(event) {
+        event.stopPropagation();
+    });
     $(el).find('.kwcClass__mobileTitle').click(function(event) {
         if (getViewport().width >= 768) return;
-
-        if ($(event.currentTarget).hasClass('kwcClass__logout'))
-            return;
 
         var menu = $(el).find('.kwfUp-menuMain');
         if (menu.height() == 0) {
