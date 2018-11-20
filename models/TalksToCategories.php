@@ -13,4 +13,11 @@ class TalksToCategories extends Kwf_Model_Db
             'column' => 'category_id'
         )
     );
+
+    protected function _init()
+    {
+        parent::_init();
+        $this->_exprs['number'] = new Kwf_Model_Select_Expr_Parent('Talk', 'number');
+        $this->_exprs['title'] = new Kwf_Model_Select_Expr_Parent('Talk', 'title');
+    }
 }

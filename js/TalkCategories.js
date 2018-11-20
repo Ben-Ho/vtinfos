@@ -3,6 +3,16 @@ vtinfos.TalkCategories = Ext2.extend(Ext2.Panel,{
     layout: 'border',
     initComponent: function ()
     {
+        var talkRelation = new Kwf.Auto.AssignGridPanel({
+            gridAssignedControllerUrl: '/admin/talks/talk-categories-to-talks',
+            gridDataControllerUrl: '/admin/talks/talks',
+            title: trl('Vorträge'),
+            region: 'south',
+            height: 700,
+            gridDataHeight: 350,
+            split: true
+        });
+
         var translationGrid = new Kwf.Auto.GridPanel({
             title: trl('Übersetzungen'),
             region: 'center',
@@ -18,9 +28,12 @@ vtinfos.TalkCategories = Ext2.extend(Ext2.Panel,{
             bindings: [{
                 queryParam: 'category_id',
                 item: translationGrid
+            },{
+                queryParam: 'category_id',
+                item: talkRelation
             }]
         });
-        this.items = [talksGrid, translationGrid];
+        this.items = [talksGrid, translationGrid, talkRelation];
         vtinfos.Structure.superclass.initComponent.call(this);
     }
 });
