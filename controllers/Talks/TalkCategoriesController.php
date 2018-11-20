@@ -3,10 +3,6 @@
 class Talks_TalkCategoriesController extends Kwf_Controller_Action_Auto_Grid
 {
     protected $_model = 'TalkCategories';
-    protected $_editDialog = array(
-        'controllerUrl' => '/admin/talks/talk-categories',
-        'width' => '400'
-    );
 
     public function indexAction()
     {
