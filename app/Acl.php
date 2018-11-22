@@ -34,6 +34,7 @@ class Acl extends Kwf_Acl_Component
             array('text' => trl('Vortragsthemen')),
             '/admin/talks/talks'));
             $this->add(new Zend_Acl_Resource('talks_talk'), 'talks_talks');
+            $this->add(new Zend_Acl_Resource('talks_talk-changes'), 'talks_talks');
         $this->allow('admin', 'talks_talks');
 
         $this->addResource(new Kwf_Acl_Resource_MenuUrl('talks_talk-categories',
