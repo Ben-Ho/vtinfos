@@ -1,5 +1,5 @@
 <?php
-class Talks_Trl_Component extends Kwc_Chained_Trl_Component
+class Talks_Talk_Trl_Component extends Kwc_Chained_Trl_Component
 {
     public static function getSettings($masterComponentClass = null)
     {

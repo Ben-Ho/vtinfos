@@ -3,7 +3,7 @@ class Talks_Events extends Kwf_Component_Abstract_Events
 {
     public function getListeners()
     {
-        $ret = array();
+        $ret = parent::getListeners();
         $ret[] = array(
             'class' => 'Talks',
             'event' => 'Kwf_Events_Event_Row_Updated',
@@ -24,11 +24,6 @@ class Talks_Events extends Kwf_Component_Abstract_Events
 
     public function onRowChanged(Kwf_Events_Event_Row_Abstract $event)
     {
-        $components = Kwf_Component_Data_Root::getInstance()
-            ->getComponentsByClass('Talks_Component', array('ignoreVisible' => true));
-        foreach ($components as $component) {
-            $this->fireEvent(new Kwf_Component_Event_Component_ContentChanged(
-            $component->componentClass, $component));
-        }
+        $this->fireEvent(new Kwf_Component_Event_ComponentClass_ContentChanged($this->_class));
     }
 }

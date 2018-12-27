@@ -6,6 +6,13 @@ class Talks_Component extends Kwc_Abstract
         $ret = parent::getSettings($param);
         $ret['componentName'] = trlStatic('Vortragsthemen');
         $ret['rootElementClass'] = 'kwfUp-webStandard';
+
+        $ret['generators']['talks'] = array(
+            'component' => 'Talks_Talk_Component',
+            'class' => 'Talks_TalkGenerator',
+            'model' => 'Talks'
+        );
+
         $ret['plugins'] = array('Login_Plugin_Component');
         return $ret;
     }
@@ -13,12 +20,9 @@ class Talks_Component extends Kwc_Abstract
     public function getTemplateVars(Kwf_Component_Renderer_Abstract $renderer)
     {
         $ret = parent::getTemplateVars($renderer);
-        $select = new Kwf_Model_Select();
-        $select->order('number');
-        $ret['talks'] = Kwf_Model_Abstract::getInstance('Talks')->getRows($select);
-        $ret['talkCategories'] = Kwf_Model_Abstract::getInstance('TalkCategories')->getRows();
-        $ret['talksToCategories'] = Kwf_Model_Abstract::getInstance('TalksToCategories')->getRows();
-        $ret['language'] = $this->getData()->getLanguage();
+        $select = new Kwf_Component_Select();
+        $select->whereGenerator('talks');
+        $ret['talkComponents'] = $this->getData()->getChildComponents($select);
         return $ret;
     }
 }
