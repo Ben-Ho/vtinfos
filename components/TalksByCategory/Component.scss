@@ -1,19 +1,5 @@
 .kwcClass {
-    .categoryTitle {
-
-    }
-
-    .talks {
-        .talk {
-            .talkNumber {
-
-            }
-            .talkTitle {
-
-            }
-            &:hover {
-                background-color: transparent;
-            }
-        }
+    &__category {
+        margin-bottom: 15px;
     }
 }

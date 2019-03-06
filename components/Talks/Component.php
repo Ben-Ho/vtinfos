@@ -22,6 +22,7 @@ class Talks_Component extends Kwc_Abstract
         $ret = parent::getTemplateVars($renderer);
         $select = new Kwf_Component_Select();
         $select->whereGenerator('talks');
+        $select->order('number');
         $ret['talkComponents'] = $this->getData()->getChildComponents($select);
         return $ret;
     }

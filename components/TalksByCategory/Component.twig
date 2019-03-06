@@ -1,14 +1,12 @@
 <div class="{{ rootElementClass }}">
     {% for category in categories %}
-        <div class="{{ 'categoryTitle'|bemClass }}">{{ category.categoryRow.title }}</div>
-        <div class="{{ 'talks'|bemClass }}">
-            {% for talk in category.talks %}
-                <div class="{{ 'talk'|bemClass }}">
-                    <span class="{{ 'talkNumber'|bemClass }}">{{ talk.number }}</span>
-                    <span class="{{ 'talkTitle'|bemClass }}">{{ talk.getTitle(language) }}</span>
-                </div>
-                <div class="{{ 'talk_test'|bemClass }}"></div>
-            {% endfor %}
+        <div class="{{ 'category'|bemClass }}">
+            <div class="{{ 'categoryTitle'|bemClass }}">{{ category.categoryTitle }}</div>
+            <div class="{{ 'talks'|bemClass }}">
+                {% for talkComponent in category.talkComponents %}
+                    {{ renderer.component(talkComponent) }}
+                {% endfor %}
+            </div>
         </div>
-    {% endfor %}</span>
+    {% endfor %}
 </div>
