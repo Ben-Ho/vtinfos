@@ -29,6 +29,9 @@ class Root_Component extends Kwc_Root_TrlRoot_Component implements Kwf_Util_Main
 
     public static function getMaintenanceJobs()
     {
-        return array('SyncCongregationDetailsFromApi');
+        return array(
+            'SyncCongregationDetailsFromApi',
+            'DeleteDeletedSpeakersJob'
+        );
     }
 }
