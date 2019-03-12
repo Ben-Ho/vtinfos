@@ -15,6 +15,10 @@ class Talks_CongregationsController extends Kwf_Controller_Action_Auto_Grid
         $this->_columns->add(new Kwf_Grid_Column('circle_id', trl('Kreis'), 100))
             ->setRenderer('name')
             ->setEditor($comboBox);
+        $this->_columns->add(new Kwf_Grid_Column('org_g_uid', trl('GUID')))
+            ->setEditor(new Kwf_Form_Field_TextField());
+        $this->_columns->add(new Kwf_Grid_Column('last_sync', trl('Last-Sync')))
+            ->setEditor(new Kwf_Form_Field_DateField());
         $this->_columns->add(new Kwf_Grid_Column('name', trl('Name')))
             ->setEditor(new Kwf_Form_Field_TextField());
         $this->_columns->add(new Kwf_Grid_Column('street', trl('Straße')))
