@@ -1,5 +1,5 @@
 <?php
-class Root_Component extends Kwc_Root_TrlRoot_Component
+class Root_Component extends Kwc_Root_TrlRoot_Component implements Kwf_Util_Maintenance_JobProviderInterface
 {
     public static function getSettings($param = null)
     {
@@ -25,5 +25,10 @@ class Root_Component extends Kwc_Root_TrlRoot_Component
         $ret = parent::getMasterTemplateVars($innerComponent, $renderer);
 //        d($ret);
         return $ret;
+    }
+
+    public static function getMaintenanceJobs()
+    {
+        return array('SyncCongregationDetailsFromApi');
     }
 }
