@@ -113,6 +113,12 @@ class Talks extends Kwf_Model_Db
             } else {
                 return trlStatic('Tagalog');
             }
+        } else if ($code == 'hi') {
+            if ($data) {
+                return $data->trl('Hindi');
+            } else {
+                return trlStatic('Hindi');
+            }
         } else {
             if ($data) {
                 return $data->trl('Unbekannt');
