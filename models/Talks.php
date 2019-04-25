@@ -12,7 +12,7 @@ class Talks extends Kwf_Model_Db
 
     public static function getLanguages()
     {
-        return array('de', 'en', 'fr', 'zh', 'fa', 'gebaerde', 'twi', 'ga', 'tr', 'sr', 'ru', 'es', 'ar', 'tgl', 'hu','it');
+        return array('de', 'en', 'fr', 'zh', 'fa', 'gebaerde', 'twi', 'ga', 'tr', 'sr', 'ru', 'es', 'ar', 'tgl', 'hu','it', 'hi');
     }
 
     public static function getLanguage($code, $data = null)
