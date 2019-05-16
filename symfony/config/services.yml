@@ -7,3 +7,10 @@ services:
         class: Speakers
         factory: ['Kwf_Model_Abstract', getInstance]
         arguments: ['Speakers']
+
+    app.handler.speakers:
+        class: KwfBundle\Rest\Handler
+        arguments:
+            - "@app.model.speakers"
+            - "@security.authorization_checker"
+            - "@validator"

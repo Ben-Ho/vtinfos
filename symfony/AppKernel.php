@@ -13,7 +13,6 @@ class AppKernel extends Kwf_SymfonyKernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new FOS\RestBundle\FOSRestBundle(),
             new KwfBundle\KwfBundle(),
-            new AppBundle\AppBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev'), true)) {
