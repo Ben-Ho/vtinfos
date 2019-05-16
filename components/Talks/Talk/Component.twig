@@ -1,6 +1,18 @@
-<div class="{{ rootElementClass }}">
+<div class="{{ rootElementClass }} {{ stateClasses }}">
     <div class="{{ 'title'|bemClass }}">
         <span>{{ talkRow.number }}</span> <span>{{ talkRow.getTitle(language) }}</span>
+        {% if state.specialTalk %}
+            <span class="{{ 'specialTalk'|bemClass }}">{{ state.specialTalk|date(data.trl('d.m.Y')) }}</span>
+        {% endif %}
+        {% if state.removed %}
+            <span class="{{ 'removed'|bemClass }}">{{ state.removed|date(data.trl('d.m.Y')) }}</span>
+        {% endif %}
+        {% if state.lastDispoChange %}
+            <span class="{{ 'lastDispoChange'|bemClass }}">{{ state.lastDispoChange|date(data.trl('d.m.Y')) }}</span>
+        {% endif %}
+        {% if state.existingSince %}
+            <span class="{{ 'existingSince'|bemClass }}">{{ state.existingSince|date(data.trl('d.m.Y')) }}</span>
+        {% endif %}
     </div>
     {% if talkRow.getChildRows('TalksToCategories')|length > 0 %}
         <div class="{{ 'categoriesRegion'|bemClass }}">
@@ -12,12 +24,4 @@
             </ul>
         </div>
     {% endif %}
-    {#<div class="{{ 'changesRegion'|bemClass }}">#}
-        {#<div class="{{ 'changesLink'|bemClass }}">{{ data.trl('Änderungen') }}</div>#}
-        {#<ul class="{{ 'changes'|bemClass }}">#}
-            {#{% for talkChangeRow in talkRow.getChildRows('TalkChanges') %}#}
-                {#<li>{{ talkChangeRow.change_date|date }}: {{ talkChangeRow.getDescription(language) }}</li>#}
-            {#{% endfor %}#}
-        {#</ul>#}
-    {#</div>#}
 </div>
