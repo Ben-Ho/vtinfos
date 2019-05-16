@@ -9,12 +9,12 @@ vtinfos.Structure = Ext2.extend(Ext2.Panel,
             region: 'east',
             width: 420,
             split: true,
-            controllerUrl: KWF_BASE_URL+'/admin/talks/speakers-to-talks'
+            controllerUrl: '/admin/talks/speakers-to-talks'
         });
 
         var speakersGrid = new Kwf.Auto.GridPanel({
             title: trl('Redner'),
-            controllerUrl: KWF_BASE_URL+'/admin/talks/speakers',
+            controllerUrl: '/admin/talks/speakers',
             height: 400,
             split: true,
             region: 'south',
@@ -25,7 +25,7 @@ vtinfos.Structure = Ext2.extend(Ext2.Panel,
         });
         var congregationsGrid = new Kwf.Auto.GridPanel({
             title: trl('Versammlungen'),
-            controllerUrl: KWF_BASE_URL+'/admin/talks/congregations',
+            controllerUrl: '/admin/talks/congregations',
             region: 'center',
             split: true,
             bindings: [{
@@ -41,7 +41,7 @@ vtinfos.Structure = Ext2.extend(Ext2.Panel,
         });
         var circleGrid = new Kwf.Auto.GridPanel({
             title: trl('Kreise'),
-            controllerUrl: KWF_BASE_URL+'/admin/talks/circles',
+            controllerUrl: '/admin/talks/circles',
             width: 120,
             split: true,
             region: 'center',
@@ -52,7 +52,7 @@ vtinfos.Structure = Ext2.extend(Ext2.Panel,
         });
         var circleGroupGrid = new Kwf.Auto.GridPanel({
             title: trl('Kreisgruppen'),
-            controllerUrl: KWF_BASE_URL+'/admin/talks/circle-groups',
+            controllerUrl: '/admin/talks/circle-groups',
             height: 200,
             split: true,
             region: 'north',

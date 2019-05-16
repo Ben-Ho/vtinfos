@@ -8,20 +8,20 @@ vtinfos.Talks = Ext2.extend(Ext2.Panel,{
             region: 'south',
             split: true,
             height: 400,
-            controllerUrl: KWF_BASE_URL+'/admin/talks/talk-changes'
+            controllerUrl: '/admin/talks/talk-changes'
         });
         var translationGrid = new Kwf.Auto.GridPanel({
             title: trl('Übersetzungen'),
             region: 'center',
             split: true,
-            controllerUrl: KWF_BASE_URL+'/admin/talks/talk-translations'
+            controllerUrl: '/admin/talks/talk-translations'
         });
         var talksGrid = new Kwf.Auto.GridPanel({
             title: trl('Vorträge des ausgewählten Redners'),
             region: 'west',
             width: 500,
             split: true,
-            controllerUrl: KWF_BASE_URL+'/admin/talks/talks',
+            controllerUrl: '/admin/talks/talks',
             bindings: [{
                 queryParam: 'talk_id',
                 item: translationGrid

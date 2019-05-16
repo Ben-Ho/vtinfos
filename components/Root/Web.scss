@@ -17,9 +17,9 @@ body {
 
 .kwfUp-webStandard p { line-height: 18px; color: $typo; margin-bottom: 10px; }
 
-.kwfUp-webStandard h1 { font-size: 25px; margin-bottom: 10px; color: $mainColor; } /* Überschrift 1 */
-.kwfUp-webStandard h2 { font-size: 20px; margin-bottom: 10px; color: $mainColor; } /* Überschrift 2 */
-.kwfUp-webStandard h3 { font-size: 14px; margin-bottom: 5px; } /* Überschrift 3 */
+.kwfUp-webStandard h1 { font-size: 25px; margin-bottom: 10px; color: $mainColor; } /*! Überschrift 1 */
+.kwfUp-webStandard h2 { font-size: 20px; margin-bottom: 10px; color: $mainColor; } /*! Überschrift 2 */
+.kwfUp-webStandard h3 { font-size: 14px; margin-bottom: 5px; } /*! Überschrift 3 */
 
 .kwfUp-webStandard a { text-decoration: none; color: $mainColor; outline: none; }
 .kwfUp-webStandard a:hover { text-decoration: none; color: $secColor; }
@@ -59,8 +59,7 @@ html .kwfUp-frontend .kwfUp-pageWrapper {
     @include kwf-breakpoint(lg) {
         width: 80%;
     }
-}
-/* end styling page-like design */
+} /*! end styling page-like design */
 
 .kwfUp-page .kwfUp-outerContent .kwfUp-content .kwfUp-innerContent {
     padding-left: 20px;

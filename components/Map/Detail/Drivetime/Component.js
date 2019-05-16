@@ -3,7 +3,7 @@ var $ = require('jQuery');
 onReady.onRender('.kwcClass', function (el) {
     el.find('.calculateTime').click(function (event) {
         Ext2.Ajax.request({
-            url: KWF_BASE_URL+'/admin/component/edit/Map_Detail_Drivetime_Component/Calculate/json-index',
+            url: '/admin/component/edit/Map_Detail_Drivetime_Component/Calculate/json-index',
             params: {
                 congregationId: $(event.currentTarget).data('congregation-id'),
                 componentId: $(event.currentTarget).data('component-id'),
