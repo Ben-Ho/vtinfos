@@ -1,7 +1,6 @@
 {
     "require": {
         "koala-framework/koala-framework": "5.2.x-dev",
-        "koala-framework/kwc-susy": "1.2.x-dev",
         "tecnickcom/tcpdf": "6.0.097",
         "paragonie/random_compat": "~2.0",
         "symfony/symfony": "~2.8",
@@ -19,31 +18,6 @@
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
-    "extra": {
-        "require-npm": {
-            "redux": "^3.6.0",
-            "redux-thunk": "^2.1.0",
-            "redux-logger": "^2.7.4",
-            "react-redux": "^5.0.1",
-            "immutable": "^3.8.1",
-            "axios": "^0.15.2",
-            "redux-act": "^1.1.0",
-            "prop-types": "^15.5.10",
-            "float-label-css": "1.0.2",
-            "react": "^15.3.0",
-            "react-dom": "^15.3.0",
-            "babel-preset-env": "^1.6.1",
-            "babel-preset-react": "^6.11.1"
-        },
-        "mouf": {
-            "nodejs": {
-                "version": "8.11.2",
-                "targetDir": "vendor/nodejs/nodejs",
-                "forceLocal": true,
-                "includeBinInPath": true
-            }
-        }
-    },
     "config": {
         "platform": {
             "php": "5.3.17",

@@ -1,1 +1,0 @@
-<?php  include('components/Login/Master.tpl'); ?>

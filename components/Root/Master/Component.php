@@ -5,15 +5,9 @@ class Root_Master_Component extends Kwc_Root_TrlRoot_Master_Component
     {
         $ret = parent::getSettings($param);
         unset($ret['generators']['flag']);
-        $ret['generators']['box']['component']['title'] = 'Title_Component';
-        $ret['generators']['box']['component']['bottomMenu'] = 'Menu_Bottom_Component';
-        $ret['generators']['box']['component']['metaTags'] = 'Kwc_Box_MetaTagsContent_Component';
+        unset($ret['generators']['box']['component']['switchLanguage']);
 
-        $ret['generators']['languageSwitcher'] = array(
-            'class' => 'Kwf_Component_Generator_Box_Static',
-            'component' => 'Language_Component',
-            'inherit' => true
-       );
+        $ret['generators']['box']['component']['metaTags'] = 'Kwc_Box_MetaTagsContent_Component';
 
         $ret['generators']['login'] = array(
             'class' => 'Kwf_Component_Generator_Page_Static',
@@ -31,14 +25,7 @@ class Root_Master_Component extends Kwc_Root_TrlRoot_Master_Component
             'unique' => true
         );
 
-        $ret['editComponents'] = array('metaTags');
-
-        $ret['masterLayout'] = array(
-            'class' => 'Root_Master_Layout',
-            'layoutConfig' => 'web/components/Root/Master/layout.config.scss',
-            'layoutName' => 'default',
-        );
-
+        $ret['editComponents'] = array();
         return $ret;
     }
 }

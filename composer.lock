@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a82615d8b1dfce859d149fcb2d98328a",
+    "content-hash": "baaf9422f0665abc8c3197ef62b36b66",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -806,42 +806,6 @@
             "description": "Framework and CMS based on Zend Framework and ExtJS",
             "homepage": "http://www.koala-framework.org/",
             "time": "2019-04-17T12:22:20+00:00"
-        },
-        {
-            "name": "koala-framework/kwc-susy",
-            "version": "1.2.x-dev",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/koala-framework/kwc-susy.git",
-                "reference": "a3e9e40a847755b3f63cdf957d5d94f440c82c69"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/koala-framework/kwc-susy/zipball/a3e9e40a847755b3f63cdf957d5d94f440c82c69",
-                "reference": "a3e9e40a847755b3f63cdf957d5d94f440c82c69",
-                "shasum": ""
-            },
-            "require": {
-                "koala-framework/koala-framework": "~5.0"
-            },
-            "type": "library",
-            "extra": {
-                "require-bower": {
-                    "susy": "^2.2.6"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Susy_": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-2-Clause"
-            ],
-            "description": "Susy Layout Tookit Integration for Koala Framework",
-            "homepage": "http://www.koala-framework.org/",
-            "time": "2018-12-18T08:29:55+00:00"
         },
         {
             "name": "koala-framework/kwf-trl-jsparser",
@@ -2372,8 +2336,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "koala-framework/koala-framework": 20,
-        "koala-framework/kwc-susy": 20
+        "koala-framework/koala-framework": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

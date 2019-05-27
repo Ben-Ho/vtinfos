@@ -1,8 +1,0 @@
-<div class="{{ rootElementClass }}">
-    <input type="text" class="{{ 'talkSearch'|bemClass }}" placeholder="{{ data.trl('Suchfeld') }}"/>
-    <div class="{{ 'talks'|bemClass }}">
-        {% for talkComponent in talkComponents %}
-            {{ renderer.component(talkComponent) }}
-        {% endfor %}
-    </div>
-</div>
