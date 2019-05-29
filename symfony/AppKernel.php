@@ -22,24 +22,4 @@ class AppKernel extends Kwf_SymfonyKernel
 
         return $bundles;
     }
-
-    public function getRootDir()
-    {
-        return __DIR__;
-    }
-
-    public function getCacheDir()
-    {
-        return getcwd().'/cache/symfony/'.$this->getEnvironment();
-    }
-
-    public function getLogDir()
-    {
-        return getcwd().'/log/symfony';
-    }
-
-    public function registerContainerConfiguration(LoaderInterface $loader)
-    {
-        $loader->load($this->getRootDir().'/config/config_'.$this->getEnvironment().'.yml');
-    }
 }

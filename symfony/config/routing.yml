@@ -3,3 +3,11 @@ speaker-search:
     methods: [GET]
     defaults:
         _controller: AppBundle\Controller\SpeakersController::searchAction
+
+
+
+oauth-token:
+    path: /api/v1/oauth/authorize
+    methods: [GET]
+    defaults:
+        _controller: app.controller.oauth.authorize:handleAuthorizeAction

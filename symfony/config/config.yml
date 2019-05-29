@@ -16,3 +16,8 @@ fos_rest:
         enabled: true
         rules:
             - { path: '^/api/', fallback_format: json }
+
+kwf:
+    csrf_protection:
+        ignore_paths:
+            - /api/v1/oauth/authorize

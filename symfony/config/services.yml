@@ -1,8 +1,4 @@
-# Learn more about services, parameters and containers at
-# http://symfony.com/doc/current/book/service_container.html
-
 services:
-# Models
     app.model.speakers:
         class: Speakers
         factory: ['Kwf_Model_Abstract', getInstance]
@@ -14,3 +10,20 @@ services:
             - "@app.model.speakers"
             - "@security.authorization_checker"
             - "@validator"
+
+    app.controller.oauth.authorize:
+        class: App\OAuth\Controller\AuthorizeController
+        autowire: true
+
+    app.service.rootCmp:
+        class: \Kwf_Component_Data_Root
+        factory: ['Kwf_Component_Data_Root', getInstance]
+
+    oauth2.storage:
+        class: App\OAuth\StoragePdo
+
+    oauth2.server:
+        class: OAuth2\Server
+        arguments:
+            - @oauth2.storage
+            - { use_openid_connect: true, issuer: 'v2.vtinfos.com', allow_implicit: true, access_lifetime: 604800, refresh_token_lifetime: 1209600, require_exact_redirect_uri: true } # 1Woche, 2Wochen
