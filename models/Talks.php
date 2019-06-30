@@ -12,7 +12,7 @@ class Talks extends Kwf_Model_Db
 
     public static function getLanguages()
     {
-        return array('de', 'en', 'fr', 'zh', 'fa', 'gebaerde', 'twi', 'ga', 'tr', 'sr', 'ru', 'es', 'ar', 'tgl', 'hu','it', 'hi');
+        return array('de', 'en', 'fr', 'zh', 'fa', 'gebaerde', 'twi', 'ga', 'tr', 'sr', 'ru', 'es', 'ar', 'tgl', 'hu','it', 'hi', 'en_pidgin');
     }
 
     public static function getLanguage($code, $data = null)
@@ -118,6 +118,12 @@ class Talks extends Kwf_Model_Db
                 return $data->trl('Hindi');
             } else {
                 return trlStatic('Hindi');
+            }
+        } else if ($code == 'en_pidgin') {
+            if ($data) {
+                return $data->trl('English-Pidgin');
+            } else {
+                return trlStatic('English-Pidgin');
             }
         } else {
             if ($data) {
