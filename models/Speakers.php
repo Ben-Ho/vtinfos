@@ -15,10 +15,7 @@ class Speakers extends Kwf_Model_Db
         'degree' => 'rest_read',
         'circle_name' => 'rest_read',
         'congregation_name' => 'rest_read',
-        'congregation_url' => array(
-            'type' => 'ColumnNormalizer_Speakers_CongregationUrl',
-            'groups' => 'rest_read'
-        ),
+        'congregation_id' => 'rest_read',
         'talks' => array(
             'type' => 'ColumnNormalizer_Speakers_Talks',
             'groups' => 'rest_read'
