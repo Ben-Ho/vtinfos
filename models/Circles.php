@@ -15,6 +15,10 @@ class Circles extends Kwf_Model_Db
         'Congregations' => 'Congregations'
     );
 
+    protected $_serialization = array(
+        'name' => 'rest_read'
+    );
+
     protected function _init()
     {
         parent::_init();

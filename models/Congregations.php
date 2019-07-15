@@ -25,6 +25,11 @@ class Congregations extends Kwf_Model_Db
         'Speakers' => 'Speakers',
         'Drivetimes' => 'Drivetimes'
     );
+
+    protected $_serialization = array(
+        'name' => 'rest_read',
+    );
+
     protected function _init()
     {
         parent::_init();

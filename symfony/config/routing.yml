@@ -2,12 +2,27 @@ speaker-search:
     path: /api/v1/speakers/search
     methods: [GET]
     defaults:
-        _controller: AppBundle\Controller\SpeakersController::searchAction
+        _controller: App\Controller\SpeakersController::searchAction
 
+circle-groups:
+    path: /api/v1/circle-groups
+    methods: [GET]
+    defaults:
+        _controller: App\Controller\CircleGroupsController::getAction
 
+congregations:
+    path: /api/v1/congregations
+    methods: [GET]
+    defaults:
+        _controller: App\Controller\CongregationsController::getAction
 
-oauth-token:
+oauth-auth:
     path: /api/v1/oauth/authorize
     methods: [GET]
     defaults:
-        _controller: app.controller.oauth.authorize:handleAuthorizeAction
+        _controller: App\OAuth\Controller\AuthorizeController::handleAuthorizeAction
+oauth-token:
+    path: /api/v1/oauth/token
+    methods: [POST]
+    defaults:
+        _controller: App\OAuth\Controller\TokenController::tokenAction

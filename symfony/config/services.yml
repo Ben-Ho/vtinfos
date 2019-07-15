@@ -4,6 +4,18 @@ services:
         factory: ['Kwf_Model_Abstract', getInstance]
         arguments: ['Speakers']
 
+    app.model.circleGroups:
+        class: CircleGroups
+        factory: ['Kwf_Model_Abstract', getInstance]
+        arguments: ['CircleGroups']
+
+    app.model.congregations:
+        class: Congregations
+        factory: ['Kwf_Model_Abstract', getInstance]
+        arguments: ['Congregations']
+
+
+
     app.handler.speakers:
         class: KwfBundle\Rest\Handler
         arguments:
@@ -11,9 +23,21 @@ services:
             - "@security.authorization_checker"
             - "@validator"
 
-    app.controller.oauth.authorize:
-        class: App\OAuth\Controller\AuthorizeController
-        autowire: true
+    app.handler.circleGroups:
+        class: KwfBundle\Rest\Handler
+        arguments:
+            - "@app.model.circleGroups"
+            - "@security.authorization_checker"
+            - "@validator"
+
+    app.handler.congregations:
+        class: KwfBundle\Rest\Handler
+        arguments:
+            - "@app.model.congregations"
+            - "@security.authorization_checker"
+            - "@validator"
+
+
 
     app.service.rootCmp:
         class: \Kwf_Component_Data_Root
