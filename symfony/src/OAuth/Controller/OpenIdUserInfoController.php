@@ -5,10 +5,10 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use OAuth2\HttpFoundationBridge\Request;
 use OAuth2\HttpFoundationBridge\Response;
 
-class TokenController extends Controller
+class OpenIdUserInfoController extends Controller
 {
-    public function tokenAction(Request $request)
+    public function userinfoAction(Request $request)
     {
-        return $this->get('oauth2.server')->handleTokenRequest($request, new Response());
+        return $this->get('oauth2.server')->handleUserInfoRequest($request, new Response());
     }
 }

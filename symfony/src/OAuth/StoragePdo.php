@@ -13,11 +13,10 @@ class StoragePdo extends \OAuth2\Storage\Pdo
 
     public function getUser($username)
     {
-        $select = new \Kwf_Model_Select();
-        $select->whereEquals('email', $username);
-        $userRow = \Kwf_Registry::get('userModel')->getRow($select);
+        $userRow = \Kwf_Registry::get('userModel')->getRow($username);
         if (!$userRow) return false;
         $userData = $userRow->toArray();
+        $userData['id'] = (string)$userData['id']; // convert to string, for matching
         $userData['user_id'] = $userData['id'];
         return $userData;
     }
@@ -30,5 +29,12 @@ class StoragePdo extends \OAuth2\Storage\Pdo
     protected function checkPassword($userRow, $password)
     {
         return \Kwf_Registry::get('userModel')->getRow($userRow['user_id'])->validatePassword($password);
+    }
+
+    public function getAllClientPublicKeyClientIds()
+    {
+        $stmt = $this->db->prepare(sprintf('SELECT client_id FROM %s', $this->config['public_key_table']));
+        $stmt->execute();
+        return $stmt->fetchAll(\PDO::FETCH_COLUMN);
     }
 }

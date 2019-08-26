@@ -1,4 +1,6 @@
 <?php
+
+use Nelmio\CorsBundle\NelmioCorsBundle;
 use Symfony\Component\Config\Loader\LoaderInterface;
 
 class AppKernel extends Kwf_SymfonyKernel
@@ -12,6 +14,7 @@ class AppKernel extends Kwf_SymfonyKernel
             new Symfony\Bundle\MonologBundle\MonologBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new FOS\RestBundle\FOSRestBundle(),
+            new Nelmio\CorsBundle\NelmioCorsBundle(),
             new KwfBundle\KwfBundle(),
         );
 

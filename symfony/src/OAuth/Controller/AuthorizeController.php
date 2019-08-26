@@ -20,6 +20,6 @@ class AuthorizeController extends Controller
             return new RedirectResponse($cmp->getAbsoluteUrl().'?'.http_build_query($params));
         }
         $response = new Response();
-        return $this->get('oauth2.server')->handleAuthorizeRequest($request, $response, true, $userRow->id);
+        return $this->get('oauth2.server')->handleAuthorizeRequest($request, $response, true, (string)$userRow->id);
     }
 }

@@ -26,3 +26,18 @@ oauth-token:
     methods: [POST]
     defaults:
         _controller: App\OAuth\Controller\TokenController::tokenAction
+oauth-well-known-openid-configuration:
+    path: /api/v1/oauth/.well-known/openid-configuration
+    methods: [GET]
+    defaults:
+        _controller: App\OAuth\Controller\WellKnownController::getConfigurationAction
+openid-userinfo:
+    path: /api/v1/oauth/oidc/userinfo
+    methods: [GET]
+    defaults:
+        _controller: App\OAuth\Controller\OpenIdUserInfoController::userinfoAction
+openid-jwks:
+    path: /api/v1/oauth/oidc/jwks
+    methods: [GET]
+    defaults:
+        _controller: App\OAuth\Controller\OpenIdJWKSController::getJWTSetsAction
