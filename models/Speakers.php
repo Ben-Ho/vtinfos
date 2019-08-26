@@ -6,8 +6,16 @@ class Speakers extends Kwf_Model_Db
 
     protected $_serialization = array(
         'id' => 'rest_read',
-        'firstname' => 'rest_read',
-        'lastname' => 'rest_read',
+        'givenname' => array(
+            'type' => 'ColumnNormalizer_Speakers_RenameColumn',
+            'column' => 'firstname',
+            'groups' => array('rest_read')
+        ),
+        'familyname' => array(
+            'type' => 'ColumnNormalizer_Speakers_RenameColumn',
+            'column' => 'lastname',
+            'groups' => array('rest_read')
+        ),
         'email' => 'rest_read',
         'phone' => 'rest_read',
         'phone2' => 'rest_read',

@@ -10,7 +10,7 @@ class CircleGroups extends Kwf_Model_Db
 
     protected $_serialization = array(
         'name' => 'rest_read',
-        'cirlces' => array(
+        'circles' => array(
             'type' => '\KwfBundle\Serializer\KwfModel\ColumnNormalizer\ChildRows',
             'rule' => 'Circles',
             'child_groups' => array('rest_read'),

@@ -35,11 +35,11 @@ class SpeakersController extends Controller
         }
         $select->where(new \Kwf_Model_Select_Expr_Child_Contains('SpeakerToTalks', $talkSelect));
 
-        if ($request->get('firstname')) {
-            $select->where(new \Kwf_Model_Select_Expr_SearchLike(array('firstname' => $request->get('firstname'))));
+        if ($request->get('givenname')) {
+            $select->where(new \Kwf_Model_Select_Expr_SearchLike(array('firstname' => $request->get('givenname'))));
         }
-        if ($request->get('lastname')) {
-            $select->where(new \Kwf_Model_Select_Expr_SearchLike(array('lastname' => $request->get('lastname'))));
+        if ($request->get('familyname')) {
+            $select->where(new \Kwf_Model_Select_Expr_SearchLike(array('lastname' => $request->get('familyname'))));
         }
         if ($request->get('phone')) {
             $phone = str_replace(' ', '', $request->get('phone'));
