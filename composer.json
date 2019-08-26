@@ -8,7 +8,8 @@
         "symfony/monolog-bundle": "~2.8",
         "sensio/framework-extra-bundle": "^3.0",
         "bshaffer/oauth2-server-php": "~1.11.1",
-        "bshaffer/oauth2-server-httpfoundation-bridge": "~1.4"
+        "bshaffer/oauth2-server-httpfoundation-bridge": "~1.4",
+        "nelmio/cors-bundle": "^1.5"
     },
     "autoload": {
         "psr-4": {
