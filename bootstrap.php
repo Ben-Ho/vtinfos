@@ -6,6 +6,13 @@ require 'vendor/koala-framework/koala-framework/Kwf/Setup.php';
 Kwf_Setup::setUp();
 
 $request = Request::createFromGlobals();
+// fix for js apollo-client
+if (!$request->headers->has('Authorization') && function_exists('apache_request_headers')) {
+    $all = apache_request_headers();
+    if (isset($all['authorization'])) {
+        $request->headers->set('Authorization', $all['authorization']);
+    }
+}
 
 $kernel = null;
 $authHeaderValue = $request->headers('Authorization');
